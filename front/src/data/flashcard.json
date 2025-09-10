@@ -1,0 +1,86 @@
+[
+    {
+        "subject": "Anatomía",
+        "topic": "Cráneo: visión anterior",
+        "tabs": [
+            {
+                "concepts": ["Huesos del cráneo","Aspectos clínicos", "Comentario"],
+                "features": [
+                    ["Los huesos del cráneo se pueden dividir en 2 grupos: huesos del neurocráneo (8 huesos), que rodean el encéfalo, y los huesos de la cara (14 huesos).", "Los 8 huesos del neurocráneo son los siguientes: frontal, occipital, etmoides y esfenoides junto con 2 huesos temporales y 2 huesos parietales.", "Otros huesos asociados al cráneo incluyen los huesecillos del oído (3 en cada cavidad del oído medio) y el hueso hioides, impar. De esta manera, el cráneo y los huesos asociados comprenden 29 huesos (los 32 dientes del adulto forman parte de la mandíbula y maxilares y no se cuentan por separado)."],
+                    ["Las fracturas del tercio medio facial siguen la clasificación clínica de Le Fort","Le Fort I: Fractura horizontal que separa el maxilar a los largo de la línea del suelo nasal.","Le Fort II: Fractura piramidal que afecta a ambos maxilares, huesos nasales, rebordes infraorbitarios y suelo orbitario de ambos lados.","Le Fort III: Al cuadro de Le Fort II se añade la fractura de ambos huesos cigomáticos; puede provocar obstrucción de las vías respiratorias, obstrucción nasolagrimal y derrame de liquido cefalorraquídeo (LCR)."],
+                    ["Los huesos del cráneo se fusionan entre sí mediante articulaciones fibrosas, no móviles, denominadas suturas."]
+                ],
+                "atlasId": "",
+                "atlasPage": "1"
+            }
+        ]
+    },
+    {
+        "subject": "Anatomía",
+        "topic": "Músculos extrínsecos del dorso: planos intermedios",
+        "tabs": [
+            {
+                "concepts": ["Origen", "Inserción", "Acción", "Inervación", "Aspectos clínicos", "Comentario"],
+                "features": [
+                    ["El músculo serrato posterior superior se origina en el ligamento nucal y en las apófisis espinosas de las vertebras C7 a T3.", "El músculo serrato posterior inferior se origina en las apófisis espinosas de las vertebras T11 a L2."],
+                    ["4 digitaciones carnosas unen el musculo serrato posterior superior a las costillas 2 a la 5.", "El músculo serrato posterior inferior se divide en 4 digitaciones planas que se insertan en los bordes inferiores de las 4 últimas costillas."],
+                    ["El músculo serrato posterior superior eleva las costillas, mientras que el serrato posterior inferior tira de las costillas hacia fuera y hacia abajo, contrarrestando la tracción hacia el interior del diafragma."],
+                    ["El músculo serrato posterior superior esta inervado por ramas anterior de los nervios espinales T1 a T4.", "El musculo serrato posterior inferior esta inervado por ramos anterior de los nervios espinales T9 a T12."],
+                    ["Estos 2 grupos de músculos son músculos accesorios de la respiración y pueden estar muy desarrollados en los atletas. Sin embargo, en el anciano suelen encontrarse  adelgazados e incluso se distinguen con dificultad."],
+                    ["Estos 2 músculos tienen inserciones en las costillas, se consideran músculos de la pared torácica (pueden agruparse como músculos extrínsecos del dorso) y actúan sobre las costillas durante la respiración. A menudo estos 2 músculos son delgados y pueden fusionarse a la musculatura subyacente."]
+                ],
+                "atlasId": "",
+                "atlasPage": "2"
+            }
+        ]
+    },
+    {
+        "subject": "Anatomía",
+        "topic": "Atrio (aurícula) y ventrículo izquierdo",
+        "tabs": [
+            {
+                "concepts": ["Ruidos cardíacos", "Aspectos clínicos", "Comentarios"],
+                "features": [
+                    ["Los ruidos cardíacos están producidos por el cierre de las válvulas. El primer ruido cardiaco lo provoca el cierre de las válvulas mitral y tricúspide, mientras que el segundo ruido cardiaco corresponde al cierre de las válvulas aortica y pulmonar."],
+                    ["Debido a las presiones que debe soportar, la válvula mitral es la que se ve afectada con mayor frecuencia en las valvulopatías.", "La estenosis (estrechamiento) mitral puede impedir el flujo de sangre desde el atrio izquierdo hacia el ventrículo izquierdo, provocando una dilatación del atrio izquierdo.", "La insuficiencia (regurgitación) mitral suele deberse a alteraciones de las valvas, a la rotura o fibrosis de un musculo papilar o a la rotura de las cuerdas tendinosas."],
+                    ["El ventrículo izquierdo es significativamente más grueso que el ventrículo derecho. Contiene 2 músculos papilares en los que se insertan las cuerdas tendinosas que se unen a las valvas de la válvula mitral (atrioventricular izquierda o bicúspide).", "La válvula mitral debe su nombre al hecho de que se parece a la mitra de obispo."]
+                ],
+                "atlasId": "",
+                "atlasPage": "3"
+            }
+        ]
+    },
+    {
+        "subject": "Anatomía",
+        "topic": "Brazo",
+        "tabs": [
+            {
+                "concepts": ["Comentarios", "Inervación", "Irrigación", "Aspectos clínicos"],
+                "features": [
+                    ["Funcionalmente, el brazo se divide en un compartimiento anterior y otro posterior.", "Esquemáticamente, el compartimiento anterior contiene los músculos flexores del codo, y el compartimiento posterior los músculos extensores del codo.", "Los nervios mediano y cubital pasan a través del brazo en un compartimiento vasculonervioso medial cuando discurren hacia el antebrazo. Estos 2 nervios no inervan músculos del brazo."],
+                    ["El nervio musculocutáneo inerva los músculos del compartimiento anterior o flexor. El nervio radial inerva los músculos del compartimiento posterior o extensor."],
+                    ["El compartimiento anterior está ampliamente vascularizado por la arteria braquial y sus ramas.", "El comportamiento posterior está ampliamente vascularizado por la arteria braquial profunda y sus ramas."],
+                    ["El nervio radial rodea el cuerpo del húmero para acceder al compartimiento posterior del brazo. Las fracturas de la diáfisis humeral pueden poner en peligro el nervio radial, que puede sufrir un estiramiento o una rotura en su recorrido alrededor del húmero, afectando a los extensores del carpo y los dedos."]
+                ],
+                "atlasId": "",
+                "atlasPage": "4"
+            }
+        ]
+    },
+    {
+        "subject": "Anatomía",
+        "topic": "Nervio peroneo común",
+        "tabs": [
+            {
+                "concepts": ["Comentarios", "Aspectos clínicos"],
+                "features": [
+                    ["El nervio peroneo común es una extensión directa del nervio ciático. Se enrolla superficialmente alrededor de la cabeza del peroné y luego se divide en un ramo superficial y un ramo profundo.", "El nervio peroneo superficial inerva los músculos del compartimiento lateral de la pierna, que están esencialmente implicados en la eversión del pie.", "El nervio peroneo profundo inerva los músculos del compartimiento anterior de la pierna y los músculos del dorso del pie. Estos músculos son fundamentalmente flexores dorsales del pie a nivel del tobillo y extensores de los dedos."],
+                    ["El nervio peroneo común es el nervio del miembro inferior más frecuentemente lesionado.", "Este nervio es vulnerable a las lesiones por compresión, normalmente por traumatismo directo, cuando gira alrededor de la cabeza del peroné. Cuando se lesiona, el paciente puede mostrar un pie péndulo (incapacidad para la flexión dorsal a nivel del tobillo) e incapacidad para la eversión del pie."]
+                ],
+                "atlasId": "",
+                "atlasPage": "5"
+            }
+        ]
+    }
+
+]

@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Nightmare Codehack';
+    src: url('../assets/fonts/NightmareCodehack.ttf') format('truetype'),
+    url('../assets/fonts/NightmareCodehack.woff') format('woff'), 
+    url('../assets/fonts/NightmareCodehack.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	gap: 20px;
+	width: 100%;
+	height: 90px;
+	background: black;
+}
+
+@media (max-width: 800px) {
+	nav {
+		flex-direction: column;
+	}
+}
+
+.logo {
+	width: 80px;
+	height: 80px;
+	margin-right: 2rem;
+}
+
+.logoContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.logoContainer a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: white;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 12px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	word-wrap: normal;
+}
+
+.main-menu li {
+	z-index: 2;
+}
+
+.gradientText {
+	background: linear-gradient(to bottom, #2f99d9, #3464b4);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-family: 'Nightmare Codehack';
+    font-size: 54px;
+}
+
+/**
+ * Initial state, hidden off screen
+ */
+.clicky-menu ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	visibility: hidden;
+	/*[1]*/
+}
+
+/**
+ * No JS fallback
+ *
+ * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
+ */
+.clicky-menu.no-js li:hover>ul {
+	visibility: visible;
+}
+
+.clicky-menu.no-js li:focus-within>ul {
+	/*[2]*/
+	visibility: visible;
+}
+
+/**
+ * Open/Close Menu Behavior with JS
+ */
+.clicky-menu ul[aria-hidden="false"] {
+	visibility: visible;
+}
+
+/* Prevent offscreen-submenus */
+.clicky-menu .sub-menu--right {
+	left: auto !important;
+	right: 0 !important;
+}
+
+/**
+ * Footnotes
+ *
+ * [1] Using `visibility` instead of `display` allows for easier transitions and animation of submenus
+ * [2] Must be a separate ruleset so that hover works in non-modern browsers
+ */
+
+/* Hidden SVG used for down arrows */
+#arrowsvg {
+	display: none;
+	position: absolute;
+}
+
+.clicky-menu {
+	justify-content: stretch;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@media (min-width: 800px) {
+	.clicky-menu {
+		display: flex;
+	}
+}
+
+/* General Link & Button Styles */
+.clicky-menu a,
+.clicky-menu button {
+	margin: .25em;
+	padding: 1em;
+	background: transparent;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: inherit;
+	border-radius: 3px;
+}
+
+.clicky-menu a:hover,
+.clicky-menu button:hover {
+	background: white;
+	color: black;
+}
+
+.clicky-menu a:focus,
+.clicky-menu button:focus {
+	background-color: white;
+	color: black;
+}
+
+/* Top Level Items */
+.clicky-menu>li {
+	position: relative;
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: stretch;
+	flex-wrap: wrap;
+}
+
+@media (max-width:800px) {
+	.clicky-menu li {
+		background-color: black;
+		color: white;
+	}
+}
+
+.clicky-menu>li>a,
+.clicky-menu>li>button {
+	flex: 1 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border: 0;
+	font-size: inherit;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+@media (min-width: 800px) {
+
+	.clicky-menu>li>a,
+	.clicky-menu>li>button {
+		justify-content: center;
+	}
+}
+
+/* Icon */
+.clicky-menu svg {
+	width: 1em;
+	height: 1em;
+	margin-left: .5em;
+	stroke: white;
+	transition: stroke 0.3s;
+}
+
+.clicky-menu [aria-expanded="true"] svg {
+	transform: scaleY(-1);
+}
+
+.clicky-menu a:hover svg,
+.clicky-menu button:hover svg,
+.clicky-menu a:focus svg,
+.clicky-menu button:focus svg {
+	filter: invert(100%);
+}
+
+/* Submenu Styles */
+.clicky-menu ul {
+	min-width: 100%;
+	/* width: 12em; */
+	margin-top: .25em;
+	padding: 0;
+	list-style: none;
+	background-color: black;
+	border-radius: 3px;
+}
+
+@media (min-width: 800px) {
+	.clicky-menu {
+		box-shadow: 2px 4px 4px rgba(0, 0, 0, .2);
+	}
+}
+
+/* Responsive Submenu Behavior */
+.clicky-menu ul[aria-hidden="false"] {
+	position: static;
+	width: 100%;
+	flex: 0 0 auto;
+}
+
+@media (min-width: 800px) {
+	.clicky-menu ul[aria-hidden="false"] {
+		position: absolute;
+		width: auto;
+	}
+}
+
+/* Submenu Links */
+.clicky-menu ul a {
+	display: block;
+	padding-top: .375em;
+	padding-bottom: .375em;
+}
+
+@media (min-width: 800px) {
+	.clicky-menu ul a {
+		padding: .375em 1em;
+		white-space: nowrap;
+	}
+}
+
+.menu-toggle {
+	display: none;
+}
+
+@media (max-width: 800px) {
+	.menu-toggle {
+		display: block;
+		cursor: pointer;
+		background-color: black;
+		width: 50px;
+		padding: 10px;
+	}
+
+	.menu-toggle .bar {
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		margin: 5px 0;
+	}
+
+	.main-menu {
+		display: none;
+		margin: 10px;
+	}
+
+	.main-menu.open {
+		display: block;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.menuContainer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.menuContainer {
+		position: relative;
+	}
+
+	.main-menu {
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		min-width: 40vw;
+	}
+
+}

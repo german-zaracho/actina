@@ -1,0 +1,435 @@
+[
+    {
+        "productId": 1,
+        "name": "Blue Snowball Ice - White",
+        "description": "Tabletop condenser microphone for clear and precise recordings. Cardioid polar pattern reduces background noise and improves sound quality.",
+        "brand": "blue",
+        "price": 34400,
+        "category": "microphone",
+        "link": "https://articulo.mercadolibre.com.ar/MLA-903198847-microfono-blue-snowball-ice-condensador-cardioide-blanco-_JM#position=5&search_layout=stack&type=item&tracking_id=43c97fc4-7a39-44b8-b08b-bd2c7eeda47b",
+        "image": "https://i.imgur.com/yKFgkBo.jpg"
+    },
+    {
+        "productId": 2,
+        "name": "Blue Yeti Nano - Shadow Grey",
+        "description": "Tabletop condenser microphone ideal for recording, streaming and podcasting. Omnidirectional and cardioid polar patterns to adapt to different situations.",
+        "brand": "blue",
+        "price": 84000,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 3,
+        "name": "Blue Yeticaster - Black",
+        "description": "recommended for instruments, streaming, podcasts, voices, games, voiceovers. Format: studio.",
+        "brand": "blue",
+        "price": 174990,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 4,
+        "name": "Blue Yeti - Midnight Blue",
+        "description": "Recommended for podcasts, recordings, voices, instruments, computers, interviews, games, voiceovers, conferences. Format: studio and table.",
+        "brand": "blue",
+        "price": 106600,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 5,
+        "name": "Hyperx Duocast Gaming Microphone",
+        "description": "USB microphone with a sleek design, low-profile shock mount, and stylish RGB ring light, is a full-featured microphone designed for gaming, working, and creating content.",
+        "brand": "hyperx",
+        "price": 78300,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 6,
+        "name": "Hyperx SoloCast Microphone - White",
+        "description": "Recommended for streaming, gaming, recording. Compatible Devices: Playstation, Mac, PC.",
+        "brand": "hyperx",
+        "price": 25800,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 7,
+        "name": "Hyperx QuadCast Multi-Pattern - Black",
+        "description": "Recommended for podcasts, recordings, voices, instruments, computers, interviews, games, voiceovers, conferences. Format: table.",
+        "brand": "hyperx",
+        "price": 91000,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 8,
+        "name": "Hyperx ProCast Mic - Black",
+        "description": "Gold-sputtered large diaphragm condenser. Cardioid polar pattern. XLR Connection. Detachable HyperX Shield metal pop filter",
+        "brand": "hyperx",
+        "price": 68500,
+        "category": "microphone",
+        "image": ".webp"
+    },
+    {
+        "productId": 9,
+        "name": "Logitech G705 Mouse - White",
+        "description": "It's wireless. You can connect to any device via Bluetooth. Hand Orientation: Right Handed. Includes rechargeable battery. It has an energy saving switch.",
+        "brand": "logitech",
+        "price": 50700,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 10,
+        "name": "Logitech LightSync G203 - White",
+        "description": "8000 dpi optical sensor for greater precision and speed. Ergonomic design with 6 configurable buttons. Compatible with Windows 7, macOS 10.13 and Chrome OS",
+        "brand": "logitech",
+        "price": 18650,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 11,
+        "name": "Logitech MX Master - Black",
+        "description": "You can connect to any device via Bluetooth. Includes rechargeable battery. With laser sensor. 1600dpi resolution.",
+        "brand": "logitech",
+        "price": 80700,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 12,
+        "name": "Logitech G502 Gaming Mouse - Black",
+        "description": "Use wire. With lights to improve the user experience. With optical sensor. 16000dpi resolution.",
+        "brand": "logitech",
+        "price": 37600,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 13,
+        "name": "Hyperx Pulsefire Gaming Mouse - White",
+        "description": "Constructed with a honeycomb-style shell that makes it lighter than a standard mouse without sacrificing durability, as well as improving ventilation and coolness.",
+        "brand": "hyperx",
+        "price": 35000,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 14,
+        "name": "Hyperx Pulsefire Surge - Black",
+        "description": "High-precision PixArt 3389 optical sensor for precise aiming. Compatible with Windows, PS4, PS5, Xbox One and Series X/S",
+        "brand": "hyperx",
+        "price": 30500,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 15,
+        "name": "Hyperx Pulsefire Raid - Black",
+        "description": "16000 dpi adjustable to suit your needs and gaming style. 11 customizable buttons for quick access to your favorite actions",
+        "brand": "hyperx",
+        "price": 29400,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 16,
+        "name": "Hyperx Pulsefire Dart Wireless",
+        "description": "With 2.4Ghz wireless connectivity, a 1ms report rate and RF technology for a better wireless signal, you'll have the freedom of wireless connectivity.",
+        "brand": "hyperx",
+        "price": 53000,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 17,
+        "name": "Redragon Griffin M607 Mouse - Black",
+        "description": "Use cord. With lights to improve the user experience. With optical sensor. 7200dpi resolution.",
+        "brand": "redragon",
+        "price": 15000,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 18,
+        "name": "Redragon Storm Pro M808-KS Wireless",
+        "description": "it's wireless. Use cord. Includes rechargeable battery. With lights to improve the user experience. With optical sensor. 16000dpi resolution.",
+        "brand": "redragon",
+        "price": 25000,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 19,
+        "name": "Redragon Cobra M711 Mouse - White",
+        "description": "Use wire. With lights to improve the user experience. With optical sensor. 10000dpi resolution.",
+        "brand": "redragon",
+        "price": 14500,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 20,
+        "name": "Redragon Centrophorus 2 M601 - Black",
+        "description": "Use wire. With lights to improve the user experience. With optical sensor. 7200dpi resolution.",
+        "brand": "redragon",
+        "price": 14000,
+        "category": "mouse",
+        "image": ".webp"
+    },
+    {
+        "productId": 21,
+        "name": "Logitech G Pro X Shroud",
+        "description": "Pro-inspired tenkeyless design. User-swappable mechanical switches. LIGHTSYNC RGB lighting. 1.8 m detachable cable",
+        "brand": "logitech",
+        "price": 95000,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 22,
+        "name": "Logitech G 715 Aurora Wireless",
+        "description": "Connectivity with multiple devices. Ergonomic and suitable for various uses. It has a wrist rest. Splash resistant. Keyboard Type: Mechanical. Cylindrical key.",
+        "brand": "logitech",
+        "price": 174500,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 23,
+        "name": "Logitech K380 - White",
+        "description": "Ergonomic design for comfort when typing. Bluetooth connection with a range of up to 10 meters. Splash resistant for durability. Silent keys, ideal for quiet environments",
+        "brand": "logitech",
+        "price": 27000,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 24,
+        "name": "Logitech Pop Keys",
+        "description": "Ergonomic design for comfort when typing. Bluetooth connection and wireless reception with a 10 m range. Hotkeys for increased productivity. Antighost keys to avoid typing errors",
+        "brand": "logitech",
+        "price": 50400,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 25,
+        "name": "Hyperx Alloy MKW100 - Black",
+        "description": "TTC Linear Red switches for fast and accurate response. Splash resistant for durability. Customizable RGB backlighting. Hotkeys and antighost for full control",
+        "brand": "hyperx",
+        "price": 39600,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 26,
+        "name": "Hyperx Alloy Core - Black",
+        "description": "An exclusive light bar from the brand, with stylish RGB effects and amazing brightness level. Enjoy its six settings: Color Cycle, Spectrum Wave, Breathing, Solid, 5 Zones, and Aurora.",
+        "brand": "hyperx",
+        "price": 54900,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 27,
+        "name": "Hyperx Alloy Elite - Black",
+        "description": "Compatible consoles: ps5, ps4, xbox series xis and xbox one. Contains numeric keypad. Built-in anti-ghosting function. Keyboard Type: Mechanical.",
+        "brand": "hyperx",
+        "price": 92700,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 28,
+        "name": "Hyperx Alloy Origins - Black",
+        "description": "Compatible consoles: ps5, ps4, xbox series xis and xbox one. Splash resistant. Contains numeric keypad. Built-in anti-ghosting function. Keyboard Type: Mechanical",
+        "brand": "hyperx",
+        "price": 61500,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 29,
+        "name": "Redragon Dark Avenger K568 Keyboard",
+        "description": "Ergonomic and suitable for various uses. Splash resistant. Built-in anti-ghosting function. Keyboard Type: Mechanical. Cylindrical key.",
+        "brand": "redragon",
+        "price": 24600,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 30,
+        "name": "Redragon Yama K550 Keyboard",
+        "description": "Ergonomic and suitable for various uses. It has a wrist rest. Splash resistant. Contains numeric keypad. Built-in anti-ghosting function. Keyboard Type: Mechanical. Cylindrical key.",
+        "brand": "redragon",
+        "price": 40000,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 31,
+        "name": "Redragon Draconic Pro K530 Keyboard",
+        "description": "Connectivity with multiple devices. Built-in anti-ghosting function. Keyboard Type: Mechanical. With USB-C connector. With removable cable.",
+        "brand": "redragon",
+        "price": 29900,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 32,
+        "name": "Redragon K552 Kumara Keyboard",
+        "description": "Ergonomic and suitable for various uses. Splash resistant. Keyboard Type: Mechanical. With USB connector. Measurements: 37.5cm wide, 15.5cm high and 4.3cm deep.",
+        "brand": "redragon",
+        "price": 25000,
+        "category": "keyboard",
+        "image": ".webp"
+    },
+    {
+        "productId": 33,
+        "name": "Logitech Z407 Speakers",
+        "description": "Speaker type: subwoofer. With bluetooth connectivity. 40W power. Includes remote control. Input connector: USB-A, Miniplug. Number of speakers: 3. Placement location: table.",
+        "brand": "logitech",
+        "price": 89900,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 34,
+        "name": "Logitech G560",
+        "description": "Speaker type: subwoofer. With bluetooth connectivity. It has led lights. 120W power. Input connector: Auxiliary, USB. Number of speakers: 3. Placement: desktop.",
+        "brand": "logitech",
+        "price": 143000,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 35,
+        "name": "Logitech S150 Speakers",
+        "description": "1.2W power. Input connector: USB-A. Number of speakers: 2. Dimensions: 68mm wide, 158mm high and 64mm deep.",
+        "brand": "logitech",
+        "price": 11210,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 36,
+        "name": "Logitech Z120 Speakers",
+        "description": "Speaker type: subwoofer. 1.2W power. Comes with 0 accessory microphones. Input connector: USB. Number of speakers: 2. Placement location: desktop and the floor. Dimensions: 90mm wide, 110mm high and 88mm deep.",
+        "brand": "logitech",
+        "price": 14000,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 37,
+        "name": "Genius Sw 2.1 Speakers",
+        "description": "Power supply 100V - 240V. Audio input 3.5mm. Total output power (W) 10 W (Subwoofer: 3.5 W / Satellites: 3.25 W x2). Driver Unit Subwoofer: 3.5 inch, 6 ohm / Satellites: 2.0 inch x2, 6 ohm",
+        "brand": "genius",
+        "price": 26400,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 38,
+        "name": "Genius Sp-q180 Speakers",
+        "description": "Delivers clear, high-quality stereo sound that fills the room. It has independent volume control. It's perfect for any device with a 3.5mm audio jack. It fits well next to your computer.",
+        "brand": "genius",
+        "price": 7500,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 39,
+        "name": "Genius Sp-u125 Speakers",
+        "description": "Speaker type: pc. 3W power. Number of speakers: 2. Ideal for listening to your favorite music.",
+        "brand": "Genius",
+        "price": 11700,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 40,
+        "name": "Genius SP-HF180 Speakers",
+        "description": "Speaker type: pc, notebook desktop, tweeter. 6W power. Comes with 0 accessory microphones. Input connector: Plug, USB. Number of speakers: 2",
+        "brand": "genius",
+        "price": 13500,
+        "category": "speakers",
+        "image": ".webp"
+    },
+    {
+        "productId": 41,
+        "name": "Logitech G332 Headphones - Black",
+        "description": "With built-in microphone. The length of the cable is 2 m. Superior sound without limits. Comfortable and practical. Speaker size: 50mm.",
+        "brand": "logitech",
+        "price": 33800,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 42,
+        "name": "Logitech G635 Headphones - Black",
+        "description": "Built-in flexible microphone. The length of the cable is 2.8 m. Superior sound without limits. Comfortable and practical. Speaker size: 50mm.",
+        "brand": "logitech",
+        "price": 74900,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 43,
+        "name": "Logitech G335 Headphones - Black",
+        "description": "Designed for gamers: compatible with PlayStation, Xbox and Nintendo Switch. Built-in microphone: communicate clearly in your games. 3.5 mm Jack connector: easy connection to devices and consoles.",
+        "brand": "logitech",
+        "price": 37500,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 44,
+        "name": "Logitech G435 Headphones - White",
+        "description": "10m wireless range. The battery lasts 18 hours. Hands-free mode included. With noise cancellation. With built-in microphone.",
+        "brand": "logitech",
+        "price": 55600,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 45,
+        "name": "HyperX Cloud Stinger Core HHSS1C Headphones - White",
+        "description": "12 m wireless range. The battery lasts 17 hours. Hands-free mode included. With noise cancellation. Built-in flexible microphone.The length of the cable is 1.3 m",
+        "brand": "hyperx",
+        "price": 54800,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 46,
+        "name": "HyperX Cloud Alpha HX-HSCA Headphones - Black",
+        "description": "With noise cancellation. Built-in flexible microphone. The length of the cable is 1.3 m. Superior sound without limits. Comfortable and practical. Speaker size: 50mm.",
+        "brand": "hyperx",
+        "price": 55000,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 47,
+        "name": "HyperX Cloud Stinger Core Headphones - Black",
+        "description": "20 m wireless range. The battery lasts 17 hours. Hands-free mode included. With noise cancellation. Built-in flexible microphone. The length of the cable is 2.5 m.",
+        "brand": "hyperx",
+        "price": 62900,
+        "category": "headphones",
+        "image": ".webp"
+    },
+    {
+        "productId": 48,
+        "name": "HyperX Cloud Flight Headphones - Black",
+        "description": "20 m wireless range. The battery lasts 30 hours. Hands-free mode included. With noise cancellation. Built-in flexible microphone. The length of the cable is 1.3 m.",
+        "brand": "hyperx",
+        "price": 67000,
+        "category": "headphones",
+        "image": ".webp"
+    }
+]

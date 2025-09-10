@@ -1,0 +1,9 @@
+Para poder abrirlo hay que: 
+	- abrir 2 terminales a la vez (una en la carpeta bak y otra en la carpeta front).
+	- En ambas npm i 
+	- luego npm run dev en ambas
+	- Finalmente luego del npm run dev del fron te muestra el en que puerto se abrio
+
+Por cuestion del cambio del tiempo me faltaron ordenas un par de cosas y context
+
+	- Para loguear el unico usuario que cree fue [Usuario: "123456" Contraseña: "12345678"]

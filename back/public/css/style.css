@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    /*So that there is no horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+    margin: 5px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+.card {
+    /* width: 300px; */
+    /* height: 340px; */
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 236, 236);
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card2 {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 236, 236);
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card3 {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 236, 236);
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.size{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.card3 p {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+
+
+form input {
+    padding: 10px;
+    margin: 10px;
+}
+.btn:hover {
+    box-shadow:
+        0 4px 3px 1px #FCFCFC,
+        0 6px 8px #D6D7D9,
+        0 -4px 4px #CECFD1,
+        0 -6px 4px #FEFEFE,
+        inset 0 0 3px 3px #CECFD1;
+}
+
+.btn:active {
+    box-shadow:
+        0 4px 3px 1px #FCFCFC,
+        0 6px 8px #D6D7D9,
+        0 -4px 4px #CECFD1,
+        0 -6px 4px #FEFEFE,
+        inset 0 0 5px 3px #999,
+        inset 0 0 30px #aaa;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto auto 0px;
+}
+
+.columnContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footerColumn{
+    margin: 20px;
+}
+.rowContainer{
+    display: flex;
+    flex-direction: row;
+}

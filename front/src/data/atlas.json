@@ -1,0 +1,39 @@
+[
+    {
+        "type": "Básico",
+        "subject": "Anatomía",
+        "pages": [
+            {
+                "topic": "Cráneo: visión anterior",
+                "image": "",
+                "items":["Hueso frontal", "Escotadura (agujero/foramen) supraorbitaria", "Hueso nasal", "Hueso lagrimal", "Hueso cigomático", "Agujero (foramen) infraorbitario", "Maxilar", "Agujero (foramen) mentoniano", "Mandibula", "Hueso temporal"],
+                "flashcardId": ""
+            },
+            {
+                "topic": "Músculos extrínsecos del dorso: planos intermedios",
+                "image": "",
+                "items":["Músculo serrato posterior superior","Músculo serrato posterior inferior"],
+                "flashcardId": ""
+            },
+            {
+                "topic": "Atrio (aurícula) y ventrículo izquierdo",
+                "image": "",
+                "items":["Orejuela izquierda", "Valvula mitral (valvas posterior y anterior)", "Músculo papilar anterior", "Atrio (auricula) izquierdo", "Venas pulmonares izquierdas", "Ligamento arterioso", "Arco de la aorta"],
+                "flashcardId": ""
+            },
+            {
+                "topic": "Brazo",
+                "image": "",
+                "items":["Músculo biceps braquial (cabezas corta y larga)", "Músculo coracobraquial", "Músculo deltoides", "Músculo braquial", "Nervio radial", "Músculo triceps braquial (cabezas medial, lateral y larga)", "Músculo braquiorradial", "Nervio musculocutáneo"],
+                "flashcardId": ""
+            },
+            {
+                "topic": "Nervio peroneo común",
+                "image": "",
+                "items":["Nervio peroneo común (L4, L5, S1, S2)", "Nervio peroneo superficial", "Nervio cutáneo dorsal medial", "Nervio cutáneo dorsal intermedio", "Nervio cutaneo dorsal lateral (ramo del nervio sural)", "Nervios digitales dorsales", "Nervio peroneo profundo"],
+                "flashcardId": ""
+            }
+        ]
+    }
+
+]

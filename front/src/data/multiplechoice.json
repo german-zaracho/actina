@@ -1,0 +1,1959 @@
+[
+    {
+        "subject": "Bioquímica",
+        "classification": "Introducción a la Bioquímica y Agua (local)",
+        "questions": [
+            {
+                "question": "En la molécula de ATP (adenosintrifosfato), ¿la unión química que se establece entre los fosfatos es de tipo?",
+                "options": [
+                    "Anhídrido fosfórico",
+                    "Éster",
+                    "Ester fosforico",
+                    "Eter"
+                ],
+                "answer": 1,
+                "justification": "la union quimica entre acidos, sean organicos o inorganicos, con perdida de una molecula de agua se denomina anhidrido o anhidrido fosforico, como en el ATP que es un transportador de energia, desde donde se produce en la celula hacia donde se consume"
+            },
+            {
+                "question": "Teniendo en cuenta la composicion del organismo humano desde el punto de vista de la masa corporal, el elemento biogeno primario mas abundante es:",
+                "options": [
+                    "Carbono, 65%",
+                    "Oxigeno, 65%",
+                    "Oxigeno, 33%",
+                    "Hidrogeno, 65%"
+                ],
+                "answer": 2,
+                "justification": "Se calcula que el 65% de la masa corporal es oxigeno. Si consideramos que aproximadamente el 60% del cuerpo es agua y que de la masa molecular del agua es 18gr, el oxigeno aporta 16gr y los 2 hidrogeno solo 2gr (1 cada uno), es facil darse cuenta de que la mayor parte del organismo, desde el punto de vista de la masa corporal, es oxigeno. A esto debemos sumarle que forma parte de casi todas las moleculas organicas."
+            },
+            {
+                "question": "Cual de los siguientes no corresponde a una categoria de clasificacion cuantitativa de los elementos biogenos?",
+                "options": [
+                    "oligoelementos",
+                    "primarios",
+                    "estructurales",
+                    "secundarios"
+                ],
+                "answer": 3,
+                "justification": "De los 118 elementos quimicos identificados en la naturaleza y clasificados en la tabla periodica de los elemtnso, solo algunos pocos forman parte de los organismos vivos y por tanto se los considera elementos biogenos. En funcion de su abundancia en los tejidos vivos se los clasifica en primarios (98%), secundarios y oligoelementos (estan presentes en cantidades infimas pero son importantes funcionalmente)."
+            },
+            {
+                "question": "El compuesto organico mas abundante en el cuerpo humano es:",
+                "options": [
+                    "glucidos",
+                    "proteinas",
+                    "lipidos",
+                    "agua"
+                ],
+                "answer": 2,
+                "justification": "El agua es el compuesto inorganico mas abundante y las proteinas, el compuesto organico mas abundante. Llamamos compuestos organicos a los que son sintetizados por organismo vivos. Si sometieramos al cuerpo humano a un proceso de liofilizacion, quitando todas las moleculas de agua, aproximadamente el 50% de lo restante serian proteinas. Dicho de otro modo, las proteinas constituyen el 50% del peso seco del organismo."
+            },
+            {
+                "question": "Los estados de la materia pueden ser liquido, solido o gaseoso. El paso del solido a gaseoso recibe el nombre de:",
+                "options": [
+                    "Vaporizacion",
+                    "Condensacion",
+                    "sublimacion inversa",
+                    "sublimacion"
+                ],
+                "answer": 4,
+                "justification": "Los cambios en el estado de la materia no corresponden a una modificacion de las moleculas que las conforman, sino que, manteniendo su formula quimica, cambia el nivel de interaccion entre las mismas. El clasico ejemplo es el agua que estando en forma liquida, siendo vapor de agua o hielo, mantiene su formula: h2o. Al cambiar las condiciones de temperatura y presion cambia la energia cinetica de las moleculas, y de los atomos y particulas subatomicas que las conforman, produciendo un cambio en el estado fisico, pero no es su formula molecular. Los procesos que describen un cambio de estado fisico de la materia son: sublimacion: es el cambio de estado solido a gaseoso sin pasar por el estado liquido. un ejemplo clasico de sustancia capaz de sublimarse es el hielo seco. Sublimacion inversa: es el paso directo del estado gaseoso al estado solido. Fusion: es el paso de un estado solido a un estado liquido por aumento de la temperatura. Por ejemplo, hielo derritiendose. Solidificacion: es el paso de un liquido a solido por enfriamiento. Vaporizacion y ebullicion: son los procesos fisicos en los que un liquido pasa a estado gaseoso. Condensacion o Licuacion: es el cambio de estado de gaseoso a liquido. es el proceso inverso a la vaporizacion."
+            },
+            {
+                "question": "En la tabla periodica de los elementos, los elementos que pertenecen a un mismo grupo se ordenan de arriba hacia abajo en una misma columna. la caracteristica que identifica a los elementos de cada grupo es:",
+                "options": [
+                    "El numero de electrones en su ultima orbita",
+                    "El numero de electrones en su primera orbita",
+                    "El numero de electrones en sus orbitas",
+                    "El numero de orbitas para sus electrones"
+                ],
+                "answer": 1,
+                "justification": "En el ordenamiento de la tabla periodica, los elementos de un grupo poseen el mismo numero de electrones en la ultima capa y, por lo tanto, configuraciones electronicas similares (misma valencia). Dado que las propiedades quimicas dependen profundamente de las interacciones de los electrones que estan ubicados en los niveles mas externos, los elementos de un mismo grupo tienen propiedades quimicas simlares y tienden a reaccionar con los elementos del grupo que les permita cumplir con la regla de los octetos. Por su parte, las filas de la tabla periodica nos indican los niveles energeticos de los elementos que la comparte. Los elementos en el mismo periodo tienen un mismo numero de orbitas o niveles energeticos y por lo tanto muestran tendencias similares en radio atomico, electronegatividad, etc. En un periodo, el radio atomico normalmente decrece de izquierda a derecha, debido a que al cambiar de grupo aumenta el numero de protones y los electrones(que tambien aumentan) son atraidos con mas fuerza hacia el centro. Esta disminucion del radio atomico tambien causa que la energia de ionizacion y la electronegatividad aumenten de izquierda a derecha en un mismo meriodo, debido a la atraccion que ejerce el nucleo por tener mas protones y mayor capacidad de atraccion (o retencion) si los electrones estan mas cercanos a el."
+            },
+            {
+                "question": "Para formar moleculas, los atomos de diferentes elementos se unen entre si por diferenteis tipos de uniones quimicas. A que llamos union covalente?",
+                "options": [
+                    "a la que se produce entre 2 atomos que comparten sus electrones externos",
+                    "a la que se produce cuando un poco electronegativo atrae a un sector menos electronegativo de otra molecula.",
+                    "a la que se produce entre 2 elementos que tiene la misma valencia",
+                    "a la que se produce entre un elemento que cede un electron y otro que lo acepta."
+                ],
+                "answer": 1,
+                "justification": "Un enlace covalente es aquel que se produce entre 2 atomos que comienzan a compartir sus electrones externos para alcanzar el octeto que les de estabilidad (a excepcion del H que solo necesita 2 electrones para alcanzarla). En estos casos, los electrones compartidos forman una nueva orbita que se denomina orbita molecular, donde (estos electrones externos) interaccionan con ambos nucleos. Los atomos en cuestion pueden compartir 1, 2 o 3 electrones, dando origen a uniones covalentes simples, dobles o triples respectivamente. No es necesario que los elementos tengan la misma valencia, ya que hay varias formas de lacanzar el octeto. En los casos donde la union se produce por la sesion de un electron, de un atomo a otro, se produce un efecto de ionizacion. El elemento cedente quedara ionizado positivamente y el aceptante negativamente (esto es obvio porque los electrones tienen cargas negativas). Al quedar los atomo participantes con cargas opuestas, se mantienen unidos electrostaticamente en una union que se conoce como \"enlace de tipo ionico\". Por ultimo, la union que se produce entre un sector de mayor electronegatividad con otros de menor electronegatividad (relativamento positivos) de otra molecula se denominan uniones puente. la mas comun es el puente de hidrogeno. Este se da entre moleculas constituidas por hidrogenos y atomos electronegativos como oxigeno o nitrogeno. El tipico ejeplo es el agua, donde el electron de la orbita externa del hidrogeno es atraido con mas fuerza por el oxigeno, dejando a los nucleos del os hidrogenos parcialmente desnudos y positivizados, y al oxigeno negativizado (en terminos extrictos los electrones de la ultima orbita estan mas tiempo sobre el nucleo del O).De esta forma, la molecula se polariza y las atracciones entre los polos de las diferentes moleculas forman uniones transitorias llamadas puentes de hidrogeno."
+            },
+            {
+                "question": "llamamos grupo quimico (o grupo funcional) al conjunto de atomos que otorgan a las moleculas ciertas propiedades y determinan su funcion quimica. Cual de las siguientes formulas corresponde a un grupo hidroxilo de la serie alcohol?",
+                "options": [
+                    "-CH2-OH, o R-OH",
+                    "-CH2-C=O-CH2, o R-C=O-R",
+                    "-CH2-CHO, o R-CHO",
+                    "-CH2-COOH, o R-COOH"
+                ],
+                "answer": 1,
+                "justification": "El grupo funcional determina la capacidad de una molecula para reaccionar con otras. En terminos estrictos, los compuestos que tiene un mismo grupo funcional dan lugar a uan serie; y la union al resto de la molecula se simboliza con la letra R. En el caso de este ejercicio, vemos como se peude reemplazar (-CH2-) por la letra R. La presencia de un grupo hidroxilo -OH indica pertenencia a la serie funcional de los alcoholes. Si el hidroxilo esta en el carbono terminal, estamos ante un alcohol primario; si estuviera en un carbono secundario, seria un alcohol secundario, etc. En adelante utilizaremos la denominacion grupo tanto para indicar al grupo de atomos como a la serie funciona: -Grupos: - hidroxilo (-OH) - carbonilo (-CHO) - carboxilo (-COOH)-Serie funcional correspondiente al grupo: - Hidroxilo (-OH) = alcohol - carbonilo (-CHO, o R-C=O-R) = aldehido o cetona - carboxilo (-COOH) = acido carboxilico o simplemente grupo acido"
+            },
+            {
+                "question": "Las sustancias agrupadas por su funcion quimica presentan propiedades y capacidad de reaccion similares. Esta capacidad de reaccion determinara la union con otros grupos funcionales y , por lo tanto, el tipo de union. Cual de las siguientes es una union de tipo ester?",
+                "options": [
+                    "la union entre 2 alcoholes",
+                    "la union entre un acido y un alcohol",
+                    "la union entre un aldehido y un alcohol",
+                    "la union entre una cetona y un alcohol"
+                ],
+                "answer": 2,
+                "justification": "llamaremos union o funcion ester a la union de un acido y un alcohol. Los esteres organicos mas comunes derivan del acido carboxilico. Los esteres derivados de acidos inorganicos se designan como el acido que les da origen: el acido carbonico (origina esteres carbonicos), el acido fosforico (esteres fosforicos), etc. en quimica organica y bioquimica, los esteres  son un grupo funcional compuesto de un radical organico unido al residuo de cualquier acido oxigenado, organico o inorganico. Los esteres mas comunmente encontrados en la naturaleza son las grasas, que son esteres de los grupos alcoholicos del glicerol y acidos monocarboxilicos con cadenas hidrocarbonadas, llamados acidos grasos. El proceso de union se denomina esterificacion. La union entre 2 grupos alcoholicos, con perdida de una molecula de agua se denomina union o funcion de tipo eter. La union entre un aldehido, o una cetona, y un alcohol, con perdida de una molecula de agua, se denomina union acetalica. Son especialmente importantes las uniones de este tipo que se dan intramolecularmente en los monosacaridos permitiendo la formacion de moleculas ciclicas. En estos casos deniminan uniones hemiacetalicas. Todas las reaccioens exlpicadas en este ejercicio so nreaccioens de condensacion. En quimica organica se llama condensacio na la union de 2 moleculas (o 2 grupos de una molecula si la reaccion tiene lugar de forma intramolecular) acompañado de la formacion de una molecula de agua."
+            },
+            {
+                "question": "Señale la opcion incorrecta respecto de la molecula de agua:",
+                "options": [
+                    "la molecula de agua es electricamente neutra",
+                    "la presencia de otras moleculas de agua determina la polaridad molecular",
+                    "la polaridad molecular le permite realizar uniones puende de hidrogeno",
+                    "los enlaces O-H forman un angulo de 104,5 grados entre los hidrogenos."
+                ],
+                "answer": 2,
+                "justification": "Se considera que una molecula de agua es electricamente neutra porque, si sumamos su carga negativa y su carga positiva, la suma algebraica nos da 0 y nos indica neutralidad electrica. Sin embargo, el desplazamiento de los nucleos de los atomos de hidrogeno, generado por la fuerte electronegatividad del oxigeno, impide la conformacion de una molecula lineal (que no tendria polaridad), generando un dipolo electrico. El polo negrativo es alrededor del oxigeno y el positivo en los hidrogenos. La presencia de otras moleculas de agua permite la formacion de uniones puente de hidrogeno pero no determinan su polaridad que es intrinseca de la molecula."
+            },
+            {
+                "question": "Cual de las siguientes caracteristicas es propia de las uniones puente de hidrogeno?",
+                "options": [
+                    "requieren atomos electronegativos",
+                    "estabilizan las cadenas lipidicas",
+                    "son uniones altamente estables",
+                    "exclusivas de las moleculas de agua"
+                ],
+                "answer": 1,
+                "justification": "Los elementos electronegativos como el oxigeno y el nitrogeno atraen con mas fuerza a los electrones que el hidrogeno. Como los electrones tienen carga negativa, el elemento que los atrae retiene la carga negativa mientras que en el hidrogeno predomina la carga positiva por el motivo contrario. Asi se produce una atraccion entre moleculas vecinas que tienen hidrogenos electropositivos con atomos electronegativizados por estar unidos a otro hidrogeno. Esta atraccion determina la union puente de hidrogeno. Si bien son uniones individualmente labiles, aportan una gran estabilidad a varias macromoleculas e ncondiciones fisiologicas. Por ejemplo, la estructura secundaria de las proteinas esta principalmente determinada por este tipo de uniones que estabilizan la cadena peptidica y le dan forma."
+            },
+            {
+                "question": "a cuales compuestos se los considera hidrofobicos por ser insolubles en agua?",
+                "options": [
+                    "compuestos anfipaticos",
+                    "compuestos ionicos",
+                    "compuestos polares no ionicos",
+                    "compuestos apolares"
+                ],
+                "answer": 4,
+                "justification": "Dada la polaridad en la molecula de agua, esta produce atracciones con otras moleculas polares y los compuestos apolares son excluidos y repelidos de los medios acuosos por no generar atraccioens entre cargas positivas y negativas. Se denomina compuestos anfipaticos a aquellos que tienen una porcion hidrofobica polar y otra porcion hidrofobica apolar."
+            },
+            {
+                "question": "En el agua pura a 25 grados, la concentracion de protones [H+] en relacion con la concentracion de iones hidroxilo [OH-] es:",
+                "options": [
+                    "mayor la concentracion de hidroxilos que de protones",
+                    "no se encuentran iones si es agua pura",
+                    "igual concentracion de ambos iones",
+                    "mayor la concentracion de protones que de hidroxilos"
+                ],
+                "answer": 3,
+                "justification": "Siempre que tengamos agua pura, una muy pequeña porcion se va a separar en iones. Resulta evidente que por cada ion de hidrogeno (proton) que se genere por divion de una molecula de agua, tiene que existir necesariamente un ion hidroxilo. Para entenderlo mejor pensemos en una unica molecula de agua que se separa en un H+ y un OH-."
+            },
+            {
+                "question": "Una solucion 1M contiene:",
+                "options": [
+                    "6,02x10 23 moleculas.",
+                    "un mol por litro",
+                    "un mol de por decilitro",
+                    "un mol por mililitro"
+                ],
+                "answer": 2,
+                "justification": "Por definicion, una solucion 1 molar es la que contiene un mol de soluto en un litro de solvente. Es una medida de concentracion. Recordemos que una solucion es una mezcla homogenea de 2 o mas productos, donde el Que esta en mayor concentracion es el solvente. En los medios biologicos, el solvente siempre es agua. Por otra parte (6,02x10 a la 23) no es una medida de concentracion sino una medida cuantitativa que refiere el numero de moleculas que contiene un mol de cualquier elemento y esta directamente vinculado a su peso molecular en gramos. Se conoce como numero de Avogadro y esta basado en el hidrogeno (primer elemento de la Tabla periodica), cuyo peso molecular es  1 y por lo tanto un mol de hidrogeno pesa un gramo. Si tomatos el oxigeno cuyo peso atomico es 16 gramos sabemos que un mol de oxigeno pesa 16gr. Un mol de glucosa 180gr, etc."
+            },
+            {
+                "question": "Un nanomol es una medida cuantitativa de un determinado compuesto quimico y corresponde a:",
+                "options": [
+                    "una millonesima parte del numero avogadro",
+                    "6,02x10 23 moleculas",
+                    "la cantidad de moleculas igual al peso atomico en gramos",
+                    "uno x 10 -9 moles."
+                ],
+                "answer": 4,
+                "justification": "Un nanomol corresponde a un mol dividido en mil millones de partes. No hay que confundirse con la millonesima parte de un mol ya que es la millonesima parte de un minimol. El prefijo nano (simbolo n) indica un factor de 1 x 10-9, viene del griego vavoc que significa enano, y como regla mnemotecnica podemos asociar la n de nano con la n de nueve."
+            }
+        ]
+    },
+    {
+        "subject": "Bioquímica",
+        "classification": "Soluciones ionizadas",
+        "questions": [
+            {
+                "question": "cuando el pH de una solucion de un acido debil HA es igual al pKa; el cociente de las concentracioens de la sal y el acido (A/HA) es:",
+                "options": [
+                    "2",
+                    "0",
+                    "3",
+                    "1"
+                ],
+                "answer": 4,
+                "justification": "El pK es el pH en el que el grupo funcional esta disociado en un 50%, en este caso, es el pH en el que (A`) = (HA). Aplicando la ecuacion de Henderson-Hasselbach; pH = pKa + log 10 (A`)/(AH) pH = pKa + log 10 1/pKa + 0 pH = pKa"
+            },
+            {
+                "question": "El mecanismo pulmonar de regulacion equilibrio acido-base:",
+                "options": [
+                    "se activa a las 6 horas de haberse producido el desequilibrio",
+                    "en una alcalosis metabolica se acelera la frecuencia respiratoria",
+                    "en una acidosis metabolica ocurre una hipoventilacion pulmonar",
+                    "compensa el desequilibrio acido-base de manera siempre completa"
+                ],
+                "answer": 1,
+                "justification": "Asi como los cambios en los buffers sanguineos ya se observan a los 30 segundos de la alteracion acido-base; los intercambios entre la celula y el intersticio a las 3 horas y los mecanismos renales a los 3 dias; el mecanismo pulmonar suele ocurrir a las 6 horas."
+            },
+            {
+                "question": "El pasaje de un pH de 1 a un pH de 3 en una solucion implica que:",
+                "options": [
+                    "la concentracion de hidroxilos aumenta 3 veces",
+                    "la concentracion de hidroxilos disminuyo 10 veces",
+                    "la concentracion de protones disminuyo 100 veces",
+                    "la concentracion de protones aumento 2 veces"
+                ],
+                "answer": 3,
+                "justification": "la relacion de pH es logaritmica, lo que implica que un aumento aritmetico de 2 unidades de pH implica la disminucion de la concentracion de hidrogeniones en 100 veces."
+            },
+            {
+                "question": "La acidosis metabolica que acompaña a la diabetes mellitus tipo 1 suele acompa;arse de una de las siguientes alteraciones electroliticas:",
+                "options": [
+                    "hipercloremia",
+                    "hipernatremia",
+                    "hiperpotasemia",
+                    "hipopotasemia"
+                ],
+                "answer": 3,
+                "justification": "Cuando la concentracion de protones en el liquido extracelular aumenta por la acidosis, las celulas captan el exceso de protones para mantener el equilibrio quimico de dicho ion y por el principio de la electroneutralidad eliminan potasio a cambio."
+            },
+            {
+                "question": "La aplicacion clinica de la ecuacion de Henderson-Hasselbach permite:",
+                "options": [
+                    "Conocer la capacidad buffers de una solucion de NaHCO3",
+                    "Calcular el pH de un paciente conociendo la pCO2 y la [HCO3-] en sangre",
+                    "calcular el pK de disociacion de cualquier acido debil en el liquido extracelular",
+                    "conocer el estado acido/base de un paciente a partir de la frecuencia respiratoria y la [HCO3-] en orina"
+                ],
+                "answer": 2,
+                "justification": "Conociendo 3 de los 4 valores que representa la Ecuacion de Henderson-Hasselbach puede determinarse el valor del parametro restante, en este caso el pH. Recordarque el pKa del acido carbonico es 6.1"
+            },
+            {
+                "question": "la presencia de sed muy intensa, con globos oculares normotonicos y ausencia de signo del pliegue cutaneo en una paciente con deshidratacion sugiere:",
+                "options": [
+                    "deshidratacion isotonica",
+                    "los hallazgos no corresponden a un paciente deshidratado",
+                    "deshidratacion hipotonica",
+                    "deshidratacion hipertonica"
+                ],
+                "answer": 4,
+                "justification": "Este cuadro odria corresponderse prefectamente con una insolacion. La deshidratacion de las celuals del centro de la sed hipotalamico provoca sed intensa, que se acompaña de globos oculares normotonicos y sobre todo, ausencia del signo del pliegue cutaneo"
+            },
+            {
+                "question": "Un paciente de 35 años, consulta la guardia de un hospital por presentar nauseas, vomitos abundantes y dolor abdominal. Tiene un hematocrito del 50% con un pH de 7.55 y una pCO2 de 40 mmHg. El exceso de base esta aumentando. Cual es su impresion diagnostica?",
+                "options": [
+                    "sobrehidratacion alcalosis respiratoria descompensada",
+                    "deshidratacion; alcalosis metabolica totalmente compensada",
+                    "deshidratacion; alcalosis metabolica parcialmente compensada",
+                    "sobrehidratacion; alcalosis mixta"
+                ],
+                "answer": 3,
+                "justification": "La presencia de vomitos genera un cuadro de deshidratacion, lo que lleva a una hemoconcentracion con elevacion del hematocrito; La perdida de jugo gastrico acido ocasiona una alcalosis metabolica, lo que genera aumento del pH y disminucion de la frecuencia respiratoria para acumular CO2 y provocar, asi, una acidosis respiratoria, que no alcanza a compensar totalmente el aumento de pH."
+            },
+            {
+                "question": "Un paciente de 80 años esta confuso y presenta una natremia de 120 mEq/l. Si lo compara con uan natremia normal de 142 mEq/l y el paciente pesa 70 kg: cuanto sera el deficit total de sodio de su organismo?",
+                "options": [
+                    "272 mEq",
+                    "714 mEq",
+                    "924 mEq",
+                    "884 mEq"
+                ],
+                "answer": 3,
+                "justification": "La diferencia entre la natremia normal y la del paciente es de 142 mEq/l - 120mEq/l es decir 22 mEq/l: Si se multiplica 22x42 (es el 60% del peso corporal del paciente, 70kg) se obtiene un deficit total de 924 mEq"
+            },
+            {
+                "question": "Una persona sufre un ataque de panico al conducir su automovil por un tunel. cual de los siguientes valores de pH arterial seria mas consistente con su diagnostico?",
+                "options": [
+                    "8,10",
+                    "7,55",
+                    "6,40",
+                    "7,15"
+                ],
+                "answer": 2,
+                "justification": "La perdida de CO2 desplaza la reaccion de la anhidrasa carbonica en el sentido de una mayor produccion de CO2, lo cual reduce la concetracion de protones y eleva el pH. La alcalosis respiratoria es leve, comparada con una alcalosis metabolica. Por ello, el valor mas aproximado de pH es 7,55 mas de 8.10."
+            },
+            {
+                "question": "Una solucion 2.5M de H3PO4 representa a las siguientes concentraciones:",
+                "options": [
+                    "2.5 N, 7.5 osM",
+                    "10N, 7.5 osM",
+                    "7,5 N; 10 osM",
+                    "1.5 N; 2.5 osM"
+                ],
+                "answer": 3,
+                "justification": "N = M x Valencia = 2.5 x 3 = 7.5N; osM = M x numero de particulas = 2.5 x 4 = 10 osM"
+            }
+        ]
+    },
+    {
+        "subject": "Bioquímica",
+        "classification": "Glúcidos",
+        "questions": [
+            {
+                "question": "El acido hialuronico es un componente muy importante del liquido sinovial. Esta constituido por:",
+                "options": [
+                    "alfa-D-glucopiranosa y N-acetilgalactosamina",
+                    "alfa-D-glucopiranosa y beta-D-gluconico",
+                    "Beta-D-glucopiranosa y N-acetilglucosamina",
+                    "Beta-D-glucuronico y N-acetil-glucosamina"
+                ],
+                "answer": 4,
+                "justification": "El acido hialuronico es el encargado de aportar viscosidad al liquido sinovial. Esta formado por beta-D-glucuronico y N-acetilglucosamina, que juntos forman un glicosaminglicano"
+            },
+            {
+                "question": "La union quimica que se establece entre 2 glucidos (union glicosidica) es de tipo:",
+                "options": [
+                    "ester",
+                    "eter",
+                    "anhidrido",
+                    "amida"
+                ],
+                "answer": 2,
+                "justification": "La union quimica que se establece entre glucidos es de tipo acetalica, considerada de tipo eter, por establecerse entre 2 hidroxilos (alcoholes), con perdida de agua."
+            },
+            {
+                "question": "La heparina es un potente anticoagulante formado por:",
+                "options": [
+                    "La repeticion de un disacarido N-acetilglucosamina y N-acetilglucosamina sulfato",
+                    "beta-D-glucuronico y N-acetilglucosamina en union beta 1->4",
+                    "un glucido de 6 carbonos unido a uan proteina por una union de tipo C-O",
+                    "acidos uronicos (glucuronico e iduronico) y glucosamina sulfatada en enlaces beta 1->4"
+                ],
+                "answer": 4,
+                "justification": "La heparina es un proteoglicano con mayor densidad de cargas negativas gracias a los radicales sulfato. Esto le permite interactuar con muchas moleculas y justificar su potente accion anticoagulante"
+            },
+            {
+                "question": "Un compuesto que es sometido a hidrólisis se divide en dos al diez polihidroaldehídos o polihidroacetonas. Este compuesto es un:",
+                "options": [
+                    "oligosacarido",
+                    "Polihidrosacarido",
+                    "monosacarido",
+                    "Polisacarido"
+                ],
+                "answer": 1,
+                "justification": "Un glúcido es una sustancia formada por átomos de carbono, oxígeno e hidrógeno. La estructura básica se denomina monosacárido y está formada por una cadena de carbonos que presentan un grupo aldehído (-CHO) o cetona (C=O) y en el resto de los carbonos funciones alcohólicas (grupos hidroxilo -HO). Estas sustancias se unen entre sí para formar polímeros y, en función de la cantidad de monosacáridos que se puedan obtener de la hidrolisis de estos polímeros se denominarán: oligosacáridos, si obtenemos entre dos a diez, o polisacáridos, si obtenemos más de diez. Es importante destacar que, por su composición química, se los suele mencionar con diferentes nombres, a saber:- Hidratos de carbono es sinonimo de glucidos.- Azucares simples es sinonimo de monosacaridos. También se los puede designar como polihidroxiadehídos o polihidroxicetonas si el grupo funcional es aldehído o cetona respectivamente. Paralelamente se los designa con el sufijo -osa, así los de función aldehído son llamados aldosas y los de función cetona, cetosas.Por último, de acuerdo con el número de carbonos que tenga el monosacárido se lo llama triosa, tetrosa, pentosa, hexosa; si tiene tres, cuatro, cinco o seis carbonos respectivamente. A su vez, estos nombres se suelen combinar, así una aldohexosa es un molécula de seis carbonos con una función aldehído."
+            },
+            {
+                "question": "La notación D antepuesta al nombre de un monosacárido de más de tres carbonos indica:",
+                "options": [
+                    "Que desvía la luz polarizada en sentido antihorario.",
+                    "La configuración del carbono secundario más cercano al grupo aldehído o cetona.",
+                    "La configuración del carbono secundario más alejado del grupo aldehído o cetona.",
+                    "Que desvía la luz polarizada en el sentido horario."
+                ],
+                "answer": 3,
+                "justification": "La estructura mínima de un monosacárido son las triosas: el gliceraldehído (polihidroxialdehído de tres carbonos) y la dihidroxiacetona (polihidroxicetona de tres carbonos). En el gliceraldehído el segundo carbono es asimétrico y puede adoptar dos posiciones espaciales denominadas quirales. Esta denominación viene del griego y significa manos. Es un concepto sencillo de entender ya que mirándonos las manos nos daremos cuenta de que cada una es la imagen especular de la otra. Como regla mnemotécnica, podemos poner nuestras dos manos abiertas con las palmas hacia nuestros ojos y veremos que el pulgar derecho queda a la derecha y el izquierdo a la izquierda. Del mismo modo se orientan los grupos hidroxilos del carbono asimétrico del gliceraldehído. Decimos que un carbono es asimétrico cuando está unido a cuatro grupos funcionales diferentes. Por convención en las fórmulas desarrolladas, se escribe D hacia la derecha y L hacia la izquierda. Se considera que todos los monosacáridos derivan del gliceraldehído y de la dihidroxiacetona por adición de un grupo =CH.HO entre el C del grupo funcional y el C secundario inmediato. Es decir que el nuevo carbono asimétrico se une por un lado al C del grupo funcional aldehído o cetona y por otro al C que continúa la cadena, las otras dos valencias están ocupadas por un H y un grupo HO. De esta forma el carbono originalmente quiral de la triosa se va alejando del grupo funcional (aldehído o cetona) y es la orientación de éste la que define si se trata de un monosacárido de la serie D o de la serie L independientemente del efecto sobre la luz polarizada y de la orientación de los demás carbonos asimétricos. Es importante aclarar que cuando decimos el carbono secundario o asimétrico, más alejado del grupo funcional, nos estamos reriendo a mismo carbono. (Ver en bibliografía recomendada: Química Biológica de Blanco 9na Edición.) (tablas 4-1 y 4-2 en las páginas 73 y 74.)"
+            },
+            {
+                "question": "El monosacárido de mayor importancia biológica es la D-glucosa. En soluciones acuosas la llamamos dextrosa y podemos encontrar alfa D-glucosa o beta D-glucosa. ¿Por qué ocurre esta diferenciación molecular?",
+                "options": [
+                    "Por la diferente orientación del grupo -HO del sexto C que queda fuera del ciclo pirano.",
+                    "Por la diferente orientación del grupo -HO en el nuevo C asimétrico generado en la unión hemiacetálica.",
+                    "Por derivar de distintos polisacáridos. Almidón la alfa D-glucosa y celulosa la beta D-glucosa.",
+                    "Por la diferente capacidad que tienen los distintos isómeros para hacer rotar la luz ultravioleta."
+                ],
+                "answer": 2,
+                "justification": "La glucosa es una aldohexosa que en soluciones acuosas forma una unión intramolecular hemiacetálica entre el carbono del grupo aldehído y el hidroxilo del quinto carbono. Esta unión hace desaparecer el grupo aldehído que pasa ser potencial y genera un nuevo carbono asimétrico. El C1 que tenía la forma CHO pasa a ser CH.HO, y este hidroxilo puede adquirir dos posiciones espaciales diferentes: Si el hidroxilo queda en el mismo plano que la unión hemiacetálica será alfa y si queda en el plano opuesto será beta. En la fórmula desarrollada, alfa se dibuja hacia la derecha y beta hacia la izquierda. En la fórmula de Haworth se representan hacia abajo si es alfa y hacia arriba si es beta. Estas dos formas muestran un fenómeno de mutarrotación, es decir que pueden pasar de una forma a la otra. En soluciones acuosas alcanzan un equilibrio dinámico que hace girar la luz ultravioleta +52,7° (el signo más indica que es hacia la derecha o en sentido horario) conformado por un tercio del isómero alfa y dos tercios del beta. El potencial de rotación de luz ultravioleta es de +112.2° para la alfa D-glucosa pura y de +18,7° para la beta respectivamente. Como a este tipo de isómeros se los llama anómeros, al carbono asimétrico de la posición uno (C1) se lo designa carbono anomérico. Es el carbono que tenía el grupo aldehído en la molécula lineal y que formó el puente de oxígeno con el carbono cinco para formar el ciclo hexagonal llamado pirano, por analogía con este compuesto."
+            },
+            {
+                "question": "¿Cuál de las siguientes se corresponde con la definición de glucósido?",
+                "options": [
+                    "Es cualquier monosacárido cuyo carbono hemiacetálico se ha unido a cualquier molécula no glucídica.",
+                    "Es una glucosa cuyo carbono hemiacetálico se ha unido a cualquier molécula no glucídica.",
+                    "Es cualquier monosacárido cuyo carbono hemiacetálico se ha unido a un hidroxilo.",
+                    "Es una glucosa cuyo carbono hemiacetálico se ha unido a un hidroxilo."
+                ],
+                "answer": 2,
+                "justification": "Cuando el carbono hemiacetálico de un monosacárido se une a una molécula de distinta naturaleza, forma un compuesto denominado genéricamente glicósido. Si el monosacárido en cuestión es glucosa, se trata de un glucósido; si es galactosa, galactósido; si es fructosa, fructósido, etc. Por otra parte, la reducción del grupo aldehído o cetona por la incorporación de un átomo de hidrógeno a la molécula de un monosacárido genera un poli alcohol que, en el caso de la glucosa, se denomina sorbitol. A diferencia de las uniones hemiacetálicas intramoleculares, que forman las estructuras cíclicas típicas de los monosacáridos en solución, estos compuestos no presentan mutarrotación y pierden la capacidad reductora potencial del grupo aldehído o cetona. Es importante destacar que la reducción de los grupos aldehído o cetona, se da sobre la molécula lineal donde estos grupos están libres para reaccionar. Hay que recordar que el estado de las moléculas es un equilibrio dinámico."
+            },
+            {
+                "question": "La oxidación de distintos carbonos de los monosacáridos da origen a los correspondientes ácidos. Llamamos ácido glucurónico al producido por la oxidación de:",
+                "options": [
+                    "Cualquier carbono de una molécula de glucosa.",
+                    "El C6 de una molécula de glucosa.",
+                    "Cualquier carbono de cualquiera de las D-aldosas.",
+                    "El C1 de una molécula de glucosa."
+                ],
+                "answer": 2,
+                "justification": "Si sometemos una aldosa a oxidación suave, el primer grupo que se oxidará será el grupo aldehído, que se trasformará en carboxilo: CHO > COOH. Posteriormente se oxidará el C6 dando un ácido dicarboxílico. Pero en condiciones controlas, y enzimáticamente catalizadas, se puede oxidar el C6 preservando intacta la función aldehído. Esto permite que la aldosa en cuestión pueda adquirir su forma cíclica por la unión hemiacetálica intramolecular de su aldehído con un grupo hidroxilo distante (C5 en glucosa). En el caso de la glucosa se denomina a esta molécula ácido glucurónico y tiene gran importancia biológica. Es decir que el ácido glucurónico en una glucosa con una función carboxilo -COOH en su sexto carbono y con la capacidad intacta de formar el ciclo pirano y cualquier otra reacción dependiente de su grupo aldehído del C1. El ácido glucurónico tiene una importante función en la eliminación de sustancias (principalmente a nivel hepático), uniéndose a las moléculas que el organismo necesita eliminar y haciéndolas más solubles."
+            },
+            {
+                "question": "La maltosa es un disacárido formado por dos moléculas de glucosa. Se obtiene a partir de:",
+                "options": [
+                    "Síntesis de la flora intestinal.",
+                    "Degradación de glucógeno.",
+                    "Degradación de almidón.",
+                    "Síntesis hepática."
+                ],
+                "answer": 3,
+                "justification": "Por hidrólisis del almidón, catalizado por una enzima llamada amilasa, se obtienen estos disacáridos constituidos por la unión alfa 1-4 de dos moléculas de glucosa, de las cuales una mantiene la función aldehído potencial por tener libre su C1. La cerveza se elabora por la fermentación alcohólica de este azúcar, cuyo origen son los polisacáridos de almidón presentes en los granos de cebada. El proceso de fermentación alcohólica se da en anaerobiosis (ausencia de O2) y consiste en la descarboxilación del azúcar. Es decir que las levaduras van rompiendo las moléculas de maltosa (y maltotriosa) para obtener energía (ATP) y van liberando CO2 y dejando etanol como residuos C2 H5 OH. El tipo de levadura determina el tipo de cerveza."
+            },
+            {
+                "question": "¿Cuál es el polisacárido de mayor importancia nutricional?",
+                "options": [
+                    "La celulosa",
+                    "La amilosa",
+                    "El almidón",
+                    "El glucógeno."
+                ],
+                "answer": 3,
+                "justification": "El almidón es el principal hidrato de carbono de la alimentación Humana y el origen de la mayor parte de la glucosa que utilizamos tanto en los seres humanos como la gran mayoría de las cadenas alimentarias. La síntesis de glucosa producida en los vegetales a partir de la fotosíntesis se acumula en forma de polisacáridos de almidón, que son muy abundantes en tubérculos, cereales, legumbres, etc. Las moléculas de almidón están formadas exclusivamente por glucosas unidas entre sí. Alcanzan un gran tamaño y peso molecular. De acuerdo a la estructura de las uniones intermoleculares, se distinguen dos monoglicanos diferentes en las moléculas de almidón: la amilosa y la amilopectina. Cada amilosa tiene entre mil y seis mil moléculas de glucosa unidad por enlaces glucosídicos tipo alfa 1-4 y forman largas cadenas que se enrollan en forma de hélice que en soluciones acuosas tienen a precipitar. La amilopectina tiene mayor tamaño llegando a polimerizar hasta 600.000 glucosas o más. A diferencia de la amilosa, la amilopectina presenta ramicaciones. Se trata de cadenas de glucosas unidas por enlaces alfa 1-4 a las que se unen otras cadenas similares por una unión alfa 1-6. Estas cadenas secundarias dejan una distancia libre de unas diez glucosas, suelen tener entre 24 y 30 monómeros y de ellas se desprenden cadenas terciarias más cortas (hasta 16 monómeros de glucosa). Por otra parte, el glucógeno sólo se encuentra en animales, especialmente hígado y músculos en períodos postprandiales y de reposo. Su aporte dietario es muy inferior al del almidón. Su función es de reserva metabólica de glucosa para el propio organismo."
+            },
+            {
+                "question": "¿Cuál de los siguientes compuestos es un glicosaminoglicano?",
+                "options": [
+                    "El ácido hialurónico.",
+                    "La quitina.",
+                    "La insulina.",
+                    "El ácido glucurónico."
+                ],
+                "answer": 1,
+                "justification": "Los glicosaminoglicanos (antiguamente llamados mucopolisacáridos) son polímeros de disacáridos, generalmente formados por un ácido urónico y una hexosamina. En el caso del ácido hialurónico, está formado por unidades repetitivas de ácido glucurónico y N-acetilglucosamina. En medios acuosos da origen a soluciones muy viscosas con propiedades lubricantes, por su gran capacidad de hidratación (solvatación con H2O). Se encuentra en articulaciones, humor vítreo, cordón umbilical, etc."
+            },
+            {
+                "question": "¿Cuál de las siguientes se corresponde con la definición de proteoglicanos?",
+                "options": [
+                    "Son glicosaminoglicanos unidos a proteínas.",
+                    "Son proteínas que incluyen glúcidos como grupos prostéticos.",
+                    "Son grandes polisacáridos unidos entre sí por péptidos.",
+                    "Son heteropolisacáridos unidos entre sí por proteínas."
+                ],
+                "answer": 1,
+                "justification": "Los proteoglicanos están formados por cadenas de glicosaminoglicanos unidos a un núcleo proteico central que, a su vez, se une a una molécula de ácido hialurónico por medio de proteínas de enlace. Así, conforman una inmensa red de gel hidratado. La presencia de grupos sulfato y ácidos urónicos le otorgan una gran carga negativa a pH fisiológico. Esta carga negativa, además de atraer agua, atrae Na+ que a su vez atrae más agua, dándole a esta red un gran poder osmótico que lo otorga gran turgencia. En el tejido conectivo, este gel turgente, sirve como un medio de transporte selectivo capaz de regular el tráco de moléculas y de células (intersticiales e inmunológicas). En las membranas celulares y el aparato de Golgi pueden actuar como correceptores y participar en varios procesos de regulación celular."
+            },
+            {
+                "question": "La lactosa es un disacárido presente en lácteos y derivados. Se caracteriza por poseer:",
+                "options": [
+                    "beta-D-glucopiranosa y beta-D-glucopiranosa en unión de tipo beta 1->4",
+                    "beta-D-galactopiranosa y alfa-D-glucopiranosa en unión beta 1-> 4",
+                    "beta-D-fructofuranosa y alfa-D-glucopiranosa en unión de tipo beta 2->1",
+                    "alfa-D-glucopiranosa y alfa-D-glucopiranosa en unión de tipo alfa 1->4"
+                ],
+                "answer": 2,
+                "justification": "La lactosa se caracteriza por estar formada por unidades de beta-D-galactopiranosa y alfa-D-glucopiranosa, en uniones de tipo beta 1->4. La enzima intestinal que hidroliza este enlace puede estar en déficit con carácter hereditario y ser ésta una de las formas de intolerancia a la lactosa. El azúcar, al no degradarse se acumula en el intestino y es fermentado por las bacterias, generando gas que distiende el intestino y es causa de dolor abdominal y ácido láctico, que acidica el intestino y provoca diarrea ácida."
+            },
+            {
+                "question": "Los epímeros son isómeros que:",
+                "options": [
+                    "difieren en la conguración alrededor de un solo átomo de carbono",
+                    "son imágenes especulares el uno del otro (ejemplo: D y L-glucosa)",
+                    "derivan de la oxidación de la glucosa en el carbono 6.",
+                    "se repiten en la estructura química de un proteoglicano"
+                ],
+                "answer": 1,
+                "justification": "Los epímeros son isómeros que difieren entre sí en la configuración alrededor de un solo átomo de carbono; por ejemplo, glucosa y galactosa, en el carbono 4 y glucosa y manosa, con respecto al carbono 2."
+            },
+            {
+                "question": "El azúcar presente en el ADN es:",
+                "options": [
+                    "alfa-D-ribofuranosa.",
+                    "alfa-D-2-desoxirribofuranosa",
+                    "beta-D-2 desoxirribofuranosa",
+                    "beta-D-ribofuranosa"
+                ],
+                "answer": 2,
+                "justification": "El ácido desoxirribonucleico debe su nombre a este azúcar. En el ARN, el azúcar es la beta-D-ribofuranosa."
+            }
+        ]
+    },
+    {
+        "subject": "Bioquímica",
+        "classification": "Lípidos",
+        "questions": [
+            {
+                "question": "¿Cuál de las siguientes sustancias se encuentra presente en casi todos los lipidos?",
+                "options": [
+                    "los acidos fosforicos",
+                    "el glicerol",
+                    "Los acidos organicos monocarboxilicos",
+                    "el ciclopentanoperhidrofenantreno"
+                ],
+                "answer": 3,
+                "justification": "A los acidos organicos monocarboxilicos generalmente se los denomina acidos grasos. Estan formados por un grupo funcional de acido carboxilo (-COOH) unido a una cadena de carbonos hidrogenada -(CH2)n-CH3. generalmente estos compuestos no se encuentran libres, sino que suelen estar asociados a otras moleculas. 3 acidos grasos unidos a un glicerol forman lipidos simples llamados triacilgliceroles. 2 acidos monocarboxilicos unidos a un glicerol forman dsitintos complejos en funcion de cuales son las moleculas que se unen a la funcion alcoholica (-HO) restante del glicerol. Por otra parte, cuando se unen un acido graso y una esfingosina dan origen a otra serie de lipidos complejos llamados esfingolipidos."
+            },
+            {
+                "question": "¿Cuál de las siguientes es la principal caracteristicas moleculas de los acidos grasos insaturados?",
+                "options": [
+                    "el número de carbonos de la molecula suele ser par",
+                    "responden a la formula general CH3-(CH2)n-COOH",
+                    "Su cadena de carbonos presenta enlaces dobles del tipo C=C",
+                    "Suelen unirse a glicerol-3-fosfato para formar fosfolipidos de membrana"
+                ],
+                "answer": 3,
+                "justification": "Decimos que un acido graso insaturado es aquel que presenta dobles ligaduras entre los atomos de carbono de su cadena hidrocarbonada. Obviamente no se corresponde con la formula general CH3-(CH2)n-COOH, ya que los carbonos de las dobles ligaduras tienen solo un hidrogeno y no 2. Las esterificaciones con glicerol u otras moleculas son independientes de la saturacion o no, al igual que el numero par o impar de atomos de carbono que conformen la molecula, aunque casi siempre sea par."
+            },
+            {
+                "question": "Los lipidos suelen ser considerados compuestos de bajo peso molecular. Esta caracteristica se debe a que:",
+                "options": [
+                    "no forman en grandes polimeros",
+                    "las cadenas hidrocarbonadas son mas livianas que el agua",
+                    "los átomos que las componene son de bajo peso atómico",
+                    "sus moleculas no suelen superar los 24 atomos de C"
+                ],
+                "answer": 1,
+                "justification": "Las proteinas, los glucidos y los acidos nucleicos se polimerizan para crear grandes moleculas de alto peso molecular. En cambio, los lipidos, tanto simples como complejos, suelen unirse a otras moelculas sin polimerizarse y manteniendo un bajo peso molecular. si bien muchas de las moleculas que conforman los lipidos puede nser individualmente de mayor peso relativo que los monomeros integrantes de otros compuestos organicos, el hecho de que no se unan entre si para formar grandes moleculas es lo que determina su bajo peso molecular."
+            },
+            {
+                "question": "¿A cuál de los siguientes acidos grasos corresponde la notacion 18:2 omega6?",
+                "options": [
+                    "al acido oleico",
+                    "al acido palmitoleico",
+                    "al acido linolenico",
+                    "al acido linoleico"
+                ],
+                "answer": 4,
+                "justification": "el numero 18 indica el numero total de carbono en la molecula. El numero 2 indica que existen 2 enlaces dobles, o insaturaciones, y el omega nos indica las posiciones de las mismas. Para saber donde estan los dobles enlaces debemos restarle al numero total de carbonos (en este caso 18) el numero omega (en este caso 6). asi sabemos que la ultima doble ligadura esta entre el C12 y C13. A su vez, las dobles ligaduras suelen no ser conjugadas (continuas), normalmente estan separadas por un puente metilo (-CH2-) y, por lo tanto, el siguiente carbono C11 se encuentra saturado. Asi sabemos que la segunda doble ligadura estara entre el C9 y el C10. Como regla mnemotecnica, debemos restar 3 para saltar de una desaturacion a la siguiente cuando se trate de acidos grasos poliinsaturados no conjugados. El nombre propio del acido graso de 18 carbonos con doble insaturacion no conjugada, en los carbonos C12 y C9, es jutamente acido linoleico. Es importante destacar que existen isomeros, el acido linoleico cuyas insaturacioens estan conjugadas. Se los identifica con la sigla ALC (acido linoleico conjugado). Su presencia en la naturaleza y los alimentos es muchisimo menor, pero se estan estudiando sus efectos sobre metabolismo. La incorporacion de estos en la dieta de animales de laboratorio arrojo resultados prometedores para la salud, como la reduccion de la proporcion de grasa corporal, efecto protector vascular, etc. sin embargo, las pruebas en seres humanos so naun contradictorias. Uno de los mas abundantes y conocidos de estos isomeros es el acido 18:2 delta, cis 9, trans 11, que recibe el nombre de acido rumerico por estar presente en las grasas de animales rumiantes."
+            },
+            {
+                "question": "¿Cuál es el factor que mas influye en el punto de fusion de los acidos grasos?",
+                "options": [
+                    "La extension de la cadena hidrocarbonada",
+                    "la esterificacion del acido graso con colesterol",
+                    "El número de enlaces dobles entre carbonos",
+                    "la esterificacion del acido graso con glicerol-3-fosfato"
+                ],
+                "answer": 3,
+                "justification": "La mayoria de los acidos grasos saturados son solidos a temperatura ambiente. Solo los de cadenas muy cortas, 4 a 8 carbonos, tienen temperaturas de fusion por debajo de los 20 grados. a medida que se alarga la cadena de temperatura de fusion aumenta. Por ejemplo, es de 62.7 grados para el acido palmitico de 16 carbonos saturados y de 69,9 grados para el acido estearico de 18 carbonos saturados. Sin embargo, la mayor influencia sobre el punt ode fusion y fluidez de un acido graso esta determinada por los dobles enlaces insaturados. Siguiendo con los compuestos de 18 carbonos veremos que cuando tienen un doble enlace, acido oleico, la temperatura de fusion sera de 13.4 grados. Para el de 18C y 2 insaturaciones, acido linoleico, es de -5 gradis. y para el de 18 C y 3 dobles ligaduras, acido linolenico, -10 grados. Por otra parte, la esterificacion con otras moleculas puede alterar la fluidez de la molecula en su conjunto, pero no la del acido graso en particular."
+            },
+            {
+                "question": "La oxidacion de los acidos grasos por el oxigeno atmosferico se produce con mayor facilidad en:",
+                "options": [
+                    "El carbono terminal",
+                    "Los carbonos centrales",
+                    "Los carbonos insaturados",
+                    "El carbono del grupo carboxilo"
+                ],
+                "answer": 3,
+                "justification": "Los carbono insaturados de los acidos grasos se oxidan con relativa facilidad. Por este motivo, el oxigeno atmosferico suele unirse a los carbonos de las dobles ligaduras generando peroxidos, que a su vez siguen oxidandose. Esto provoca la ruptura de las cadenas hidrocarbonadas y da origen  a acidos y aldehidos. La luz puede facilitar este proceso, que es el responsable del sabor rancio que suelen adquirir estos lipidos. La abundancia de acidos grasos insaturados en los acietes vegetales explica que se pongan rancios con mayor facilidad que las grasas solidas. Por este motivo en la industria alimenticia, se suelen hidrogenar artificialmente los aceites con el objetivo de evitar este deterioro, mejorar sus caracteristicas organolepticas y aumentarles el punto de fusion. Estos acidos grasos hidrogenados son nocivos para la salud, entre otras cosas, porque se generan acidos grasos trans que afectan e interfieren multiples funciones metabolicas."
+            },
+            {
+                "question": "¿Cuál de los siguientes acidos grasos es considerado estrictamente esencial para el ser humano y debe ser obligatoriamente incorporado con la dieta?",
+                "options": [
+                    "El ácido araquidico",
+                    "El ácido palmitico",
+                    "El ácido linoleico",
+                    "El ácido araquidonico"
+                ],
+                "answer": 3,
+                "justification": "La sintesis de los ácidos saturados y monoinsaturados (monoetilenicos) es realizada en forma similar tanto por animales como por vegetales. Sin embargo, en el caso de los ácidos grasos poliinsaturados (pilietilenicos), la sintesis difiere entre mamiferos y vegetales, ya que la formacion de dobles ligaduras adicionales esta realizada por diferentes desaturasas. En los mamiferos, las desaturasas solo pueden añadir dobles ligaduras en los carbonos proximos al grupo carboxilo. Si tenemos en cuenta que la primera desaturacion es producida entre los carbonos C9 y C10 por la delta 9 desaturasa, comprenderemos que los ácidos grasos linoleico y linolenico no peuden ser sintetizados por los mamiferos ya que tienen dobles ligaduras a nivel omega 6 y omega 3, mas proximos al carbono terminal. Esto los convierte en ácidos grasos estrictamente esenciales. Por su parte, el ácidoo araquidonico es un ácido graso de 20 carbonos con 2 dobles ligaduras en las posiciones 14, 11, 8 y 5; es decir es un omega 6. Sin embargo, puede sintetizarse a partir del ácido linoleico y por lo tanto lo consideramos semiesencial. Resumiendo el concepto diremos que los mamiferos podemos sintetizar acidos grasos saturados, monoinsaturados en la posicion C9-C10 (omega9), poliinsaturados por añadidura de insaturaciones de los omega 9 hacia el extremo carboxilo; pero debemos incorporar en la dieta los omega 3 y omega 6."
+            },
+            {
+                "question": "¿En cuál de los siguientes organos o tejidos son mas abundantes los fosfolipidos?",
+                "options": [
+                    "En el cerebro",
+                    "En los musculos",
+                    "En el tejido adiposo",
+                    "En el hígado"
+                ],
+                "answer": 1,
+                "justification": "Los fosfolipidos son sustancias de gran importancia biologica y los principales constituyentes de las membranas celulares. Estan ampliamente dsitribuidos en el cuerpo cumpliendo importantes funciones tanto de membrana como de mensajeros biologicos. Son especialemnte abundante en el cerebro, donde constituyen hasta el 30% del peso seco de este organo. Se dividen en 2 grandes grupos: Los glicerofosfolipidos cuando estan constituidos por una molecula de glicerol unida a un acido ortofosforico y 2 acidos grasos, y los esfingofosfolipidos cuando se unen un acido graso, un acido fosforico y una molecula de esfingosina. La union entre el acido graso y la esfingosina es de tipo amida (similar a las uniones peptidicas) y se llama ceramida. Cuando el fosfato que se esterifica en la molecula esta unido a colina, se forma el esfingolipido mas abundante en el organismo que es la esfingomielina."
+            },
+            {
+                "question": "¿Cual de las siguientes es uan caracteristica de los glicolipidos a pH fisiologico?",
+                "options": [
+                    "son compuestos anfipaticos",
+                    "son mayoritariamente aniones",
+                    "son mayoritariamente cationes",
+                    "son compuestos electricamente neutros"
+                ],
+                "answer": 1,
+                "justification": "Los glicolipidos son lipidos (hidrofobicos) unidos a un hidrato de carbono (hidrofilicos) y, por lo tanto, son moleculas anfipaticas. A diferencia de los fosfolipidos no tiene grupos fosfatos. Los mas importantes son los cerebrosidos y los gangliosidos. Los cerebrosidos son estruturalmente igualesque los esfingofosfolipidos pero sin fosforo, ya que e lgrupo fosfato es reemplazado por un monosacarido. Son abundantes en la mielina. Por su parte los gangliosidos tiene nla misma estrustura pero se porcion glucidica es mas compleja y esta conformada por oligosacaridos unidos a acido sialico. actuan como marcadores de membrana para varis toxinas bacterianes: colerica, botulinica, tetanica, etc."
+            },
+            {
+                "question": "¿Entre que carbonos presenta un doble enlace la molecula de colesterol?",
+                "options": [
+                    "entre el C7 y el C8",
+                    "Entre C22 y C23",
+                    "Entre C3 y C4",
+                    "Entre C5 y C6"
+                ],
+                "answer": 1,
+                "justification": "La molecula de colesterol es un ciclopentanoperhidrofenantreno con una cadena hidrocarbonada de 8 carbonos unida al C17, una doble ligadura entre los carbonos C5 y C6 y un grupo hidroxilo -HO cis en el C3. El 7-deshidrocolesterol presenta un segundo doble enlace entre los carbonoes C7 y C8. El ergosterol de los vegetales presenta ademas un tercer doble enlace entre los carbonos C22 y C23, y un metilo en el C24. El colesterol da estabilidad a las membranas plasmaticas y ademas es el sustrato para la sintesis de hormonas esteroides y acidos biliares. El 7-desoxicolesterol es transformado en vitamina D por la luz ultravioleta al igual que el ergosterol de los vegetales."
+            },
+            {
+                "question": "Los gangliosidos son lipidos complejos formados por:",
+                "options": [
+                    "Glicerol; acidos grasos; fosforo; inositol",
+                    "esfingosina; acido graso, oligosacarido, N-acetilneuraminico",
+                    "ceramida; oligosacarido",
+                    "esfingosina; acido graso; fosforilcolina"
+                ],
+                "answer": 2,
+                "justification": "Los gangliosidos constituyen un grupo importante de glicoesfingolipidos formados por esfingosina, acido graso y un oligosacarido con N-acetilneuraminico. Son anfipaticos y cumple funciones estructurales. La asociacion ceramida-oligosacarido forma un globosido; esfingosina; acido graso y fosforilcolina forman la esfingomielina y finalmente, la asociacion: glicerol, acidos grasos; fosforo e inositol forma el fosfatidilinositol."
+            },
+            {
+                "question": "La esfingomielina es un lipido complejo formado por:",
+                "options": [
+                    "esfingosina; acido graso; fosforilcolina",
+                    "glicerol; acidos grasos; fosforilcolina",
+                    "esfingosina; acido graso; oligosacarido con N-acetilneuraminico",
+                    "ceramida; oligosacarido"
+                ],
+                "answer": 1,
+                "justification": "La esfingomielina es un esfingofosfolipido que se encuentra sobre todo en e ltejido nervioso (vainas de mielina). Esta formado por la asociacion de esfingosina; acido graso y el radical fosforilcolina. Es un lipido anfipatico."
+            },
+            {
+                "question": "Los acidos grasos esenciales son:",
+                "options": [
+                    "palmitoleico; gamma-linolenico",
+                    "linoleico; alfa-linolenico",
+                    "oleico; alfa-linolenico; araquidonico",
+                    "lenoleico; linolenico; araquidonico"
+                ],
+                "answer": 2,
+                "justification": "Los acidos grasos insaturados que el organismo humano no puede sintetizar, por carecer de las enzimas desaturantes correspondientes, son el linoleico (omega 3) y el alfa-linolenico (omega 6)"
+            },
+            {
+                "question": "El quilomicron es una lipoproteina que:",
+                "options": [
+                    "previene la ateroesclerosis coronaria",
+                    "tiene alta densidad 1.126 a 1.230 g/ml",
+                    "transporta triacilgliceridos de la dieta",
+                    "posee apo B 48 como apoproteina"
+                ],
+                "answer": 3,
+                "justification": "El quilomicron es una lipoproteina que posee mas de un 90% de triacilgliceridos, lo que la convierte en la lipoproteina de densidad de mas baja ( < 0.95 g / ml). Su funcion es transportar los lipidos de la dieta, especialmente triacilgliceridos, una vez que han sido absorbidos en el intestino."
+            },
+            {
+                "question": "Las LDL (lipoproteinas de baja densidad):",
+                "options": [
+                    "tienen baja densidad por poseer un alto contenido de proteinas",
+                    "transportan principalmente triacilgliceridos absorbidos de la dieta",
+                    "poseen a la apoproteina B 48 en su composicion molecular",
+                    "son los principales transportadores de colesterol esterificado"
+                ],
+                "answer": 4,
+                "justification": "Las LDL son los principales transportadores de colesterol esterificado e nla sangre. Vulgarmente, se las reconoce como el 'colesterol malo de la sangre', ya que se relacionan estrechamente con la ateroesclerosis y sus complicaciones. Tienen baja densidad debido a su alto contenido en lipidos y tienen como apoproteina estructural a la apoproteina B100."
+            }
+        ]
+    },
+    {
+        "subject": "Bioquímica",
+        "classification": "Aminoácidos y Proteínas",
+        "questions": [
+            {
+                "question": "¿Cuales de las siguientes caracteristicas corresponden a la union peptidica?",
+                "options": [
+                    "Union amida; coplanar; hidrida de resonancia",
+                    "union anhidrido; su hidrolisis libera energia",
+                    "union amina; rigida; muy estable",
+                    "union ester; estable; rigida"
+                ],
+                "answer": 1,
+                "justification": "La union peptidica se produce por la asociacion de un grupo acido carboxilico con un grupo amino con perdida de una molecual de agua (union amida); todos los atomos que la forman estan en un mismo plano (coplanar); la union quimica presenta, por momentos, caracter parcial de doble enlace (hibridacion de resonancia)."
+            },
+            {
+                "question": "Se considera punto isoelectronico de un aminoacido a:",
+                "options": [
+                    "El pH donde toda la molecula se haya ionizada",
+                    "El pH donde toda la molecula tiene carga neutra",
+                    "El pH donde los grupos N y C tienen carga neutra",
+                    "El pH donde los grupos N y C estan ionizados"
+                ],
+                "answer": 2,
+                "justification": "El pundo isoelectrico es el valor de pH, en el cual una molecula ionizable no se desplaza, ni hacia el anodo ni hacia e lcatodo, cuandoes sometida a una corrida electroforetica. Para todos los aminoacidos (Aa.) se cumple que no se desplazaran cuando la sumatoria de 'todas' las cargas de la molecula sean 0, formandose una especie neutra llamada 'zwitterion'. Para los Aa. de cadenas laterales neutras, estos se da cuando el grupo N tiene carga positiva NH3+ y el grupo C tiene carga negativa COO-. El analisis precedente se basa en una situacion teorica tomando e ncuenta una situacion ficticia de un solo Aa. si consideramos una solucion de un determinado Aa., debemos comprender que existe un equilibreio dinamico, donde los grupos ionizables estan permanentemente aceptando y cediendo proteones. Por lo tanto, el punto isoelectrico se da cuando la especie que se encuentra en mayor proporcion es la electricamente neutra. Es importante no confundir el punto isoelectrico con e lvalor del pK. El pK es la inversa de la constante de equilibreio de disociacion. Es decir, e lvalor de pH en e lcual un determinado grupo ionizable se encuentra 50% neutro (llamamos grupo funcional a un sector especifico de la molecula). Existe un pK para cada grupo capaz de ceder o aceptar protones."
+            },
+            {
+                "question": "De los 20 alfa-L-aminoacidos que forman parte de las proteinas humanas hay solo uno que tiene capacidad de amortiguar el pH en condiciones fisiologicas. Señale cual:",
+                "options": [
+                    "triptofano",
+                    "histidina",
+                    "fenilalanina",
+                    "tirosina"
+                ],
+                "answer": 2,
+                "justification": "Para que un acido o una base debil tangan capacidad de amortiguacion de los cambios de la concentracion de H+ (pH), deben tener una constante de disociaion (pKa) cercano al pH del medio en el que se hayan. Como podemos ver en las curvas de titulacion de Aa., los pKc y pKn de los grupos C y N respectivamente tienen valores cercanos a 2 (pKc) y 9 (pKn) respectivamente, y por lo tanto, en condicioens fisiologicas (pH entre 7,38 a 7,45) se encuentran totalmente ionizados y sin capacidad amortiguadora. Sin embargo, el aminoacido histidina cuenta con un grupo imidazol en su cadena lateral que tiene un pKr cercano a 6,5 y por lo tanto puede contener cambios en la concentracion de H+, aceptando o cediendo protones."
+            },
+            {
+                "question": "Los 8 aminoacidos esenciales son aquellos que el cuerpo no puede sintetizar y por lo tanto deben ser incorporados por la dieta. Señale cual de los siguientes es un Aa. esencial estricto:",
+                "options": [
+                    "fenilalanina",
+                    "tirosina",
+                    "histidina",
+                    "arginina"
+                ],
+                "answer": 1,
+                "justification": "La fenilalalina presenta en su cadena lateral un anillo bencenico que nuestro organismo no es capaz de sintetizar y por lo tanto es un aminoacido esencial que debemos incorporar con la dieta. si bien la tirosina tambien presenta un anillo de carbono (en este caso fenolico), esta se sintetiza hidroxilando el anillo bencenico de la fenilalanina en una reaccion fisiologicamente inrreversible. De las 4 opciones del presente ejercicio, el unico aminoacido estrictamente esencial, es la fenilalanina. Los otros aminoacidos esenciales son : valina, leucina, isoleucina, triptofano, metionina, treonina y lisina. Existen varias reglas para recordar estos 8 aminoacidos y te sugerimos que elijas una y la memorices: 'LEo hIZOLIo, METIO un TRIo de TREs aminoacidos esenciales en una VALIja FEa'"
+            },
+            {
+                "question": "Un aminoacido polar con carga negativa a pH= 7 es sometido a un pH=1. El mismo tendra una carga electrica neta igual a:",
+                "options": [
+                    "-2",
+                    "-1",
+                    "0",
+                    "+1"
+                ],
+                "answer": 4,
+                "justification": "En un medio tan acido, el aminoacido se comportara como uan base tomando protones del medio y neutralizando ambos carboxilos, por lo tanto lo que quedara con el grupo amino protonizado (carga +1)."
+            },
+            {
+                "question": "El glutation es un tripeptido de alta importancia biologica y esta formado por 3 aminoacidos. Señale cuales:",
+                "options": [
+                    "glicina, cisteina y glutamato",
+                    "alanina, glicina y glutamato",
+                    "asparragina, glutamina y glutamato",
+                    "lisina, prolina y glutamato"
+                ],
+                "answer": 1,
+                "justification": "La palabra peptido deriva del griego peptos que significa 'digerido' porque los primeros peptidos identificados en quimica se obtuvieron de la accion de enzimas digestivas llamadas peptidasas o proteasas. A la union de 2 aminoacidos se la designa union peptidica y se produce entre el grupo carboxilo de un Aa. y el grupo amino del siguiente. Esta union es del tipo amida y produce la perdida de una molecula de H2O. Por convencion llamamos peptidos a las cadenas de entre 2 a 50 aminoacidos. Ya que, la primera proteina completamente secuenciada fue la insulina que posee 51 aminoacidos (regla mnemotecnica:'insulina la primera proteina', 51 Aa.) De 2 a 9 aminoacidos, los llamaremos oligopeptido, entre 10 y 49 polipeptidos y mas de 50 proteinas. Lo interezante es que varios oligopeptidos cumplen importantes funciones biologicas. En este aso la glutation es considerado el mayor antioxidante de las celulas y permite neutralizar el daño que producirian los radicales libres del oxigeno."
+            },
+            {
+                "question": "Un aminoacido polar con carga positiva a pH=7 es sometido a un pH=13. ¿Cuál sera su carga electrica neta?",
+                "options": [
+                    "-1",
+                    "0",
+                    "+1",
+                    "+2"
+                ],
+                "answer": 1,
+                "justification": "A un pH tan extremadamente alcalino, se comportara como un acido cediendo los protones presentes en cada grupo amino, por lo que quedara con la carga electrica -1 por el grupo carboxilo."
+            },
+            {
+                "question": "Cuando 2 o mas Aa se unen forman una cadena a la que llamamos peptido. ¿A partir de cuantos Aa y que masa molecular se los comienza a llamar proteinas?",
+                "options": [
+                    "21 aminoacidos y 2.500 Dalton",
+                    "100 aminoacidos y 10 kDa",
+                    "50 aminoacidos y 6.000 Dalton",
+                    "10 aminoacidos y 1.200 Dalton"
+                ],
+                "answer": 3,
+                "justification": "Si bien algunos autores consideran proteinas a las cadenas polipeptidicas a partir de 100 o mas Aa., nosotros optamos por la convencion que elige a la insulina como la primera proteina como se ha explicado en punto 6 y repetimos a continuacion: Por convencion llamamos peptidos a las cadenas de entre 2 a 50 aminoacidos. Ya que, la primera proteina completamente secuenciada fue la insulina que posee 51 aminoacidos (regla mnemotecnica:'insulina la primera proteina', 51 Aa.)"
+            },
+            {
+                "question": "Señale la opcion correcta con respecto a las propiedades acido-base (A-B) de los peptidos:",
+                "options": [
+                    "Estan determinadas por la presenci o no de uniones intrapeptidicas entre las cadenas laterales",
+                    "Son iguales a la sumatoria de las propiedades de cada uno de los Aa. que lo integran",
+                    "Estan determinadas por las cadenas laterales ionizadas de los aminoacidos que lo integran",
+                    "Estan dadas por los grupos N y C terminales y por las cadenas laterales."
+                ],
+                "answer": 4,
+                "justification": "Las propiedades acido-base de cualquier molecula estan dadas por la cantidad de grupos ionizables y por los pK de estos. En un peptido o una proteina existira un solo grupo C terminal y un solo grupo N terminal que estaran libres y por lo tanto seran capaces de aceptar o ceder protones. El resto de las interaccioens acido-base seran determinadas por sus cadenas laterales (R). Es importante destacar que mientras mayor sea la extension de la cadena peptidica, menor sera la influencia relativa de los grupos C (carboxilo) y N (amino) terminales."
+            },
+            {
+                "question": "la estructura cuaternaria de una proteina esta estabilizada principalmente por:",
+                "options": [
+                    "Uniones peptidicas",
+                    "Puentes disulfuro",
+                    "enlaces cruzados covalentes",
+                    "uniones o puentes salinos"
+                ],
+                "answer": 4,
+                "justification": "La estructura cuaternaria es la asociacion de subunidades polipeptidicas en el espacio con la posbilidad de cambiar conformaciones. Para ello, se necesitan euniones faciles de romper como los puentes salinos. Las otras 3 opciones son covalencias que implican uniones fuertes que impiden cambios de conformacion."
+            },
+            {
+                "question": "Una proteina es de alto valor biologico cuando:",
+                "options": [
+                    "Para su sintesis se requieren aminoacidos especiales",
+                    "Su funcion no puede ser reemplazada nunca por otras proteinas",
+                    "Su presencia es muy importante para el funcionamiento del organismo",
+                    "De su digestion se obtiene aminoacidso esenciales"
+                ],
+                "answer": 4,
+                "justification": "Hablamos de proteinas de alto valor biologico cuando su incorporacion a la dieta nos garantiza el aporte de aminoacidos esenciales y semiesenciales. Las proteinas de origen animal (carnes, clara de huevo, leche) aportan todos los Aa esenciales. Entre los vegetales se destaca la quinoa con proteinas de alto valor biologico, mientras que otros suelen carecer de algunos aminoacidos: por ejemplo, el arroz es deficitario en lisina, las lentijas en metionina, etc. Estas cualidades de los alimentos han adquirido mayor importancia social a partir de las criticas a la industria alimentaria y la busqueda de nuevas formas de produccion e incorporacion de alimentos por parte de sectores crecientes de la sociedad."
+            },
+            {
+                "question": "Cuando hablamos de la estructura primaria de una proteina, nos referimos a:",
+                "options": [
+                    "el nombre, numero y orden de los aminoacidos que la conforman",
+                    "solo el numero de aminoacidos que la conforman",
+                    "la capacidad de los aminoacidos que la conforman para estabilizar la molecula y darle forma",
+                    "la disposicion espacial de los aminoacidso que la conforman"
+                ],
+                "answer": 1,
+                "justification": "Es importante tener en cuenta que las proteinas se forman por cadenas lineales de aminoacidos sin ningun tipo de ramificaciones y que esa secuencia lineal no es al azar, sino que esta determinada en el codigo genetico. Justamente a esa secuencia lineal de aminoacidos propia de cada proteina es la que llamamos estructura primaria."
+            },
+            {
+                "question": "La estructura de una proteina consiste en la disposicion espacial que adopta la cadena polipeptidica. ¿Cuál de las siguientes no corresponde a la estructura secundaria?",
+                "options": [
+                    "la disposicion fibrosa o fibrilar",
+                    "la disposicion o enrollamiento al azar",
+                    "la lamina plegada beta",
+                    "La helice alfa"
+                ],
+                "answer": 1,
+                "justification": "Consideramos estructura secundaria de una proteina a la disposicion espacial que adopta la cadena polipeptidica de acuerdo con la orientacion que va tomando cada aminoacido por la rotacion de su carbono alfa. El C alfa es el unico capaz de rotar, dado que la union amida C-N es una union fija que impide la rotacion del C y del N. Por tanto, cada carbono alfa rotara de acuerdo con las fuerzas electrostaticas que establezcan los grupos R y la cadena peptidica formara una helice alfa, una lamina plegada beta o un enrollamiento al azarl. Hay que destacar que se lo llama al azar solo para aumentar la confusion, porque de azar no tiene nada; simplemente no tiene una forma regular describible y sirve para unir los sectores estrusturados. Lo cierto es que estas 3 disposiciones determinaran la forma tridimensional final de la proteina a la que llamaremos estrustura terciaria. Si la estructura terciaria es globular, veremos que una misma cadena polipeptidica tiene sectores de helices alfa alternados con otros sectores de laminas beta y sectores que los unen, sin forma especifica, que se corresponden a los enrollamientos al azar. Si la estrustura terciaria es fibrosa, veremos que toda la molecula (cadena polipeptidica) se dispone en helice alga o lamina beta y predomina su eje longitudinal. La excepcion la constituye el colageno que, por tener gran cantidad de residuos de glicina y prolina, no forma helices alfa, sino otra helice diferente, exclusiva del colageno, mas extendida y levogira, que se combina con otras 2 para formar la superhelice de colageno. Algunos autores consideran que esta superhelice ya no seria parte de la estructura secundaria por tratarse de la union de diferentes cadenas polipeptidicas. pero nosotros la consideramos una cuarta forma de estrustura secundaria."
+            },
+            {
+                "question": "La estructura terciaria de una proteina consiste en la disposicion espacial tridimensional que adopta la arquitectura total de la molecula. ¿Cuál de las siguientes interacciones no son propias de la estructura terciaria?",
+                "options": [
+                    "Las fuerzas de van der Waals determinadas por la atraccion y repulsion entre las nubes de electrones de atomos contiguos",
+                    "las interacciones entre los grupos hidrofobicos de las cadenas laterales",
+                    "uniones electrostaticas entre los grupos NH3 y COO de las cadenas laterales",
+                    "Las uniones puente de hidrogeno entre los grupos NH y CO de los residuos de Aa"
+                ],
+                "answer": 4,
+                "justification": "Las uniones puente de hidrogeno entre los grupos NH y CO de los residuos de Aa. de una misma cadena polipeptidica son los que van a determinar la estructura secundaria. Mientras que seran otras fuerzas las responsables de la configuracion espacial que conocemos como estructura terciaria. Los enlaces propios de la estructura terciaria pueden ser de 2 tipos: covalente y no covalentes. Los enlaces covalentes pueden deberse a la formacion de un puente disulfuro entre cadenas laterales de csiteina, o a la formacio nde un enlace amida (-CO-NH-) entre las cadenas laterales de lisina y algun aminoacido dicarboxilico. Los enlaces no covalentes pueden ser puentes de hidrogeno, interacciones hidrofobicas, uniones de van der Waals, o fuerzas electrostaticas entre grupos ionizados."
+            },
+            {
+                "question": "Señale la opcion correcta con respecto a la estructura cuaternaria de una proteina:",
+                "options": [
+                    "Solo pueden presentar estructura cuaternaria las moleculas formadas por 2 o mas cadenas peptidicas",
+                    "Se dan por la combinacion de helices alfa y laminas beta sumadas a estrusturas terciarias",
+                    "Solo alcanzan la estructura cuaternaria las cadenas polipeptidicas muy largas con varios segmentos de diferentes estructuras terciarias",
+                    "Todas las proteinas deben alcanzar la estructura cuaternaria para cumplir su funcion"
+                ],
+                "answer": 1,
+                "justification": "Muchas cadenas polipeptidicas se asocian a otras para cumplir sus funciones biologicas y llamamos estructur cuaternaria de una proteina la configuracion espacial tridimensional que adoptan estas estructuras oligomericas de 2 o mas cadenas polipeptidicas. Es importante aclarar que generalmente no se trata de cadenas polipeptidicas puras, sino que  suelen con otras moleculas, principalmente glucidos y en menos medida lipidos. La estructura cuaternaria es la estructura funcional final de mayor parte de las proteinas."
+            }
+        ]
+    },
+    {
+        "subject": "Microbiología",
+        "classification": "Primer Parcial I",
+        "questions": [
+            {
+                "question": "¿Cuál de las siguientes infecciones en las vías aéreas no es producida por un virus respiratorio?",
+                "options": [
+                    "Crup",
+                    "Laringitis",
+                    "Epiglotitis",
+                    "Bronquiolitis"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto al mini BAL, el punto de corte es:",
+                "options": [
+                    "10^3 UFC/ml",
+                    "10^4 UFC/ml",
+                    "10^5 UFC/ml",
+                    "10^6 UFC/ml"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto al Dx de ITU, marcar la INCORRECTA",
+                "options": [
+                    "La muestra de orina se conserva a 4°C hasta ser procesada",
+                    "El urocultivo se hace a partir de la centrifugación de la orina",
+                    "El punto de corte de análisis de punta de catéter proximal es 100 UFC",
+                    "Previa manipulación urológica debe asegurarse que no haya bacteriuria asintomática"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto a la infección por HAV, marcar la INCORRECTA",
+                "options": [
+                    "El periodo de incubación es de 15 a 45 días",
+                    "El diagnostico se realiza por detección de IgM HAV por EIA",
+                    "En los niños pequeños la infección es frecuentemente sintomática",
+                    "Es ARN +"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca del VVZ marcar la INCORRECTA",
+                "options": [
+                    "La transmisión puede ser tanto por vía aérea como por contacto directo con las lesiones",
+                    "El exantema puede afectar palmas de manos y plantas de pie",
+                    "Se produce zoster en pacientes pediátricos por reinfección",
+                    "Con respecto a las complicaciones de la primoinfección, hasta un 10% de los adultos puede desarrollar neumonía"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca del HPV, marcar la CORRECTA",
+                "options": [
+                    "Los serotipos 16 y 18 son los responsables del 70% de cáncer de cérvix",
+                    "La vacuna tetravalente disminuyo los riesgo de neoplasias de mujeres no infectadas previamente",
+                    "La inmunidad postvacunal se ha comprobado que provee protección de por vida",
+                    "El uso de preservativo no provee protección absoluta pero disminuye el riesgo de contagio"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál de los siguientes puede ser responsable de diarrea crónica en pacientes con SIDA?",
+                "options": [
+                "Isospora",
+                "Cryptosporidium",
+                "Encephalitozoon",
+                "Todas son correctas"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a los virus respiratorios, el principal agente que afecta a mayores de 65 años es",
+                "options": [
+                "Influenza A",
+                "Influenza B",
+                "Parainfluenza ",
+                "VSR"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto de la posible etiología de la artritis infecciosa aguda, marcar la INCORRECTA",
+                "options": [
+                "Micobacterias",
+                "Nocardia",
+                "Sporotrick Schenkii",
+                "S pyogenes"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "En la relación de la patogenia de las ITU, indicar la INCORRECTA",
+                "options": [
+                "La corteza renal es mas susceptible que la medula",
+                "Las vías urinarias sueles ser estériles excepto la uretra distal y el meato",
+                "Se origina más frecuente por  vía ascendente",
+                "El espermicida aumenta el riesgo de IU porque favorece la adherencia de E. Coli a las células epiteliales"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HAV",
+                "options": [
+                "Resiste bajas temperaturas",
+                "Es inactivado por detergentes",
+                "Resiste altas temperaturas: hasta 60° C durante una hora a pH neutro",
+                "Es inactivado por autoclavado (121° C durante 20min) "
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA  con respecto a Parvovirus B19",
+                "options": [
+                "La aparición del rash coincide con la elevación de los niveles de anticuerpos",
+                "La viremia cursa con reticulocitopenia",
+                "La mayoría de los embarazos afectados por la infección presentan complicaciones",
+                "La artralgia es la complicación mas frecuente, al igual que en la rubeola"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Paciente masculino con secreción uretral purulenta. ¿Qué actitud tomaría respecto aldiagnostico? Todas son validas excepto",
+                "options": [
+                "Directo  con tinción de Gram del exudado",
+                "Cultivo del exudado en medio de Thayer Martin",
+                "Detección de IgM anti- ureaplasma y Mycoplasma",
+                "Detección de Clamydia en exudado por PCR"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Sobre las pruebas treponémicas y no treponémicas, marcar la  CORRECTA",
+                "options": [
+                "Las treponémicas se hacen negativas luego del tratamiento",
+                "Las no treponémicas tienen alta sensibilidad y baja especificidad",
+                "Las pruebas treponémicas detectan anticuerpos dirigidos, por ejemplo, contra la cardiolipina",
+                "FTA-Abs es una prueba no treponémicas"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a la epiglotitis marcar la INCORRECTA",
+                "options": [
+                "El principal agente etiológico es Parainfluenza 1",
+                "En adultos genera un cuadro mas leve",
+                "Las muestras de epiglotis están contraindicadas en niños no intubados",
+                "La dificultad respiratoria en niños obliga a que adopten la “posición de trípode”"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a los virus respiratorios y su forma de presentación, marcar la INCORRECTA",
+                "options": [
+                "Adenovirus – cuadro de conjuntivitis previo al cuadro respiratorio",
+                "VSR – sintomático en adultos",
+                "Paramixoviridae – bronquiolitis en niños pequeños",
+                "Metapneumovirus – bronquiolitis en primavera"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a las ITU",
+                "options": [
+                "La etiología polimicrobiana es frecuente en la cistitis aguda no complicada",
+                "S. saprophyticus es uno de los agentes etiológicos de cistitis aguda no complicada en la mujer",
+                "E. Coli es el agente etiológico más frecuente de cistitis aguda",
+                "Bacterias de la flora endógena perineal pueden causar cistitis aguda"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HAV",
+                "options": [
+                "Resiste pH acido",
+                "Es inactivado por cloro (3-10 mg/l a 20°C durante 5/15min)",
+                "Es inactivado por congelación en freezer",
+                "Es inactivado por formaldehido (dilución 1:4000 a 37° por 72hs)"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca de HBV, marcar la asociación INCORRECTA",
+                "options": [
+                "Susceptible /Ig anti-HBsAg",
+                "Vacunado / Ig anti-HBsAg",
+                "Infeccion crónica / HBeAg, HBsAg, Ig G anti- HBc , virus infeccioso",
+                "Infección aguda/ HBeAg, HBsAg, Ig M anti- HBc , virus infeccioso"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "En general, los siguientes patógenos pueden ocasionar lesiones genitales y adenopatías inguinales, excepto:",
+                "options": [
+                "HSV -2",
+                "Klebsiella granulomatis",
+                "Mycoplasma hominis",
+                "Haemophilus ducreyi"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Ud. atiende por guardia a una paciente de 80 años de edad que refiere disnea de dos días de evolución. Presento además tos productiva y malestar gral. Al examen físico presenta mala entrada de aire con crepitantes solamente en base pulmonar derecha, fiebre y escalofríos. La radiografía presenta una opacidad bien delimitada en lóbulo inferior derecho.¿Cuál es su sospecha clínica?",
+                "options": [
+                "Bronquiolitis por VSR",
+                "Bronquiolitis por Metapneumovirus",
+                "Neumonía aguda de la comunidad por S. pneumoniae",
+                "Neumonía aguda de la comunidad por Clamydophila trachomatis"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes microorganismos corresponden a la flora normal de la orofaringe, excepto:",
+                "options": [
+                "Cándida",
+                "Porphyromonas",
+                "Haemophylus spp",
+                "Clamydophila pneumoniae"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Todas estas muestren requieren cultivo cuantitativo, excepto:",
+                "options": [
+                "Liquido pleural",
+                "BAL",
+                "Punción de sonda",
+                "Aspirado nasofaríngeo"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a HBV marcar la correcta",
+                "options": [
+                "Es un virus desnudo",
+                "Existe una vacuna que es a virus vivo atenuado",
+                "80% de los neonatos de madres con hepatitis B, nacen con la infección y llegan a la cronicidad",
+                "Periodos de incubación de 21 días"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿A que se llama periodo ventana del HIV?",
+                "options": [
+                "Tiempo entre contagio e infección aguda",
+                "Tiempo entre infección aguda y detección de anticuerpos en plasma",
+                "Tiempo entre infección y enfermedades oportunistas",
+                "Tiempo entre infección aguda y aparición de enfermedades oportunistas"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA  con respecto a Parvovirus B19:",
+                "options": [
+                "Se transmite de perros y gatos al humano",
+                "Se replica principalmente en la medula ósea del adulto y en el hígado del feto",
+                "El ser humano es el único reservorio",
+                "Se replica en el núcleo"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Las siguientes son causales de uretritis no gonocócica excepto:",
+                "options": [
+                "Agente causal del linfogranuloma venéreo",
+                "Clamydia Trachomatis",
+                "Mycoplasma hominis",
+                "Mycoplasma genitalum"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Los genotipos 1 y 2 se asocian a infecciones en países en vías de desarrollo",
+                "La transmisión es fecal- oral o sanguínea",
+                "Las embarazadas son el grupo de riesgo de chaces de desarrollar hepatitis aguda fulminante",
+                "Los genotipos 3 y 4 pueden inducir infecciones crónicas en inmunosuprimidos"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca del Urocultivo, marcar la INCORRECTA",
+                "options": [
+                "Todo microorganismo tomado por punción debe ser estudiado",
+                "Para realizarlo se utiliza la orina sin centrifugar",
+                "A partir de una muestra de chorro medio, un recuento bacteriano≥ 10^5 UFC/ml y sedimento no patológico es indicativo de infección urinaria",
+                "Cuando se realiza en agar sangre permite caracterizar la hemolisis del patógeno"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca de las hepatitis, marcar la INCORRECTA",
+                "options": [
+                "10% de los pacientes infectados por HAV pueden desarrollar colestasis",
+                "1%  de los pacientes que se infectan por HBV  desarrolla una hepatitis fulminante",
+                "La coinfección de HDV y HBV elimina ambos agentes",
+                "20-30% de los pacientes infectados por HCV desarrolla cronicidad"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes elementos son útiles para el diagnostico del sarampión dentro del 1er día de aparecido el exantema, excepto:",
+                "options": [
+                "Manchas de Koplik",
+                "IgM específicas para sarampión",
+                "Conjuntivitis y congestión unos días antes",
+                "IgG anti sarampión con un titulo de 4 veces mayor"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Paciente que se presenta con disuria y exudado uretral luego de 5 días de tener relaciones sexuales con una nueva pareja. Con Gram se observan muchos leucocitos pero no se ven bacterias. ¿Qué se realiza?",
+                "options": [
+                "Tomar muestra para cultivo de gonococo y detección de Mycoplasma y Clamydia",
+                "Se lo cita al día siguiente para un nuevo análisis",
+                "Se cita a la pareja para analizar",
+                "Se diagnostica infección urinaria"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Las siguientes enfermedades son marcadoras de SIDA, excepto:",
+                "options": [
+                "Criptosporidiasis",
+                "Sarcoma de Kaposi",
+                "Leucoplasia oral vellosa",
+                "Esofagitis candidiásica"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Se presenta a la consulta una niña de 10 años con fiebre de 39°, odinofagia, cefalea y dolor abdominal. Al examen físico, se observa amígdalas aumentadas de tamaño y exudativas y se palpan adenopatías leves. ¿Qué muestra colectaría para el caso?",
+                "options": [
+                "Hisopado de fauces",
+                "Aspirado nasofaríngeo",
+                "Lavado bronquioalveolar",
+                "Hisopado nasal"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Paciente masculino de 22 años consulta ante un cuadro de anorexia, fiebre de 38°y nauseas con vómitos esporádicos. Hace 2 días advierte que las diuresis son oscuras y color amarillento en la piel y mucosa ocular. Es fumador, bebedor, con excesos durante los fines de semana. No toma medicación habitualmente. En el hepatograma se evidencia transaminasasemia elevada. ¿Cuál de los siguientes marcadores no solicitaría ante el cuadro presentado?",
+                "options": [
+                "HBsAg",
+                "Anti HCV",
+                "Ag HBc",
+                "IgM- anti HAV"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Indicar la correcta con respecto a H. influenzae",
+                "options": [
+                "La mayoría de las cepas que producen neumonía son no capsuladas",
+                "La incidencia de otitis media aguda disminuyo con la vacuna",
+                "Para su aislamiento se requieren factor X y V",
+                "Los animales domésticos actúan como reservorio "
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a RUBEOLA, marcar la correcta",
+                "options": [
+                "No existe vacuna",
+                "El 80% de los casos es asintomática",
+                "Se transmite 7 días antes y 7 días después del exantema",
+                "Es un virus ADN"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Es un virus ARN con 7.2 kpb y con 3 marcos de lectura",
+                "Los serotipos 3 y 4 son zoonóticos",
+                "No producen infección hepática crónica",
+                "En embarazadas puede producir falla hepática aguda"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto al Dx de ITU, marcar la INCORRECTA",
+                "options": [
+                "Aislar una única especie bacteriana, independientemente del recuento de colonias, indica infección urinaria",
+                "Aislar 2 o mas especies bacterianas en recuentos no significativos y con sedimento no patológico indica contaminación de la muestra",
+                "Aislar una determinada especie bacteriana con un recuento ≥ 10^5 UFC/ml y sedimento patológico es indicativo de agente etiológico",
+                "Aislar una especie bacteriana con un recuento de 10^4 UFC/ml y sedimento no patológico amerita solicitar nueva muestra"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca de las hepatitis, marcar la INCORRECTA",
+                "options": [
+                "HBV posee 8 genotipos",
+                "Los virus hepatotropos secundarios son aquellos que infectan primariamente otros  tipos celulares pero que, en el curso de una infección generalizada pueden infectar a los hepatocitos",
+                "HAV pertenece a la familia Picornaviridae",
+                "La sobreinfección de HDV y HBV favorece la eliminación de ambos"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca del virus del sarampión, marcar la INCORRECTA",
+                "options": [
+                "Es un virus pequeño de 50 nm",
+                "La proteína F de fusión forma sincicios",
+                "Es ARN – ",
+                "La adsorción se da por unión de la hemaglutinina con los receptores CD150/SLAM Y CD46"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca del virus del sarampión, marcar la INCORRECTA",
+                "options": [
+                "Presenta 5 serotipos, por lo que se puede enfermar mas de una vez",
+                "Existe una vacuna ",
+                "Ingresa al organismo por vía digestiva",
+                "El virus no puede ser aislado de las lesiones cutáneas"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál es el agente etiológico del Granuloma inguinal?",
+                "options": [
+                "Haemophilus ducreyi",
+                "Klebsiella granulomatis",
+                "Clamydia trachomatis",
+                "Mycoplasma genitalum"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Una joven de 17 años llega a la consulta porque hace días que sufre de ardor al orinar, micción frecuente y nota su orina turbia. La joven refiere que padeció los mismos síntomas hace 2 meses, pero que fue resuelto con ATB. Se sospecha infección urinaria. ¿Cuál seria la conducta a seguir?",
+                "options": [
+                "Indicar la recolección de la muestra de orina al acecho con previa higiene de genitales",
+                "Solicitar la recolección de chorro medio de orina por micción espontanea",
+                "Solicitar primer chorro de orina para diferenciar la colonización de la infección",
+                "Solicitar muestras seriadas de orina para asegurar el aislamiento del patógeno"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca de HIV, marcar la INCORRECTA",
+                "options": [
+                "Durante la primoinfección hay alta carga viral en el plasma y disminuyen transitoriamente los niveles de CD4",
+                "En la adsorción del HIV a la célula huésped, participan gp120 y el receptor CD4",
+                "Todas las variantes virales usan el correceptor CCR5",
+                "La carga viral en plasma indica el pronóstico, la velocidad de progresión al SIDA"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Sobre la muestra colectada, se practica una prueba rápida de detección de Ag (tipo Strep test)que arroja un resultado positivo y el cultivo en agar sangre evidencia la presencia de colonias con hemolisis completa. Elegir la opción CORRECTA",
+                "options": [
+                "La coloración de Gram es fundamental para la identificación rápida del agente",
+                "Las pruebas de PYR y bacitracina resultan relevantes para la identificación del agente",
+                "La prueba rápida tiene escasa especificidad y por ello, aunque reactiva, debe analizarse el cultivo",
+                "Se recomienda solicitar antibiograma"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto al sarampión, marcar la CORRECTA",
+                "options": [
+                "Ingresa al organismo por vía digestiva",
+                "La vacuna se aplica a los 2, 4 y 6 meses y un refuerzo entre los 4 y 6 años",
+                "El virus puede ser aislado a partir de las lesiones cutáneas",
+                "El efecto sobre el SNC durante el periodo de convalecencia no se debe a la replicación viral"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Una muestra de esputo mas de 25 PMN y menos de 10 células epiteliales por campo, presenta cocobacilo Gram – pleomórfico. El agente mas probable es: ",
+                "options": [
+                "Haemophilus Influenzae",
+                "Pseudomona Aeruginosa",
+                "Leptospira Interrogans",
+                "No es representativa"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "HAV pertenece a la familia ",
+                "options": [
+                "Picornaviridae",
+                "Hepeviridae",
+                "Hepadnaviridae",
+                "Flaviviridae"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la CORRECTA con respecto al procesamiento de una muestra urinaria",
+                "options": [
+                "Una gota de orina sin centrifugar examinada “en fresco” se emplea para investigar la presencia de leucocitos y piocitios",
+                "El hallazgo de bacilos cortos en el sedimento urinario indican que E.coli es el agente etiológico",
+                "La siembra de la orina sin centrifugar en medios solidos permite aislar al patógeno y realizar el recuento cuantitativo de colonias",
+                "El antibiograma se realiza directamente de la muestra cuando el sedimento de la orina es patológico"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            }
+        ]
+    },
+    {
+        "subject": "Microbiología",
+        "classification": "Primer Parcial II",
+        "questions": [
+            {
+                "question": "Acerca de la hepatitis A , marcar la CORRECTA",
+                "options": [
+                "Es sensible a los detergentes",
+                "Tiene 1 serotipo y 7 genotipos",
+                "Es ARN – ",
+                "Es envuelto"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál es el agente etiológico del chancro blando?",
+                "options": [
+                "Haemophilus ducreyi",
+                "Klebsiella granulomatis",
+                "Clamydia trachomatis",
+                "Mycoplasma genitalum"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿A que se denomina Virus R4?",
+                "options": [
+                "Que es resistente a antirretrovirales de 4ta generación",
+                "Que no se detecta con ELISA Standard",
+                "Es una variante defectiva",
+                "Virus que utilizan el correceptor CXCR4"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Todos los siguientes son agentes causales de otitis media aguda, excepto",
+                "options": [
+                "Klebsiella pneumoniae",
+                "Moraxella catarrhalis",
+                "S pneumoniae",
+                "H. influenzae"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Que tienen en común los virus parotiditis, sarampión, rubeola, Junin?",
+                "options": [
+                "Son todos prevenibles por vacunas atenuadas",
+                "Causan enfermedades exantemáticas",
+                "El único reservorio es el ser humano",
+                "Poseen genoma ADN y son desnudos"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HAV",
+                "options": [
+                "Solo se encuentra en heces",
+                "Es inactivado por ebullición, radiación UV y microondas",
+                "El etanol a 70% a 25° disminuye su infectividad",
+                "Su principal sitio de replicación son los hepatocitos"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cual de los siguientes no entra por vía respiratoria?",
+                "options": [
+                "Parvovirus B19",
+                "Polio",
+                "Sarampión",
+                "VVZ "
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Se observa un microorganismo uropatógeno con movilidad positiva en agar blando y que se asocia a cálculos vesicales y renales, se piensa en:",
+                "options": [
+                "Enterobacter",
+                "Serratia",
+                "Klebsiella",
+                "Proteus Mirabilis"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a la transmisión vertical de HIV, marcar la CORRECTA",
+                "options": [
+                "Leche materna",
+                "Transplacentaria",
+                "Canal de parto",
+                "Todas son correctas"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Los genotipos 1 y 2 se asocian a alta mortalidad en embarazadas",
+                "Los genotipos 3 y 4 se asocian a alta mortalidad en ancianos",
+                "Los genotipos 3 y 4 son epidémicos",
+                "Los genotipos 3 y 4 se asocian a complicaciones neurológicas"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes son factores de riesgo para el desarrollo de ITU excepto:",
+                "options": [
+                "hipertrofia prostática",
+                "neutropenia",
+                "aumento del pH vaginal",
+                "falta de circuncisión"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Concurre a la guardia un paciente de 18 años HIV+, usuario de drogas endovenosas que refiere compartir jeringas. El laboratorio determina la presencia en suero de Ig anti-HCV detectados por ELISA, según el resultado usted decide:",
+                "options": [
+                "Decirle al paciente que esta crónicamente infectado por HCV",
+                "Buscar ARN –HCV por RT-PCR Nested en el suero del paciente para confirmar la infección",
+                "Buscar ARN –HCV por hibridación in situ en una muestra de biopsia hepática",
+                "Buscar proteínas del core de HCV por Western Blot en el suero del paciente"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la correcta con respecto a Rubeola",
+                "options": [
+                "Pertenece a la familia Paramixoviridae",
+                "La infección fatal se da en el 90% de los casos si la madre adquiere la primoinfección en el 1er trimestre",
+                "Es ARN –",
+                "No es posible la infección asintomática"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿en qué caso es útil usar la tinción de GRAM en patología faríngea? Cuando busco...",
+                "options": [
+                "Staphylococcus spp",
+                "Corynebacterium diptheriae",
+                "Arcanobacterium Haemolyticum",
+                "No es útil porque tiñe también la flora normal"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto al aspirado traqueal, es punto de corte es:",
+                "options": [
+                "10^3 UFC/ml",
+                "10^4 UFC/ml",
+                "10^5 UFC/ml",
+                "10^6 UFC/ml"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto a la posible etiología  de la artritis infecciosa aguda marcar la INCORRECTA",
+                "options": [
+                "Nocardia",
+                "S aureus",
+                "Rubeola ",
+                "Virus de la Coriomeningitis linfocitaria"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a las ITU",
+                "options": [
+                "El cultivo se hace sin centrifugar",
+                "Solamente se hace coloración de Gram del sedimento cuando la muestra es por punción suprapúbica",
+                "Bacteriuria asintomática en embarazada no requiere tratamiento ATB",
+                "Del cultivo de muestra por chorro medio se realiza estudio semicuantitativo"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Se obtienen los siguientes resultados: HBsAg: + /IgM anti HAV: -/ IgG anti HAV: +",
+                "options": [
+                "Infección aguda con virus hepatitis B",
+                "Infección aguda con virus hepatitis A",
+                "Infección pasada con virus de Hepatitis A e infección con virus de Hepatitis B",
+                "Coinfección aguda con virus de Hepatitis B y virus de Hepatitis A"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Cual de los siguientes no crece en agar sangre común",
+                "options": [
+                "Pseudomona",
+                "Haemophilus influenzae",
+                "S pneumoniae",
+                "E Coli"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Sobre Parvovirus b19, marcar la correcta:",
+                "options": [
+                "Es un virus ARN doble cadena",
+                "Suele cursar con aplasia medular transitoria",
+                "Es la tercera exantemática",
+                "Necesita a la célula en la fase G1 para replicarse en el núcleo"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿A que se denomina Virus R4?",
+                "options": [
+                "Virus defectivos",
+                "Virus que no responden a retrovirales de 4ta generación",
+                "Virus que no son detectados por ELISA de 4ta generación",
+                "Virus que forman sincicios"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la correcta",
+                "options": [
+                "El principal agente etiológico de CRUP es paranfluenza 3",
+                "La muestra de mayor redito en infecciones respiratorias es el aspirado nasofaríngeo",
+                "El diagnostico de bordetella puede hacerse en agar sangre",
+                "La visualización de cocos Gram positivos en cadena es sugestivo de S pyogenes "
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto al sarampión",
+                "options": [
+                "El aislamiento viral se hace a partir de muestras obtenidas por hisopado nasofaríngeo, aspirado nasofaríngeo, hisopado conjuntival, saliva u orina",
+                "El sarampión atípico se da en pacientes que recibieron la vacuna inactivada o esquemas de vacunación incompletos",
+                "El virus puede ser aislado a partir de las lesiones cutáneas",
+                "El diagnostico se hace por aumento de 4 veces en los títulos de Ac entre la fase aguda y de convalecencia o por determinación de Ig M en suero y saliva"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes son sitios de replicación del HAV excepto",
+                "options": [
+                "Hepatocitos",
+                "Células de Kupffer",
+                "Células de conductos biliares",
+                "Endotelio"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la asociación INCORRECTA entre factores de riesgo y neumonía",
+                "options": [
+                "Fibrosis quística - Pseudomona Aeruginosa",
+                "Internación –Acynetobacter",
+                "Drogadicción IV  –S  aureus",
+                "Exposición a murciélagos – Hantavirus"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿En cual de estas situaciones hay que jerarquizar una bacteriuria asintomática?",
+                "options": [
+                "Pacientes con DBT",
+                "Ancianos",
+                "Previo a manipulaciones urológicas",
+                "Pacientes sondado"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿En cual de las siguientes localizaciones puede ser encontrada N. gonorrhoeae?",
+                "options": [
+                "Mucosa rectal",
+                "Trompas de Falopio",
+                "Grandes articulaciones",
+                "Todas son correctas"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a los virus respiratorios, el principal agente que afecta a menores de 2 años es:",
+                "options": [
+                "Influenza A",
+                "Influenza B",
+                "Parainfluenza ",
+                "VSR"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a RINITIS, marcar la INCORRECTA",
+                "options": [
+                "Es autolimitada ",
+                "Afecta mucosa nasal",
+                "La incubación es de 48-72hs",
+                "Es de etiología principalmente viral con inmunidad especifica y de larga duración"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál de las siguientes son complicaciones no supurativas de la faringitis estreptococcica?",
+                "options": [
+                "Glomerulonefritis y escarlatina",
+                "Fiebre reumática y escarlatina",
+                "Escarlatina, fiebre reumática y glomerulonefritis",
+                "Fiebre reumática y glomerulonefritis"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Un paciente internado hace 15 días con ARM y desarrolla neumonía. ¿Cuál es la etiología menos probable?",
+                "options": [
+                "P.aeruginosa",
+                "S aureus",
+                "S pneumoniae",
+                "Acinetobacter"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto a las faringitis, indicar la asociación INCORRECTA",
+                "options": [
+                "Asociación fusoespirilar (Fusobacterium Necrophorum + borrelia vincenti /Angina de Vincent)",
+                "Coxackie /Herpangina",
+                "EBV / Mononucleosis infecciosa",
+                "Francicella tularensis/ Difteria"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a la evolución de la infección por HAV",
+                "options": [
+                "El 10% desarrolla colestasis.",
+                "El 10% desarrolla hepatitis fulminante.",
+                "La mayoría se recupera sin secuelas.",
+                "El 0,1 a 1% desarrolla hepatitis fulminante"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes son factores de riesgo para el desarrollo de ITU excepto:",
+                "options": [
+                "Embarazo",
+                "Litiasis renal",
+                "Coito (en la mujer)",
+                "Neutropenia",
+                "Embarazo"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto a la posible etiología de la artritis infecciosa crónica, marcar la CORRECTA",
+                "options": [
+                "S aureus",
+                "Brucella",
+                "HBV",
+                "Parvovirus B19 "
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Las siguientes enfermedades son marcadoras de SIDA, excepto:",
+                "options": [
+                "Diarrea por cryptosporidium",
+                "Encefalitis herpética",
+                "Infección por CMV",
+                "Sarcoma de Kaposi"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "En cuanto a la etiología de las ITU de la comunidad, marcar la CORRECTA",
+                "options": [
+                "Cándida albicans – Infecciones en pacientes pre púberes",
+                "Lactobacillus spp. – infecciones en mujeres menopaúsicas",
+                "Bacterias anaerobias- infecciones en varones de edad avanzada",
+                "Proteus Mirabilis – infecciones en pacientes con litiasis"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a la NAC, los siguientes agentes pueden ser causales excepto: ",
+                "options": [
+                "S pneumoniae",
+                "P.aeruginosa",
+                "M catarrhalis",
+                "Clamydophila pneumoniae"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "HBV pertenece a la familia",
+                "options": [
+                "Picornaviridae",
+                "Hepeviridae",
+                "Hepadnaviridae",
+                "Flaviviridae"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Los genotipos 1 y 2 son epidémicos",
+                "Los genotipos 1 y 2 no desarrollan infección crónica",
+                "Los genotipos 1 y 2 se asocian a alta mortalidad en embarazadas (la incidencia de hepatitis fulminante puede llegar al 25%)",
+                "El diagnostico se realiza por técnicas directas"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a la otitis media aguda:",
+                "options": [
+                "Dentro de sus factores de riesgo se encuentran las infecciones virales concomitantes y el rango etario de 6- 18 meses",
+                "Su etiología principal es viral",
+                "El diagnostico microbiológico se realiza en inmunocomprometidos, pacientes en sepsis, neonatos, respuesta inadecuada al tratamiento ATB, complicaciones supuradas y sospecha de germen inusual",
+                "El tratamiento es empírico, cubriendo los agentes mas probables"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Respecto de la artritis infecciosa, marcar la INCORRECTA:",
+                "options": [
+                "Uno de sus factores de riesgo son los traumatismos",
+                "Su etiología es principalmente bacteriana",
+                "La artritis infecciosa aguda puede ser causada por micobacterias",
+                "La artritis infecciosa puede ser causada por HiB"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Acerca de las ITU, marcar la INCORRECTA",
+                "options": [
+                "Se da con mayor frecuencia en mujeres y ancianos",
+                "E. Coli es la etiología mas frecuente en pacientes ambulatorios",
+                "La infección prostática se relaciona con infecciones recurrentes",
+                "La bacteremia precede a la infección Urinaria Alta"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Pertenece a la familia Hepadnaviridae",
+                "Los genotipos 3 y 4 pueden inducir infecciones crónicas en inmunosuprimidos",
+                "En Argentina aun no se dispone de vacuna",
+                "Los genotipos 3 y 4 son endémicos"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuáles de los siguientes microorganismos están implicados en la neumonía aspirativa?",
+                "options": [
+                "S. pneumoniae",
+                "Pseudomona Aeruginosa",
+                "Anaerobios",
+                "H influenzae"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿En qué caso es útil usar la tinción de GRAM en patología faríngea? Cuando busco..",
+                "options": [
+                "Asociación fusoespirilar (Fusobacterium Necrophorum + borrelia vincenti)",
+                "Arcanobacterium Haemolyticum",
+                "Streptococcus pyogenes",
+                "Neisseria gonorrhoae"
+                ],
+                "answer": 1,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a la osteomielitis",
+                "options": [
+                "La mayoría son causadas por S aureus",
+                "Solo compromete la porción cortical del hueso",
+                "La vía de llegada más frecuente en niños es la hemática",
+                "En el hueso se desarrollan los llamados “secuestros”"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál de los siguientes factores es importante para la adherencia de E. Coli en las ITU?",
+                "options": [
+                "Aerobactina",
+                "Pilis",
+                "Α hemolisina",
+                "Antígeno K1"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál es la etiología posible de infección del seno paranasal en inmunodeprimidos?",
+                "options": [
+                "Cándida",
+                "Histoplasma",
+                "Mucor",
+                "Criptococcus"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            },
+            {
+                "question": "Marcar la INCORRECTA con respecto a HEV",
+                "options": [
+                "Es estable a pH acido",
+                "Es lábil al calor",
+                "Posee 3 ORF",
+                "Pertenece a la familia Calciviridae"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "¿Cuál de las siguientes asociaciones es INCORRECTA con respecto a las sinusitis?",
+                "options": [
+                "Inmunocomprometidos / dx microbiológico a partir de punción aspirativa de senos paranasales",
+                "sinusitis aguda / etiología principalmente bacteriana",
+                "sinusitis crónica /etiología principalmente anaerobios",
+                "mala respuesta a tratamiento ATB/ dx microbiológico a partir de punción aspirativa de senos paranasales"
+                ],
+                "answer": 2,
+                "justification": "Completar"
+            },
+            {
+                "question": "Un paciente con evidencia de infección por HBV ¿Cuál de las siguientes determinaciones para HBV es incorrecto solicitar tras estos resultados?",
+                "options": [
+                "Carga viral",
+                "Genotipo",
+                "IgM anti core",
+                "IgM anti HBc"
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Con respecto a S. pyogenes, marcar la INCORRECTA",
+                "options": [
+                "Es sensible a la bacitracina",
+                "Es susceptible a la penicilina",
+                "Es PYR +",
+                "Es un bacilo Gram – "
+                ],
+                "answer": 4,
+                "justification": "Completar"
+            },
+            {
+                "question": "Los siguientes son factores de riesgo para el desarrollo de ITU excepto:",
+                "options": [
+                "Grupos sanguíneos B y AB no secretor",
+                "Retención urinaria",
+                "Uso de DIU",
+                "Espermicidas"
+                ],
+                "answer": 3,
+                "justification": "Completar"
+            }
+        ]
+    }
+]
