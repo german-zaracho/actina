@@ -1,7 +1,7 @@
 import express from "express";
 import * as controllers from '../controllers/controllers.js'
 
-const route = express.Router()
+const route = express.Router();
 
 //Cuando se da un click en los distintos botones o links se elige una ruta la cual envia informacion a la funcion de un controlador
 route.get("/multiplechoices", controllers.getMultiplechoices);
@@ -19,4 +19,4 @@ route.post("/multiplechoices/delete/:multiplechoice_id", controllers.deleteMulti
 
 route.get("/multiplechoices/:multiplechoice_id", controllers.getMultiplechoicebyId);
 
-export default route
+export default route;

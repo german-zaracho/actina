@@ -1,8 +1,8 @@
 import { MongoClient, ObjectId } from "mongodb";
 
-const client = new MongoClient("mongodb+srv://project:486njikl@project.gobfbbu.mongodb.net"); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
+const client = new MongoClient("process.env.REACT_APP_MONGODB_URI"); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
 
-const db = client.db("AH20232CP1");
+const db = client.db("process.env.REACT_APP_DB_NAME");
 const favorites = db.collection("favorites")
 
 function getFavorites(id){

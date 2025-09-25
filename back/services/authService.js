@@ -1,23 +1,41 @@
 import { MongoClient, ObjectId } from "mongodb";
 import bcrypt from 'bcrypt'
 
-const client = new MongoClient('mongodb+srv://project:486njikl@project.gobfbbu.mongodb.net')
-const db = client.db("AH2023")
+const client = new MongoClient('process.env.REACT_APP_MONGODB_URI')
+const db = client.db("process.env.REACT_APP_DB_NAME")
 
 const accountCollection = db.collection("account")
 
 async function createAccount(account){
     await client.connect()
 
-    const exists = await accountCollection.findOne( { userName: account.userName } )
+    // Verificar si ya existe el userName
+    const existsByUserName = await accountCollection.findOne({ userName: account.userName })
+    if (existsByUserName) {
+        throw new Error("That account already exists")
+    }
 
-    if( exists ) throw new Error( "That account already exists" )
+    // Si tienes email, también verificar que no exista
+    if (account.email) {
+        const existsByEmail = await accountCollection.findOne({ email: account.email })
+        if (existsByEmail) {
+            throw new Error("Email already exists")
+        }
+    }
     
     const newAccount = { ...account }
 
     newAccount.password = await bcrypt.hash( account.password, 10 )
 
-    await accountCollection.insertOne(newAccount)
+    // Insertar la nueva cuenta
+    const result = await accountCollection.insertOne(newAccount)
+
+    // Retornar la cuenta creada (sin la contraseña)
+    return {
+        _id: result.insertedId,
+        userName: newAccount.userName,
+        ...(newAccount.email && { email: newAccount.email })
+    }
 }
 
 async function login( account ){
@@ -25,11 +43,11 @@ async function login( account ){
 
     const exists = await accountCollection.findOne( { userName: account.userName } )
 
-    if( !exists ) throw new Error( "I could't log in" )
+    if( !exists ) throw new Error( "I couldn't log in" )
 
     const itsValid = await bcrypt.compare( account.password, exists.password )
 
-    if( !itsValid ) throw new Error( "I could't log in" )
+    if( !itsValid ) throw new Error( "I couldn't log in" )
 
     return { ...exists, password: undefined }
 }

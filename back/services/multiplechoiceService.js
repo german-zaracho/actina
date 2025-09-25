@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb";
 
-const client = new MongoClient("mongodb+srv://project:486njikl@project.gobfbbu.mongodb.net")
-const db = client.db("AH2023");
+const client = new MongoClient("process.env.REACT_APP_MONGODB_URI")
+const db = client.db("process.env.REACT_APP_DB_NAME");
 
 // Los servicios reciben las indicaciones de los controladores y hacen la magia y devuelven la informacion pertinente
 async function getMultiplechoices() {

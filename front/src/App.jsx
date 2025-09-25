@@ -11,6 +11,8 @@ import AtlasPages from './AtlasPages';
 import Home from './Home';
 import LandingPage from './LandingPage';
 import LoginPage from './LoginPage';
+import RegisterPage from './RegisterPage';
+import ProfilePage from './ProfilePage';
 import './css/styles.css';
 
 
@@ -61,6 +63,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/multiplechoiceSubjects" element={<MultiplechoiceSubjects multiplechoices={multiplechoices} />} />
           <Route path="/multiplechoiceClassification/:subject" element={<MultiplechoiceClassification multiplechoices={multiplechoices} />} />
