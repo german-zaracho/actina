@@ -1,24 +1,41 @@
 import * as service from "../../services/flashcardService.js";
 
 //Los controladores reciben la informacion de las rutas y les indican que hacer a las funciones de los servicios
-const getFlashcards = (req, res) => {
-    const filter = req.query;
 
-    service.getFlashcards(filter).then((flashcards) => {
-        res.status(200).json(flashcards);
-    });
+async function getFlashcards (req, res) {
+    
+    try {
+        const flashcards = await service.getAll();
+        res.json(flashcards);
+    } catch (err) {
+        res.status(500).json({ error: { message: err.message } });
+    }
+
 };
 
-const getFlashcardById = (req, res) => {
-    const id = req.params.id;
-    service.getFlashcardById(id).then((flashcard) => {
-        if (flashcard) {
-            res.status(200).json(flashcard);
-        } else {
-            res.status(404).json();
-        }
-    });
+// const getFlashcardById = (req, res) => {
+//     const id = req.params.id;
+//     service.getFlashcardById(id).then((flashcard) => {
+//         if (flashcard) {
+//             res.status(200).json(flashcard);
+//         } else {
+//             res.status(404).json();
+//         }
+//     });
+// };
+
+async function getFlashcardById (req, res) {
+
+    try {
+        const item = await service.getById(req.params.id);
+        res.json(item);
+    } catch (err) {
+        res.status(404).json({ error: { message: err.message } });
+    }
+
 };
+
+//los de abajo no los modifique aun
 
 const addFlashcard = async (req, res) => {
 

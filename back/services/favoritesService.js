@@ -1,9 +1,11 @@
 import { MongoClient, ObjectId } from "mongodb";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client = new MongoClient("process.env.REACT_APP_MONGODB_URI"); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
+const client = new MongoClient(process.env.MONGODB_URI); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
 
-const db = client.db("process.env.REACT_APP_DB_NAME");
-const favorites = db.collection("favorites")
+const db = client.db(process.env.DB_NAME);
+const favorites = db.collection("favorites");
 
 function getFavorites(id){
     return favorites.findOne({ _id: new ObjectId(id) })

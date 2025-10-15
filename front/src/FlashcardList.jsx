@@ -1,0 +1,119 @@
+import React, { useState, useEffect } from 'react';
+import { getAllFlashcardGroups, deleteFlashcardGroup } from './services/adminService';
+import ConfirmModal from './ConfirmModal';
+
+const FlashcardList = ({ onEdit, onCreate }) => {
+    const [groups, setGroups] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [itemToDelete, setItemToDelete] = useState(null);
+
+    useEffect(() => {
+        loadGroups();
+    }, []);
+
+    const loadGroups = async () => {
+        try {
+            const data = await getAllFlashcardGroups();
+            setGroups(data);
+        } catch (err) {
+            setError('Error al cargar los flashcards');
+            console.error(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDeleteClick = (group) => {
+        setItemToDelete(group);
+        setShowDeleteModal(true);
+    };
+
+    const handleConfirmDelete = async () => {
+        try {
+            await deleteFlashcardGroup(itemToDelete._id);
+            setGroups(groups.filter(group => group._id !== itemToDelete._id));
+            setShowDeleteModal(false);
+            setItemToDelete(null);
+        } catch (err) {
+            alert('Error al eliminar');
+            console.error(err);
+        }
+    };
+
+    const handleCancelDelete = () => {
+        setShowDeleteModal(false);
+        setItemToDelete(null);
+    };
+
+    const getTotalConcepts = (group) => {
+        return group.tabs?.reduce((total, tab) => total + (tab.concepts?.length || 0), 0) || 0;
+    };
+
+    if (loading) return <div className="loading">Cargando...</div>;
+    if (error) return <div className="error">{error}</div>;
+
+    return (
+        <>
+            <div className="flashcard-list">
+                <div className="list-header">
+                    <h2>Flashcards</h2>
+                    <button className="btn-primary" onClick={onCreate}>
+                        Crear Nuevo Grupo
+                    </button>
+                </div>
+
+                <table className="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Tema</th>
+                            <th>Tabs</th>
+                            <th>Total Conceptos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {groups.map(group => (
+                            <tr key={group._id}>
+                                <td>{group.subject}</td>
+                                <td>{group.topic}</td>
+                                <td>{group.tabs?.length || 0}</td>
+                                <td>{getTotalConcepts(group)}</td>
+                                <td className="actions">
+                                    <button 
+                                        className="btn-edit"
+                                        onClick={() => onEdit(group)}
+                                    >
+                                        Editar
+                                    </button>
+                                    <button 
+                                        className="btn-delete"
+                                        onClick={() => handleDeleteClick(group)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+
+                {groups.length === 0 && (
+                    <p className="empty-message">No hay flashcards creados aún</p>
+                )}
+            </div>
+
+            <ConfirmModal
+                isOpen={showDeleteModal}
+                title="Confirmar eliminación"
+                message={`¿Estás seguro de que quieres eliminar el flashcard "${itemToDelete?.subject} - ${itemToDelete?.topic}"? Esta acción no se puede deshacer.`}
+                onConfirm={handleConfirmDelete}
+                onCancel={handleCancelDelete}
+            />
+        </>
+    );
+};
+
+export default FlashcardList;

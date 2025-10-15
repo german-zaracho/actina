@@ -2,12 +2,13 @@ import { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { login } from "./services/authService";
 import HeaderAtLanding from "./HeaderAtLanding";
+import { useAuth } from './AuthContext';
 import './css/login.css';
 
 const LoginPage = () => {
 
     const navigate = useNavigate();
-    const location = useLocation();
+    const { login: loginContext } = useAuth();
     const [userName, setUserName] = useState("");
     const [pass, setPass] = useState("");
     const [error, setError] = useState("");
@@ -37,11 +38,11 @@ const LoginPage = () => {
         setError("");
 
         try {
-            console.log("userName:", userName, "Pass:", pass);
             const { account, token } = await login({ userName: userName.trim(), password: pass });
             
-            console.log(account, token);
-            localStorage.setItem("token", token);
+            // Usar el método del contexto en lugar de localStorage directamente
+            await loginContext(token, account);
+            
             navigate("/home", { replace: true });
         } catch (err) {
             console.error("Error en login:", err);

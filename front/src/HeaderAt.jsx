@@ -1,68 +1,21 @@
-import React, { useState, useEffect } from 'react'; // ← AGREGADO useEffect
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { logout } from './services/authService';
 import '../src/css/styles.css';
-import { getProfile } from './services/profileService';
+import { useAuth } from './AuthContext';
 import backgroundImage from '../src/assets/trama5.png';
 
 export default function HeaderAt() {
     const navigate = useNavigate();
+    const { profile, isAdmin, logout: logoutContext } = useAuth();
     const [showDropdown, setShowDropdown] = useState(false);
-    const [userInitial, setUserInitial] = useState(''); // ← VACÍO inicialmente
-    const [userImage, setUserImage] = useState('');
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        loadUserData();
-    }, []);
-
-    // Escuchar cambios en el perfil
-    useEffect(() => {
-        const handleProfileUpdate = () => {
-            loadUserData();
-        };
-
-        window.addEventListener('profileUpdated', handleProfileUpdate);
-
-        return () => {
-            window.removeEventListener('profileUpdated', handleProfileUpdate);
-        };
-    }, []);
-
-    const loadUserData = async () => {
-        try {
-            const profile = await getProfile();
-
-            // Determinar la inicial
-            let initial = 'A';
-            if (profile.name) {
-                initial = profile.name.charAt(0).toUpperCase();
-            } else if (profile.userName) {
-                initial = profile.userName.charAt(0).toUpperCase();
-            }
-
-            setUserInitial(initial);
-            setUserImage(profile.userImage || '');
-            setIsLoading(false);
-        } catch (error) {
-            console.error('Error loading user data:', error);
-            setUserInitial('A');
-            setUserImage('');
-            setIsLoading(false);
-        }
-    };
+    
+    const userInitial = profile?.name 
+        ? profile.name.charAt(0).toUpperCase() 
+        : profile?.userName?.charAt(0).toUpperCase() || 'A';
 
     const handleLogout = async () => {
-        try {
-            await logout();
-            localStorage.removeItem('token');
-            navigate('/login');
-        } catch (error) {
-            console.error('Error al cerrar sesión:', error);
-            // Aún así remover el token y redirigir
-            localStorage.removeItem('token');
-            navigate('/login');
-        }
+        await logoutContext();
+        navigate('/login');
     };
 
     return (
@@ -77,12 +30,10 @@ export default function HeaderAt() {
                         className='user-button'
                         onClick={() => setShowDropdown(!showDropdown)}
                     >
-                        {isLoading ? (
-                            <span className='user'></span>
-                        ) : userImage ? (
-                            <img
-                                src={`/src/assets/images/profile-imgs/${userImage}`}
-                                alt="Profile"
+                        {profile?.userImage ? (
+                            <img 
+                                src={`/src/assets/images/profile-imgs/${profile.userImage}`} 
+                                alt="Profile" 
                                 className="user-image"
                             />
                         ) : (
@@ -99,6 +50,15 @@ export default function HeaderAt() {
                             >
                                 Mi Perfil
                             </Link>
+                            {isAdmin && (
+                                <Link
+                                    to="/admin"
+                                    className="dropdown-item"
+                                    onClick={() => setShowDropdown(false)}
+                                >
+                                    Panel Admin
+                                </Link>
+                            )}
                             <button
                                 className="dropdown-item logout-btn"
                                 onClick={handleLogout}

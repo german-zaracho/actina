@@ -1,27 +1,27 @@
 import * as service from "../../services/atlasService.js";
 
-//Los controladores reciben la informacion de las rutas y les indican que hacer a las funciones de los servicios
-const getAtlas = (req, res) => {
+async function getAll(req, res) {
+    try {
+        const atlas = await service.getAll();
+        res.json(atlas);
+    } catch (err) {
+        console.error('Error in getAll atlas:', err);
+        res.status(500).json({ error: { message: err.message } });
+    }
+}
 
-    const filter = req.query;
-    service.getAtlas(filter).then((atlas) => {
-        res.status(200).json(atlas);
-    });
-
-};
-
-const getAtlasById = (req, res) => {
-
-    const id = req.params.id;
-    service.getFlashcardById(id).then((atlas) => {
-        if (atlas) {
-            res.status(200).json(atlas);
-        } else {
-            res.status(404).json();
+async function getById(req, res) {
+    try {
+        const item = await service.getById(req.params.id);
+        if (!item) {
+            return res.status(404).json({ error: { message: 'Atlas not found' } });
         }
-    });
-
-};
+        res.json(item);
+    } catch (err) {
+        console.error('Error in getById atlas:', err);
+        res.status(404).json({ error: { message: err.message } });
+    }
+}
 
 const addAtlas = async (req, res) => {
 
@@ -92,8 +92,8 @@ const deleteAtlas = (req, res) => {
 };
 
 export {
-    getAtlas,
-    getAtlasById,
+    getAll,
+    getById,
     addAtlas,
     updateAtlas,
     replaceAtlas,

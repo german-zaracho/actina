@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 router.get('/images/profile', (req, res) => {
     try {
         // Desde api/routes/ ir a src/assets/images/profile-imgs/
-        const imagesPath = path.join(__dirname, '../../../src/assets/images/profile-imgs');
+        const imagesPath = path.join(__dirname, '../../public/assets/images/profile-imgs');
         
         // Leer el directorio
         const files = fs.readdirSync(imagesPath);
@@ -23,7 +23,7 @@ router.get('/images/profile', (req, res) => {
             const ext = path.extname(file).toLowerCase();
             return ['.png', '.jpg', '.jpeg', '.gif', '.webp'].includes(ext);
         });
-        
+
         res.json(imageFiles);
     } catch (error) {
         console.error('Error reading images directory:', error);
@@ -36,8 +36,8 @@ router.get('/images/profile', (req, res) => {
 router.get('/images/profile/:imageName', (req, res) => {
     try {
         const imageName = req.params.imageName;
-        // Desde api/routes/ ir a src/assets/images/profile-imgs/
-        const imagePath = path.join(__dirname, '../../../src/assets/images/profile-imgs', imageName);
+        // Desde api/routes/ ir a /images/profile-imgs/
+        const imagePath = path.join(__dirname, '../../public/assets/images/profile-imgs', imageName);
         
         // Verificar que el archivo existe
         if (!fs.existsSync(imagePath)) {

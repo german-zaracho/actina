@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getProfile, updateProfile, getAvailableImages } from './services/profileService';
 import HeaderAt from './HeaderAt';
+import { useAuth } from './AuthContext';
 import './css/profile.css';
 
 const ProfilePage = () => {
     const navigate = useNavigate();
+    const { profile: contextProfile, updateProfile: updateContextProfile } = useAuth();
     const [profile, setProfile] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -97,8 +99,6 @@ const ProfilePage = () => {
 
             const updatedProfile = response.profile || response;
             setProfile(updatedProfile);
-
-            setProfile(updatedProfile);
             setFormData({
                 name: updatedProfile.name || '',
                 email: updatedProfile.email || '',
@@ -109,7 +109,7 @@ const ProfilePage = () => {
             });
             
             setIsEditing(false);
-            
+            updateContextProfile(updatedProfile);
             // Notificar al HeaderAt que el perfil se actualizó
             window.dispatchEvent(new CustomEvent('profileUpdated'));
         } catch (err) {

@@ -1,29 +1,29 @@
 import * as service from "../../services/multiplechoiceService.js";
 
 //Los controladores reciben la informacion de las rutas y les indican que hacer a las funciones de los servicios
-const getMultiplechoices = (req, res) => {
+async function getMultiplechoices (req, res) {
     
-    const filter = req.query;
+    try {
+        const multiplechoices = await service.getAll();
+        res.json(multiplechoices);
+    } catch (err) {
+        res.status(500).json({ error: { message: err.message } });
+    }
 
-    service.getMultiplechoices(filter).then((multiplechoices) => {
-        res.status(200).json(multiplechoices);
-    });
+};
+
+async function getMultiplechoiceById (req, res) {
+
+    try {
+        const item = await service.getById(req.params.id);
+        res.json(item);
+    } catch (err) {
+        res.status(404).json({ error: { message: err.message } });
+    }
 
 };
 
-const getMultiplechoiceById = (req, res) => {
-
-    const id = req.params.id;
-
-    service.getMultiplechoiceById(id).then((multiplechoice) => {
-        if (multiplechoice) {
-            res.status(200).json(multiplechoice);
-        } else {
-            res.status(404).json();
-        }
-    });
-
-};
+// los de abajo no los modifique aun
 
 const addMultiplechoice = async (req, res) => {
 

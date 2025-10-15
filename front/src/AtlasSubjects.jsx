@@ -39,8 +39,6 @@ export default function AtlasSubjects({ atlas }) {
                     <button onClick={handleGoBack} className='btnBackWhite'>Volver</button>
                 </div>
             </div>
-
-
         </>
     );
 

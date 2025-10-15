@@ -8,8 +8,8 @@ const route = Router()
 
 //Cuando se da un click en los distintos botones o links se elige una ruta la cual envia informacion a la funcion de un controlador
 //La diferencia con las rutas de la app, es que estas es cuando haces una consulta por crud con la base de datos
-route.get('/atlas', [validateToken], controllers.getAtlas)
-route.get('/atlas/:id', [validateToken], controllers.getAtlasById)
+route.get('/atlas', [validateToken], controllers.getAll)
+route.get('/atlas/:id', [validateToken], controllers.getById)
 
 route.all('/atlas/:id', [validateToken], function todos(req, res, next) {
     console.log("atlasRoute ok?" )

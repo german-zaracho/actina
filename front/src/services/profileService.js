@@ -18,6 +18,8 @@ export function updateProfile(profileData) {
 export function getAvailableImages() {
     return call({ 
         url: "images/profile", 
-        method: "GET" 
+        method: "GET",
+        // port: 3333,
+        // basePath: "" 
     });
 }

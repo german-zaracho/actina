@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { AuthProvider } from './AuthContext';
 
 import MultiplechoiceSubjects from './MultiplechoiceSubjects';
 import MultiplechoiceClassification from './MultiplechoiceClassification';
@@ -13,8 +14,9 @@ import LandingPage from './LandingPage';
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
 import ProfilePage from './ProfilePage';
+import AdminPanel from './AdminPanel';
+import FriendsPage from './FriendsPage';
 import './css/styles.css';
-
 
 export default function App() {
 
@@ -26,7 +28,7 @@ export default function App() {
 
     console.log("Iniciando componente");
     fetch("http://localhost:2023/api/multiplechoices", {
-      headers:{
+      headers: {
         "auth-token": localStorage.getItem("token")
       }
     })
@@ -35,17 +37,17 @@ export default function App() {
       .catch((error) => console.error("Error fetching multiplechoices:", error));
 
     fetch("http://localhost:2023/api/flashcards", {
-      headers:{
-          "auth-token": localStorage.getItem("token")
-        }
+      headers: {
+        "auth-token": localStorage.getItem("token")
       }
+    }
     )
       .then((res) => res.json())
       .then((data) => setFlashcards(data))
       .catch((error) => console.error("Error fetching flashcards:", error));
-    
+
     fetch("http://localhost:2023/api/atlas", {
-      headers:{
+      headers: {
         "auth-token": localStorage.getItem("token")
       }
     })
@@ -58,7 +60,7 @@ export default function App() {
   useEffect(() => { }, [multiplechoices, flashcards, atlas])
 
   return (
-    <>
+    <AuthProvider>
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -72,9 +74,11 @@ export default function App() {
           <Route path="/flashcardsSubjects" element={<FlashcardSubjects flashcards={flashcards} />} />
           <Route path="/flashcardTabs/:subject" element={<FlashcardTabs flashcards={flashcards} />} />
           <Route path="/atlasSubjects" element={<AtlasSubjects atlas={atlas} />} />
-          <Route path="/atlasPages/:subject" element={<AtlasPages atlas={atlas}/>} />
+          <Route path="/atlasPages/:subject" element={<AtlasPages atlas={atlas} />} />
+          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/friends" element={<FriendsPage />} />
         </Routes>
       </Router>
-    </>
-  )
+    </AuthProvider>
+  );
 }

@@ -26,6 +26,26 @@ async function createAccount(req, res) {
     }
 }
 
+async function getAccount(req, res) {
+    try {
+        // req.account viene del validateToken middleware
+        // Ya tiene toda la info de la cuenta, solo quitar la contraseña
+        const { password, ...accountData } = req.account;
+        res.json(accountData);
+    } catch (err) {
+        res.status(400).json({ error: { message: err.message } });
+    }
+}
+
+async function getCurrentUserRole(req, res) {
+    try {
+        res.json({ rol: req.account.rol });
+    } catch (err) {
+        res.status(400).json({ error: { message: err.message } });
+    }
+}
+
+
 async function login(req, res) {
     return services
         .login(req.body)
@@ -76,4 +96,4 @@ async function getProfile(req, res) {
         .catch(err => res.status(400).json({ error: { message: err.message } }))
 }
 
-export { createAccount, login, logout, createProfile, updateProfile, getProfile };
+export { createAccount, login, logout, createProfile, updateProfile, getProfile, getAccount, getCurrentUserRole };

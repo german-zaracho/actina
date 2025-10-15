@@ -53,6 +53,12 @@ export default function Sidebar() {
                                     <span className="text nav-text">Atlas</span>
                                 </Link>
                             </li>
+                            <li className="nav-link">
+                                <Link to="/friends">
+                                    <span className="material-icons icon">group</span>
+                                    <span className="text nav-text">Amigos</span>
+                                </Link>
+                            </li>
 
                             <li className="nav-link">
                                 <a href="#">

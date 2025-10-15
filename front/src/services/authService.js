@@ -23,6 +23,20 @@ export function logout() {
     })
 }
 
+export function getAccount() {
+    return call({ 
+        url: "account", 
+        method: "GET" 
+    });
+}
+
+export function getCurrentUserRole() {
+    return call({ 
+        url: "account/role", 
+        method: "GET" 
+    });
+}
+
 export function getProfile() {
     return call({ 
         url: "profile", 

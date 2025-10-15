@@ -82,7 +82,7 @@ const AtlasPages = ({ atlas }) => {
                                     </button></li>
                                     <li>
                                         {filteredAtlas[0].pages[currentPageIndex]?.items.map((item, itemIndex) => (
-                                            <ul className='itemContainer'>
+                                            <ul className='itemContainer' key={itemIndex}>
                                                 <li>{itemIndex + 1}.-</li>
                                                 <li className={`atlasItem ${blurredItems[itemIndex] ? 'blurred' : ''}`} key={itemIndex}>{item}</li>
                                                 <li className='btnBlurContainer'><button className='btnBack' onClick={() => handleToggleBlur(itemIndex)}>{blurredItems[itemIndex] ? 'Mostrar' : 'Ocultar'}</button></li>

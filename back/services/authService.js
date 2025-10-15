@@ -1,8 +1,10 @@
 import { MongoClient, ObjectId } from "mongodb";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client = new MongoClient('process.env.REACT_APP_MONGODB_URI')
-const db = client.db("process.env.REACT_APP_DB_NAME")
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db(process.env.DB_NAME);
 
 const accountCollection = db.collection("account")
 
@@ -23,7 +25,10 @@ async function createAccount(account){
         }
     }
     
-    const newAccount = { ...account }
+    const newAccount = { 
+        ...account,
+        rol:1
+    }
 
     newAccount.password = await bcrypt.hash( account.password, 10 )
 
@@ -34,6 +39,7 @@ async function createAccount(account){
     return {
         _id: result.insertedId,
         userName: newAccount.userName,
+        rol: newAccount.rol,
         ...(newAccount.email && { email: newAccount.email })
     }
 }
@@ -49,7 +55,9 @@ async function login( account ){
 
     if( !itsValid ) throw new Error( "I couldn't log in" )
 
-    return { ...exists, password: undefined }
+    return { 
+        ...exists, 
+        password: undefined }
 }
 export {
     createAccount,

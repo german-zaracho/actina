@@ -1,9 +1,11 @@
 import { MongoClient, ObjectId } from "mongodb";
 import bcrypt from 'bcrypt'
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client = new MongoClient('process.env.REACT_APP_MONGODB_URI')
-const db = client.db("process.env.REACT_APP_DB_NAME")
-const profileCollection = db.collection("profile")
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db(process.env.DB_NAME);
+const profileCollection = db.collection("profile");
 
 // Función para crear perfil automáticamente al registrarse
 async function createBasicProfile(account) {

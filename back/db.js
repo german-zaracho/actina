@@ -1,7 +1,9 @@
-import { MongoClient } from 'mongodb'
+import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client = new MongoClient('process.env.REACT_APP_MONGODB_URI')
-const db = client.db("process.env.REACT_APP_DB_NAME")
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db(process.env.DB_NAME);
 
 client.connect()
     .then( async() => {

@@ -1,13 +1,15 @@
-export async function call({ url, method = "GET", body = undefined }) {
+export async function call({ url, method = "GET", body = undefined, port = 2023, basePath = "api" }) {
 
     const token = localStorage.getItem("token");
 
+    const fullUrl = `http://localhost:${port}/${basePath ? basePath + "/" : ""}${url}`;
+
     // Debug: verificar el token
     console.log("Token being sent:", token);
-    console.log("Making request to:", `http://localhost:2023/api/${url}`);
+    console.log("Making request to:", fullUrl);
     console.log("Method:", method);
 
-    return fetch(`http://localhost:2023/api/${url}`, {
+    return fetch(fullUrl, {
         headers: {
             "auth-token": token,
             "Content-Type": "application/json",

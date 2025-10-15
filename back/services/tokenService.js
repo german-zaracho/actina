@@ -1,9 +1,11 @@
 import jwt from 'jsonwebtoken';
 import { MongoClient, ObjectId } from "mongodb";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client = new MongoClient('process.env.REACT_APP_MONGODB_URI')
-const db = client.db("process.env.REACT_APP_DB_NAME")
-const tokenCollection = db.collection("tokens")
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db(process.env.DB_NAME);
+const tokenCollection = db.collection("tokens");
 
 async function createToken(account){
     const token = jwt.sign(account,"Secret password")

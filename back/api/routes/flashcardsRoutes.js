@@ -12,10 +12,8 @@ route.get('/flashcards', [validateToken], controllers.getFlashcards)
 route.get('/flashcards/:id', [validateToken], controllers.getFlashcardById)
 
 route.all('/flashcards/:id', [validateToken], function todos(req, res, next) {
-
     console.log("flashRoute ok?" )
     next()
-    
 })
 
 route.post('/flashcards',[validateFlashcard], controllers.addFlashcard)

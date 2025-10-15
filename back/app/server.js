@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from "express";
 import MultiplechoiceRoute from '../routes/routes.js';
 import ApiMultiplechoiceRoute from '../api/routes/multiplechoiceRoutes.js';
@@ -5,6 +8,8 @@ import ApiFlashcardRoute from '../api/routes/flashcardsRoutes.js';
 import ApiAtlasRoute from '../api/routes/atlasRoutes.js';
 import ApiAuth from '../api/routes/authRoutes.js';
 import ImageRoutes from '../api/routes/imageRoutes.js';
+import AdminRoutes from '../api/routes/adminRoutes.js';
+import FriendshipRoutes from '../api/routes/friendshipRoutes.js';
 import cors from 'cors';
 
 const app = express();
@@ -22,6 +27,10 @@ app.use('/api',ApiAtlasRoute);
 app.use('/api', ApiAuth);
 
 app.use('/api', ImageRoutes);
+
+app.use('/api', AdminRoutes);
+
+app.use('/api', FriendshipRoutes);
 
 // Pasa el puerto del servidor
 app.listen(2023);
