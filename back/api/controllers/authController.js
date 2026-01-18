@@ -96,4 +96,13 @@ async function getProfile(req, res) {
         .catch(err => res.status(400).json({ error: { message: err.message } }))
 }
 
-export { createAccount, login, logout, createProfile, updateProfile, getProfile, getAccount, getCurrentUserRole };
+async function getPublicProfile(req, res) {
+    try {
+        const profile = await profileService.getPublicProfile(req.params.userId);
+        res.json(profile);
+    } catch (err) {
+        res.status(404).json({ error: { message: err.message } });
+    }
+}
+
+export { createAccount, login, logout, createProfile, updateProfile, getProfile, getAccount, getCurrentUserRole, getPublicProfile };

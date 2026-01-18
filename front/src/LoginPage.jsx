@@ -28,7 +28,7 @@ const LoginPage = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (!userName.trim() || !pass) {
             setError("Por favor completa todos los campos");
             return;
@@ -39,10 +39,10 @@ const LoginPage = () => {
 
         try {
             const { account, token } = await login({ userName: userName.trim(), password: pass });
-            
+
             // Usar el método del contexto en lugar de localStorage directamente
             await loginContext(token, account);
-            
+
             navigate("/home", { replace: true });
         } catch (err) {
             console.error("Error en login:", err);
@@ -65,25 +65,48 @@ const LoginPage = () => {
                         </div>
                     )}
 
+                    {error && (
+                        <div className="error-message">
+                            {error}
+                        </div>
+                    )}
+
                     <div>
-                        <label>Nombre de usuario</label>
-                        <input type="text" onChange={onChangeUserName} value={userName}  placeholder="Ingresa tu nombre de usuario"
-                            required/>
-                    </div>
-                    <div>
-                        <label>Contraseña</label>
-                        <input type="password" onChange={onChangePass} value={pass} placeholder="Ingresa tu contraseña"
-                            required />
+                        <label htmlFor="username">Nombre de usuario</label>
+                        <input
+                            id="username"
+                            type="text"
+                            onChange={onChangeUserName}
+                            value={userName}
+                            placeholder="Ingresa tu nombre de usuario"
+                            required
+                        />
                     </div>
 
-                    {error && <p className="error-message">{error}</p>}
+                    <div>
+                        <label htmlFor="password">Contraseña</label>
+                        <input
+                            id="password"
+                            type="password"
+                            onChange={onChangePass}
+                            value={pass}
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        />
+                    </div>
 
-                    <button className="btnLogin" type="submit" disabled={loading}>{loading ? "Ingresando..." : "Ingresar"}</button>
+                    <button
+                        className={`btnLogin ${loading ? 'loading' : ''}`}
+                        type="submit"
+                        disabled={loading}
+                    >
+                        {loading ? '' : 'Ingresar'}
+                    </button>
 
                     <div className="auth-links">
-                        <p>¿No tienes cuenta? <Link to="/register">Crear cuenta</Link></p>
+                        <p>¿No tienes cuenta? <a href="/register">Crear cuenta</a></p>
                     </div>
-                    
+
                 </form>
             </div>
         </>

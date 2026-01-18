@@ -1,34 +1,296 @@
-.btnLogin {
-    width: 120px;
-    height: 35px;
-    border-radius: 100px;
-    border: 0px;
-    font-weight: 600;
-    margin: 20px auto 20px;
-    color: white;
-    background-color: #037e6a;
-}
-
-.btnLogin:hover {
-    background-color: #08a389;
-}
-
+/* Container principal del login/register */
 .loginForm {
-    margin: 20px auto 20px;
+    margin: 3rem auto;
     background: white;
-    width: 30vw;
-    border-radius: 7px;
-    padding: 20px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.loginForm h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+    font-weight: 700;
 }
 
 .loginForm form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 1.5rem;
 }
 
-.loginForm div {
+/* Form groups */
+.loginForm form > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.loginForm label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.loginForm input {
+    padding: 0.9rem 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.loginForm input:focus {
+    outline: none;
+    border-color: #037e6a;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(3, 126, 106, 0.1);
+}
+
+.loginForm input::placeholder {
+    color: #adb5bd;
+}
+
+/* Botones */
+.btnLogin {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #037e6a 0%, #17a78f 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(3, 126, 106, 0.3);
+}
+
+.btnLogin:hover {
+    background: linear-gradient(135deg, #17a78f 0%, #037e6a 100%);
+    box-shadow: 0 6px 20px rgba(3, 126, 106, 0.4);
+}
+
+.btnLogin:active {
+    transform: translateY(0);
+}
+
+.btnLogin:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    background: #fee;
+    color: #c33;
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #c33;
+    font-size: 0.9rem;
+    animation: slideIn 0.3s ease;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2e7d32;
+    font-size: 0.9rem;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Links de autenticación */
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.auth-links p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.auth-links a {
+    color: #037e6a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #17a78f;
+    text-decoration: underline;
+}
+
+/* Divisor visual */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.divider span {
+    padding: 0 1rem;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Indicador de fortaleza de contraseña (opcional para register) */
+.password-strength {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    background: #e9ecef;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.password-strength-bar.weak {
+    width: 33%;
+    background: #dc3545;
+}
+
+.password-strength-bar.medium {
+    width: 66%;
+    background: #ffc107;
+}
+
+.password-strength-bar.strong {
+    width: 100%;
+    background: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .loginForm {
+        margin: 2rem auto;
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+
+    .loginForm h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .loginForm form {
+        gap: 1.25rem;
+    }
+
+    .loginForm input {
+        padding: 0.8rem 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .btnLogin {
+        height: 45px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginForm {
+        margin: 1.5rem auto;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+
+    .loginForm h1 {
+        font-size: 1.5rem;
+    }
+
+    .loginForm label {
+        font-size: 0.85rem;
+    }
+
+    .loginForm input {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .btnLogin {
+        height: 42px;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    .auth-links p {
+        font-size: 0.9rem;
+    }
+
+    .error-message,
+    .success-message {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Estados de loading */
+.btnLogin.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btnLogin.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

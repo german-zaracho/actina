@@ -56,7 +56,7 @@ const RegisterPage = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (!validateForm()) return;
 
         setLoading(true);
@@ -70,14 +70,14 @@ const RegisterPage = () => {
             });
 
             console.log("Usuario registrado:", response);
-            
+
             // Opcional: Auto-login después del registro
             // Si tu backend devuelve un token al registrarse, puedes hacer esto:
             // localStorage.setItem("token", response.token);
             // navigate("/home", { replace: true });
-            
+
             // O redirigir al login con un mensaje de éxito
-            navigate("/login", { 
+            navigate("/login", {
                 state: { message: "¡Registro exitoso! Ahora puedes iniciar sesión." }
             });
 
@@ -95,13 +95,20 @@ const RegisterPage = () => {
             <div className="loginForm">
                 <form onSubmit={onSubmit}>
                     <h1>Crear cuenta</h1>
-                    
+
+                    {error && (
+                        <div className="error-message">
+                            {error}
+                        </div>
+                    )}
+
                     <div>
-                        <label>Nombre de usuario</label>
-                        <input 
-                            type="text" 
+                        <label htmlFor="username">Nombre de usuario</label>
+                        <input
+                            id="username"
+                            type="text"
                             name="userName"
-                            onChange={handleChange} 
+                            onChange={handleChange}
                             value={formData.userName}
                             placeholder="Ingresa tu nombre de usuario"
                             required
@@ -109,11 +116,12 @@ const RegisterPage = () => {
                     </div>
 
                     <div>
-                        <label>Email</label>
-                        <input 
-                            type="email" 
+                        <label htmlFor="email">Email</label>
+                        <input
+                            id="email"
+                            type="email"
                             name="email"
-                            onChange={handleChange} 
+                            onChange={handleChange}
                             value={formData.email}
                             placeholder="Ingresa tu email"
                             required
@@ -121,11 +129,12 @@ const RegisterPage = () => {
                     </div>
 
                     <div>
-                        <label>Contraseña</label>
-                        <input 
-                            type="password" 
+                        <label htmlFor="password">Contraseña</label>
+                        <input
+                            id="password"
+                            type="password"
                             name="password"
-                            onChange={handleChange} 
+                            onChange={handleChange}
                             value={formData.password}
                             placeholder="Mínimo 6 caracteres"
                             required
@@ -133,30 +142,30 @@ const RegisterPage = () => {
                     </div>
 
                     <div>
-                        <label>Confirmar contraseña</label>
-                        <input 
-                            type="password" 
+                        <label htmlFor="confirmPassword">Confirmar contraseña</label>
+                        <input
+                            id="confirmPassword"
+                            type="password"
                             name="confirmPassword"
-                            onChange={handleChange} 
+                            onChange={handleChange}
                             value={formData.confirmPassword}
                             placeholder="Repite tu contraseña"
                             required
                         />
                     </div>
 
-                    {error && <p className="error-message">{error}</p>}
-                    
-                    <button 
-                        className="btnLogin" 
-                        type="submit" 
+                    <button
+                        className={`btnLogin ${loading ? 'loading' : ''}`}
+                        type="submit"
                         disabled={loading}
                     >
-                        {loading ? "Creando cuenta..." : "Crear cuenta"}
+                        {loading ? '' : 'Crear cuenta'}
                     </button>
 
                     <div className="auth-links">
-                        <p>¿Ya tienes cuenta? <Link to="/login">Iniciar sesión</Link></p>
+                        <p>¿Ya tienes cuenta? <a href="/login">Iniciar sesión</a></p>
                     </div>
+                    
                 </form>
             </div>
         </>

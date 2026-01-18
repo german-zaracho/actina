@@ -16,6 +16,9 @@ import RegisterPage from './RegisterPage';
 import ProfilePage from './ProfilePage';
 import AdminPanel from './AdminPanel';
 import FriendsPage from './FriendsPage';
+import PublicProfilePage from './PublicProfilePage';
+import CreateActivityPage from './CreateActivityPage';
+import MyActivitiesPage from './MyActivitiesPage';
 import './css/styles.css';
 
 export default function App() {
@@ -77,6 +80,9 @@ export default function App() {
           <Route path="/atlasPages/:subject" element={<AtlasPages atlas={atlas} />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/create" element={<CreateActivityPage />} />
+          <Route path="/my-activities" element={<MyActivitiesPage />} />
+          <Route path="/profile/:userId" element={<PublicProfilePage />} />
         </Routes>
       </Router>
     </AuthProvider>

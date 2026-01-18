@@ -10,6 +10,7 @@ import ApiAuth from '../api/routes/authRoutes.js';
 import ImageRoutes from '../api/routes/imageRoutes.js';
 import AdminRoutes from '../api/routes/adminRoutes.js';
 import FriendshipRoutes from '../api/routes/friendshipRoutes.js';
+import UserActivitiesRoutes from '../api/routes/userActivitiesRoutes.js';
 import cors from 'cors';
 
 const app = express();
@@ -31,6 +32,8 @@ app.use('/api', ImageRoutes);
 app.use('/api', AdminRoutes);
 
 app.use('/api', FriendshipRoutes);
+
+app.use('/api', UserActivitiesRoutes);
 
 // Pasa el puerto del servidor
 app.listen(2023);

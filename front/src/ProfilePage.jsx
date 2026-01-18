@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getProfile, updateProfile, getAvailableImages } from './services/profileService';
 import HeaderAt from './HeaderAt';
+import Sidebar from './Sidebar';
 import { useAuth } from './AuthContext';
 import './css/profile.css';
 
@@ -150,6 +151,7 @@ const ProfilePage = () => {
         <>
             <HeaderAt />
             <div className="profile-container">
+                <Sidebar />
                 <div className="profile-card">
                     <div className="profile-header">
                         <h1>Mi Perfil</h1>

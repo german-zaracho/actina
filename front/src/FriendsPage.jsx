@@ -237,7 +237,10 @@ const FriendsPage = () => {
                                     <div className="results-list">
                                         {friends.map(friend => (
                                             <div key={friend._id} className="user-card">
-                                                <div className="user-info">
+                                                <div className="user-info"
+                                                    onClick={() => navigate(`/profile/${friend._id}`)}
+                                                    style={{ cursor: 'pointer' }}
+                                                >
                                                     {friend.userImage ? (
                                                         <img
                                                             src={`/src/assets/images/profile-imgs/${friend.userImage}`}
@@ -256,7 +259,10 @@ const FriendsPage = () => {
                                                 </div>
                                                 <button
                                                     className="btn-remove"
-                                                    onClick={() => handleRemoveFriend(friend._id)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleRemoveFriend(friend._id);
+                                                    }}
                                                 >
                                                     Eliminar
                                                 </button>
@@ -278,7 +284,10 @@ const FriendsPage = () => {
                                     <div className="results-list">
                                         {requests.map(request => (
                                             <div key={request._id} className="user-card">
-                                                <div className="user-info">
+                                                <div className="user-info"
+                                                    onClick={() => navigate(`/profile/${request.sender._id}`)}
+                                                    style={{ cursor: 'pointer' }}
+                                                >
                                                     {request.sender?.userImage ? (
                                                         <img
                                                             src={`/src/assets/images/profile-imgs/${request.sender.userImage}`}
@@ -295,7 +304,10 @@ const FriendsPage = () => {
                                                         <p className="username">@{request.sender?.userName}</p>
                                                     </div>
                                                 </div>
-                                                <div className="request-actions">
+                                                <div
+                                                    className="request-actions"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
                                                     <button
                                                         className="btn-accept"
                                                         onClick={() => handleAcceptRequest(request._id)}

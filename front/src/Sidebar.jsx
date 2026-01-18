@@ -32,11 +32,11 @@ export default function Sidebar() {
                             <li className="nav-link" id="border-top">
                                 <Link to="/home" className="border-top">
                                     <span className="material-icons icon">home</span>
-                                    <span className="text nav-text">Multiplechoice</span>
+                                    <span className="text nav-text">Home</span>
                                 </Link>
                             </li>
-                            <li className="nav-link" id="border-top">
-                                <Link to="/multiplechoiceSubjects" className="border-top">
+                            <li className="nav-link">
+                                <Link to="/multiplechoiceSubjects">
                                     <span className="material-icons icon">summarize</span>
                                     <span className="text nav-text">Multiplechoice</span>
                                 </Link>
@@ -61,12 +61,12 @@ export default function Sidebar() {
                             </li>
 
                             <li className="nav-link">
-                                <a href="#">
+                                <Link to="/my-activities">
                                     <span className="material-icons icon">folder</span>
                                     <span className="text nav-text">Mis Actividades</span>
-                                </a>
+                                </Link>
                             </li>
-                            <li className="nav-link">
+                            {/* <li className="nav-link">
                                 <a href="#">
                                     <i className='bx bxs-bookmark icon'></i>
                                     <span className="text nav-text">Favoritos</span>
@@ -77,12 +77,12 @@ export default function Sidebar() {
                                     <span className="material-icons icon">chat</span>
                                     <span className="text nav-text">Chat</span>
                                 </a>
-                            </li>
+                            </li> */}
                             <li className="nav-link">
-                                <a href="#" className="border-bottom">
+                                <Link to="/create" className="border-bottom">
                                     <span className="material-icons icon">add_circle</span>
                                     <span className="text nav-text">Crear</span>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

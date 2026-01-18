@@ -91,9 +91,22 @@ async function getProfile(id) {
     return profile
 }
 
+async function getPublicProfile(userId) {
+    await client.connect();
+    const profile = await profileCollection.findOne({ _id: new ObjectId(userId) });
+    
+    if (!profile) {
+        throw new Error("That profile doesn't exist");
+    }
+    
+    return profile;
+}
+
+
 export {
     createBasicProfile,
     createProfile,
     updateProfile,
-    getProfile
+    getProfile,
+    getPublicProfile
 }
