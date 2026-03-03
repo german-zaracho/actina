@@ -19,6 +19,7 @@ import FriendsPage from './FriendsPage';
 import PublicProfilePage from './PublicProfilePage';
 import CreateActivityPage from './CreateActivityPage';
 import MyActivitiesPage from './MyActivitiesPage';
+import FavoritesPage from './FavoritesPage';
 import './css/styles.css';
 
 export default function App() {
@@ -82,7 +83,8 @@ export default function App() {
           <Route path="/friends" element={<FriendsPage />} />
           <Route path="/create" element={<CreateActivityPage />} />
           <Route path="/my-activities" element={<MyActivitiesPage />} />
-          <Route path="/profile/:userId" element={<PublicProfilePage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/profile/:userName" element={<PublicProfilePage />} />
         </Routes>
       </Router>
     </AuthProvider>

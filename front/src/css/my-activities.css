@@ -222,6 +222,15 @@
     background: #17a78f;
 }
 
+.btn-copy {
+    background: #3498db;
+    color: white;
+}
+
+.btn-copy:hover {
+    background: #2980b9;
+}
+
 .btn-delete {
     background: #dc3545;
     color: white;
@@ -231,7 +240,7 @@
     background: #c82333;
 }
 
-/* Estado vacío */
+/* Estado vacÃ­o */
 .empty-state {
     text-align: center;
     padding: 4rem 2rem;
@@ -407,4 +416,40 @@
 
 .btn-cancel-modal:hover {
     background: #5a6268;
+}
+
+/* Actividades eliminadas */
+.deleted-activity {
+    border: 2px solid #e74c3c !important;
+    opacity: 0.95;
+}
+
+.deleted-activity .card-content {
+    cursor: default;
+}
+
+.deleted-message {
+    color: #e74c3c !important;
+    font-weight: 500;
+    font-style: italic;
+    background: #ffe5e5;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.deleted-activity h3 {
+    color: #e74c3c;
+}
+
+.deleted-activity .card-icon {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
 }

@@ -18,21 +18,6 @@ const MultiplechoiceForm = ({ item, onSave, onCancel }) => {
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState('');
 
-    // useEffect(() => {
-    //     if (item) {
-    //         setFormData({
-    //             subject: item.subject || '',
-    //             classification: item.classification || '',
-    //             questions: item.questions || [{
-    //                 question: '',
-    //                 options: ['', '', '', ''],
-    //                 answer: 0,
-    //                 justification: ''
-    //             }]
-    //         });
-    //     }
-    // }, [item]);
-
     useEffect(() => {
     if (item) {
         setFormData({
@@ -87,20 +72,20 @@ const MultiplechoiceForm = ({ item, onSave, onCancel }) => {
         });
     };
 
-    const removeQuestion = (qIndex) => {
-        if (formData.questions.length === 1) {
-            alert('Debe haber al menos una pregunta');
-            return;
-        }
-        const newQuestions = formData.questions.filter((_, i) => i !== qIndex);
-        setFormData({ ...formData, questions: newQuestions });
-    };
+    // const removeQuestion = (qIndex) => {
+    //     if (formData.questions.length === 1) {
+    //         alert('Debe haber al menos una pregunta');
+    //         return;
+    //     }
+    //     const newQuestions = formData.questions.filter((_, i) => i !== qIndex);
+    //     setFormData({ ...formData, questions: newQuestions });
+    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSaving(true);
         setError('');
-        console.log("itetemtmemte", item);
+        // console.log("itemitemitem", item);
 
         try {
             const dataToSave = {

@@ -3,11 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import HeaderAt from './HeaderAt';
 import Sidebar from './Sidebar';
 import UserActivityForm from './UserActivityForm';
+import ToastNotification from './ToastNotification';
 import './css/create-activity.css';
 
 const CreateActivityPage = () => {
     const navigate = useNavigate();
     const [selectedType, setSelectedType] = useState(null); // null, 'multiplechoice', 'flashcard', 'atlas'
+    
+    // Estado para el toast
+    const [toast, setToast] = useState({
+        isVisible: false,
+        message: '',
+        type: 'success'
+    });
 
     const handleSelectType = (type) => {
         setSelectedType(type);
@@ -18,9 +26,24 @@ const CreateActivityPage = () => {
     };
 
     const handleSave = () => {
-        // Después de guardar, redirigir a "Mis Actividades"
-        alert('¡Actividad creada exitosamente!');
-        navigate('/my-activities');
+        // Mostrar toast y redirigir después
+        setToast({
+            isVisible: true,
+            message: '¡Actividad creada exitosamente!',
+            type: 'success'
+        });
+        
+        // Esperar a que el toast se muestre antes de redirigir
+        setTimeout(() => {
+            navigate('/my-activities');
+        }, 1500);
+    };
+
+    const closeToast = () => {
+        setToast({
+            ...toast,
+            isVisible: false
+        });
     };
 
     const activityTypes = [
@@ -101,6 +124,15 @@ const CreateActivityPage = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Toast Notification */}
+            <ToastNotification
+                message={toast.message}
+                type={toast.type}
+                isVisible={toast.isVisible}
+                onClose={closeToast}
+                duration={2000}
+            />
         </>
     );
 };

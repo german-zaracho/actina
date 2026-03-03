@@ -467,7 +467,7 @@ h2 {
 }
 
 .homeSection {
-    margin: 0px 0px 10px 0px;
+    margin: 40px 0px 10px 0px;
     border-radius: 16px;
     max-width: 500px;
     width: 100vw;
@@ -494,15 +494,15 @@ h2 {
 
 .homeSection .searchField span {
     position: absolute;
-    left: 8px;
-    top: 7px;
+    /* left: 8px; */
+    /* top: 7px; */
 }
 
 .homeSection .searchField input {
     display: block;
     width: 100%;
     outline: none;
-    padding: 4px 8px 4px 27px;
+    padding: 4px 8px 4px 40px;
 }
 
 
@@ -698,4 +698,38 @@ footer hr {
 
 .flashcardBtn {
     margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/* ultimo agregado */
+
+.category-divider {
+    background: transparent !important;
+    pointer-events: none;
+    margin: 2rem 0 1rem 0;
+    border-top: 2px solid #ccc;
+    padding-top: 1rem;
+}
+
+.category-divider span {
+    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.my-activities-category {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.my-activities-category:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.my-activities-category a {
+    color: white !important;
+    font-weight: 600;
 }

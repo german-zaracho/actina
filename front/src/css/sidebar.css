@@ -342,3 +342,74 @@ body.dark .home .text {
     text-decoration: none !important;
     color: #1b6ff3;
 }
+
+/* Badge de notificaciones */
+.notification-badge {
+    position: absolute;
+    right: 5px;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Overlay para cerrar el sidebar al hacer clic fuera */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Asegurar que el sidebar esté por encima del overlay */
+.sidebar {
+    z-index: 999;
+}
+
+/* En desktop, no mostrar el overlay ya que el sidebar siempre está visible */
+@media (min-width: 769px) {
+    .sidebar-overlay {
+        display: none;
+    }
+}
+
+/* En mobile/tablet, el overlay es útil */
+@media (max-width: 768px) {
+    .sidebar-overlay {
+        display: block;
+    }
+    
+    /* Sidebar en mobile debe estar posicionado fixed para superponerse */
+    .sidebar:not(.close) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 999;
+    }
+}

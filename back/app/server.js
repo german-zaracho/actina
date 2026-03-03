@@ -11,6 +11,7 @@ import ImageRoutes from '../api/routes/imageRoutes.js';
 import AdminRoutes from '../api/routes/adminRoutes.js';
 import FriendshipRoutes from '../api/routes/friendshipRoutes.js';
 import UserActivitiesRoutes from '../api/routes/userActivitiesRoutes.js';
+import SearchRoutes from '../api/routes/searchRoutes.js';
 import cors from 'cors';
 
 const app = express();
@@ -34,6 +35,8 @@ app.use('/api', AdminRoutes);
 app.use('/api', FriendshipRoutes);
 
 app.use('/api', UserActivitiesRoutes);
+
+app.use('/api', SearchRoutes);
 
 // Pasa el puerto del servidor
 app.listen(2023);

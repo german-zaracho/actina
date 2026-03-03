@@ -1,3 +1,117 @@
+// import React, { useState, useEffect } from 'react';
+// import { getAllAtlasGroups, deleteAtlasGroup } from './services/adminService';
+// import ConfirmModal from './ConfirmModal';
+
+// const AtlasList = ({ onEdit, onCreate }) => {
+//     const [groups, setGroups] = useState([]);
+//     const [loading, setLoading] = useState(true);
+//     const [error, setError] = useState('');
+//     const [showDeleteModal, setShowDeleteModal] = useState(false);
+//     const [itemToDelete, setItemToDelete] = useState(null);
+
+//     useEffect(() => {
+//         loadGroups();
+//     }, []);
+
+//     const loadGroups = async () => {
+//         try {
+//             const data = await getAllAtlasGroups();
+//             setGroups(data);
+//         } catch (err) {
+//             setError('Error al cargar los atlas');
+//             console.error(err);
+//         } finally {
+//             setLoading(false);
+//         }
+//     };
+
+//     const handleDeleteClick = (group) => {
+//         setItemToDelete(group);
+//         setShowDeleteModal(true);
+//     };
+
+//     const handleConfirmDelete = async () => {
+//         try {
+//             await deleteAtlasGroup(itemToDelete._id);
+//             setGroups(groups.filter(group => group._id !== itemToDelete._id));
+//             setShowDeleteModal(false);
+//             setItemToDelete(null);
+//         } catch (err) {
+//             alert('Error al eliminar');
+//             console.error(err);
+//         }
+//     };
+
+//     const handleCancelDelete = () => {
+//         setShowDeleteModal(false);
+//         setItemToDelete(null);
+//     };
+
+//     if (loading) return <div className="loading">Cargando...</div>;
+//     if (error) return <div className="error">{error}</div>;
+
+//     return (
+//         <>
+//             <div className="atlas-list">
+//                 <div className="list-header">
+//                     <h2>Atlas</h2>
+//                     <button className="btn-primary" onClick={onCreate}>
+//                         Crear Nuevo Atlas
+//                     </button>
+//                 </div>
+
+//                 <table className="admin-table">
+//                     <thead>
+//                         <tr>
+//                             <th>Tipo</th>
+//                             <th>Materia</th>
+//                             <th>Páginas</th>
+//                             <th>Acciones</th>
+//                         </tr>
+//                     </thead>
+//                     <tbody>
+//                         {groups.map(group => (
+//                             <tr key={group._id}>
+//                                 <td>{group.type}</td>
+//                                 <td>{group.subject}</td>
+//                                 <td>{group.pages?.length || 0} páginas</td>
+//                                 <td className="actions">
+//                                     <button 
+//                                         className="btn-edit"
+//                                         onClick={() => onEdit(group)}
+//                                     >
+//                                         Editar
+//                                     </button>
+//                                     <button 
+//                                         className="btn-delete"
+//                                         onClick={() => handleDeleteClick(group)}
+//                                     >
+//                                         Eliminar
+//                                     </button>
+//                                 </td>
+//                             </tr>
+//                         ))}
+//                     </tbody>
+//                 </table>
+
+//                 {groups.length === 0 && (
+//                     <p className="empty-message">No hay atlas creados aún</p>
+//                 )}
+//             </div>
+
+//             <ConfirmModal
+//                 isOpen={showDeleteModal}
+//                 title="Confirmar eliminación"
+//                 message={`¿Estás seguro de que quieres eliminar el atlas "${itemToDelete?.type} - ${itemToDelete?.subject}"? Esta acción no se puede deshacer.`}
+//                 onConfirm={handleConfirmDelete}
+//                 onCancel={handleCancelDelete}
+//             />
+//         </>
+//     );
+// };
+
+// export default AtlasList;
+
 import React, { useState, useEffect } from 'react';
 import { getAllAtlasGroups, deleteAtlasGroup } from './services/adminService';
 import ConfirmModal from './ConfirmModal';
@@ -65,17 +179,17 @@ const AtlasList = ({ onEdit, onCreate }) => {
                         <tr>
                             <th>Tipo</th>
                             <th>Materia</th>
-                            <th>Páginas</th>
+                            <th>PÃ¡ginas</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         {groups.map(group => (
                             <tr key={group._id}>
-                                <td>{group.type}</td>
-                                <td>{group.subject}</td>
-                                <td>{group.pages?.length || 0} páginas</td>
-                                <td className="actions">
+                                <td data-label="Tipo">{group.type}</td>
+                                <td data-label="Materia">{group.subject}</td>
+                                <td data-label="Páginas">{group.pages?.length || 0} páginas</td>
+                                <td data-label="Acciones" className="actions">
                                     <button 
                                         className="btn-edit"
                                         onClick={() => onEdit(group)}
@@ -95,14 +209,14 @@ const AtlasList = ({ onEdit, onCreate }) => {
                 </table>
 
                 {groups.length === 0 && (
-                    <p className="empty-message">No hay atlas creados aún</p>
+                    <p className="empty-message">No hay atlas creados aÃºn</p>
                 )}
             </div>
 
             <ConfirmModal
                 isOpen={showDeleteModal}
-                title="Confirmar eliminación"
-                message={`¿Estás seguro de que quieres eliminar el atlas "${itemToDelete?.type} - ${itemToDelete?.subject}"? Esta acción no se puede deshacer.`}
+                title="Confirmar eliminaciÃ³n"
+                message={`Â¿EstÃ¡s seguro de que quieres eliminar el atlas "${itemToDelete?.type} - ${itemToDelete?.subject}"? Esta acciÃ³n no se puede deshacer.`}
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />

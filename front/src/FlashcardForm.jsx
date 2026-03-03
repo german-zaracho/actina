@@ -139,7 +139,7 @@ const FlashcardForm = ({ item, onSave, onCancel }) => {
     return (
         <div className="form-container flashcard-form">
             <h2>{item ? 'Editar' : 'Crear'} Grupo de Flashcards</h2>
-            
+
             {error && <div className="error-message">{error}</div>}
 
             <form onSubmit={handleSubmit}>
@@ -216,13 +216,13 @@ const FlashcardForm = ({ item, onSave, onCancel }) => {
                             <div className="concepts-section">
                                 <div className="concepts-header">
                                     <h5>Conceptos ({tab.concepts.length})</h5>
-                                    <button
+                                    {/* <button
                                         type="button"
                                         className="btn-add-small"
                                         onClick={() => addConcept(tabIndex)}
                                     >
                                         + Concepto
-                                    </button>
+                                    </button> */}
                                 </div>
 
                                 {tab.concepts.map((concept, conceptIndex) => (
@@ -278,9 +278,18 @@ const FlashcardForm = ({ item, onSave, onCancel }) => {
                                             >
                                                 + Agregar Característica
                                             </button>
+
                                         </div>
                                     </div>
+
                                 ))}
+                                <button
+                                    type="button"
+                                    className="btn-add-small"
+                                    onClick={() => addConcept(tabIndex)}
+                                >
+                                    + Concepto
+                                </button>
                             </div>
                         </div>
                     ))}

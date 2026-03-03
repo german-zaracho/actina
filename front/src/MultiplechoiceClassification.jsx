@@ -1,45 +1,13 @@
 // import React, { useState } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
-// import jsondata from './data/multiplechoice.json';
-
-// export default function MultiplechoiceClassification(subject) {
-
-//     const navigate = useNavigate();
-
-//     const handleGoBack = () => {
-//         navigate(-1);
-//     };
-
-//     const [data, setData] = useState(jsondata);
-//     const [selectedClassification, setSelectedClassification] = useState(null);
-
-//     const handleItemClick = (classification) => {
-//         setSelectedClassification(classification);
-//     };
-
-//     return (
-//         <>
-//                     <p className=''>Multiplechoice</p>
-//                     <ul className='classifications'>
-//                         {data.map((multiplechoice, index) => (
-//                             <li className='bgBlue' key={index} onClick={() => handleItemClick(multiplechoice.classification)}>
-//                                 <Link to={`/multiplechoiceQuestions/${multiplechoice.classification}`}>{multiplechoice.classification}</Link>
-//                             </li>
-//                         ))}
-//                     </ul>
-//                     <button onClick={handleGoBack}>Volver</button>
-//         </>
-//     );
-// }
-
-// import React, { useState } from 'react';
 // import { Link, useNavigate, useParams } from 'react-router-dom';
-// import jsondata from './data/multiplechoice.json';
+// // import jsondata from './data/multiplechoice.json';
+// import Sidebar from './Sidebar';
+// import HeaderAt from './HeaderAt';
 
-// export default function MultiplechoiceClassification({subject}) {
+// export default function MultiplechoiceClassification({ multiplechoices }) {
 //     const { subject } = useParams();
 //     const navigate = useNavigate();
-//     const [data, setData] = useState(jsondata);
+//     const [data, setData] = useState(multiplechoices);
 //     const [selectedClassification, setSelectedClassification] = useState(null);
 
 //     const handleGoBack = () => {
@@ -54,33 +22,47 @@
 //         .filter((multiplechoice) => multiplechoice.subject === subject)
 //         .map((multiplechoice, index) => (
 //             <li className='bgBlue' key={index} onClick={() => handleItemClick(multiplechoice.classification)}>
-//                 <Link to={`/multiplechoiceQuestions/${multiplechoice.classification}`}>{multiplechoice.classification}</Link>
+//                 <Link to={`/multiplechoiceQuestions/${multiplechoice.classification}`}>
+//                     {multiplechoice.classification}
+//                 </Link>
 //             </li>
 //         ));
 
-//         console.log(filteredClassifications);
+//     console.log(filteredClassifications);
+
 //     return (
 //         <>
+//             <HeaderAt />
+//             <div className="divContainer">
+//                 <Sidebar />
+//                 <div className="container">
+//                     <div className="solidBgHeading mg">
+//                         <h2>Multiplechoice</h2>
+//                     </div>
+//                     <ul className='classifications'>
+//                         {filteredClassifications}
+//                     </ul>
+//                     <button onClick={handleGoBack} className='btnBackWhite'>Volver</button>
+//                 </div>
+//             </div>
 
-//             <p className=''>Multiplechoice</p>
-//             <ul className='classifications'>
-//                 {filteredClassifications}
-//             </ul>
-//             <button onClick={handleGoBack}>Volver</button>
+
 //         </>
 //     );
 // }
 
 
 import React, { useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-// import jsondata from './data/multiplechoice.json';
+import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import HeaderAt from './HeaderAt';
 
 export default function MultiplechoiceClassification({ multiplechoices }) {
     const { subject } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
+    const myActivities = location.state?.myActivities || [];
+    
     const [data, setData] = useState(multiplechoices);
     const [selectedClassification, setSelectedClassification] = useState(null);
 
@@ -92,17 +74,25 @@ export default function MultiplechoiceClassification({ multiplechoices }) {
         setSelectedClassification(classification);
     };
 
-    const filteredClassifications = data
-        .filter((multiplechoice) => multiplechoice.subject === subject)
+    // Si es "Mis Multiplechoice", usar myActivities
+    const isMyActivities = subject === "Mis Multiplechoice";
+    const dataToFilter = isMyActivities ? myActivities : data;
+
+    const filteredClassifications = dataToFilter
+        .filter((multiplechoice) => isMyActivities || multiplechoice.subject === subject)
         .map((multiplechoice, index) => (
             <li className='bgBlue' key={index} onClick={() => handleItemClick(multiplechoice.classification)}>
-                <Link to={`/multiplechoiceQuestions/${multiplechoice.classification}`}>
+                <Link 
+                    to={`/multiplechoiceQuestions/${multiplechoice.classification}`}
+                    state={{ 
+                        isMyActivity: isMyActivities,
+                        myActivities: isMyActivities ? myActivities : undefined 
+                    }}
+                >
                     {multiplechoice.classification}
                 </Link>
             </li>
         ));
-
-    console.log(filteredClassifications);
 
     return (
         <>
@@ -111,7 +101,7 @@ export default function MultiplechoiceClassification({ multiplechoices }) {
                 <Sidebar />
                 <div className="container">
                     <div className="solidBgHeading mg">
-                        <h2>Multiplechoice</h2>
+                        <h2>Multiplechoice - {subject}</h2>
                     </div>
                     <ul className='classifications'>
                         {filteredClassifications}
@@ -119,9 +109,6 @@ export default function MultiplechoiceClassification({ multiplechoices }) {
                     <button onClick={handleGoBack} className='btnBackWhite'>Volver</button>
                 </div>
             </div>
-
-
         </>
     );
 }
-

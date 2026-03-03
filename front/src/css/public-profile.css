@@ -8,6 +8,7 @@
     background: white;
     border-radius: 12px;
     padding: 2rem;
+    margin: 30px auto 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,6 +107,162 @@
     margin: 0;
     color: #333;
     font-size: 1.1rem;
+}
+
+/* Sección de actividades */
+.activities-section {
+    padding-top: 1rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.activities-section h3 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--activity-color);
+}
+
+.activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--activity-color);
+}
+
+.activity-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--activity-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.activity-icon .material-icons {
+    font-size: 28px;
+    color: white;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.favorite-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-button .material-icons {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+.copy-button {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.copy-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.copy-button .material-icons {
+    font-size: 20px;
+    color: #3498db;
+}
+
+.activity-content h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.activity-type {
+    margin: 0 0 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.activity-stats {
+    margin: 0 0 1rem 0;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.visibility-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #f0f0f0;
+    color: #666;
+}
+
+.visibility-badge .material-icons {
+    font-size: 16px;
 }
 
 .friends-section {
@@ -215,5 +372,13 @@
 
     .friends-grid {
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        padding: 1.25rem;
     }
 }
