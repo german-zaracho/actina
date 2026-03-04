@@ -38,8 +38,6 @@ const getMultiplechoicesBySubject = (req, res) => {
 
 };
 
-
-
 const createMultiplechoiceFormPage = (req, res) => {
     res.send(view.createForm());
 };
@@ -62,7 +60,7 @@ const createMultiplechoice = (req, res) => {
             res.send(
                 view.createPage(
                     "Multiplechoice created",
-                    `<p>The multiplechoice ${newMultiplechoice.name} was created with id ${newMultiplechoice._id}</p>`
+                    `<p>El multiplechoice ${newMultiplechoice.name} fue creado con id ${newMultiplechoice._id}</p>`
                 )
             );
         })
@@ -77,8 +75,8 @@ const editMultiplechoiceFrom = (req, res) => {
         } else {
             res.send(
                 view.createPage(
-                    "The multiplechoice was not found",
-                    "<h1>The requested multiplechoice was not found</h1>"
+                    "El multiplechoice no fue encontrado",
+                    "<h1>El multiplechoice solicitado no fue encontrado</h1>"
                 )
             );
         }
@@ -105,9 +103,9 @@ const editMultiplechoice = (req, res) => {
         // console.log("hola2");
         // console.log(product);
         if (editedMultiplechoice) {
-            res.send(view.createPage("Multiplechoice edited", `<h2>The multiplechoice "${multiplechoice.name}"  was successfully edited</h2>`))
+            res.send(view.createPage("Multiplechoice editado", `<h2>El multiplechoice "${multiplechoice.name}"  fue editado exitosamente</h2>`))
         } else {
-            res.send(view.createPage("Could not be edited", "<h1>Could not be edited</h1>"))
+            res.send(view.createPage("No puede ser editado", "<h1>No puede ser editado</h1>"))
         }
     })
 
@@ -126,8 +124,8 @@ const deleteMultiplechoiceFrom = (req, res) => {
         } else {
             res.send(
                 view.createPage(
-                    "It was not found",
-                    "<h1>The requested multiplechoice was not found</h1>"
+                    "No encontrado",
+                    "<h1>El multiplechoice solicitado no fue encontrado</h1>"
                 )
             );
         }
@@ -141,9 +139,9 @@ const deleteMultiplechoice = (req, res) => {
     service.deleteMultiplechoice(id)
         .then((deleteMultiplechoice) => {
             if (deleteMultiplechoice) {
-                res.send(view.createPage("Deleted multiplechoice", `<h2>The multiplechoice #${deleteMultiplechoice._id} was successfully deleted</h2>`))
+                res.send(view.createPage("Multiplechoice eliminado", `<h2>El multiplechoice #${deleteMultiplechoice._id} fue eliminado exitosamente</h2>`))
             } else {
-                res.send(view.createPage("Could not be deleted", "<h1>Could not be deleted</h1>"))
+                res.send(view.createPage("No puede eliminarse", "<h1>No puede eliminarse</h1>"))
             }
         })
 

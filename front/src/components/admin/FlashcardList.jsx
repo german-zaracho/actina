@@ -82,13 +82,13 @@ const FlashcardList = ({ onEdit, onCreate }) => {
                                 <td data-label="Tabs">{group.tabs?.length || 0}</td>
                                 <td data-label="Total Conceptos">{getTotalConcepts(group)}</td>
                                 <td data-label="Acciones" className="actions">
-                                    <button 
+                                    <button
                                         className="btn-edit"
                                         onClick={() => onEdit(group)}
                                     >
                                         Editar
                                     </button>
-                                    <button 
+                                    <button
                                         className="btn-delete"
                                         onClick={() => handleDeleteClick(group)}
                                     >
@@ -101,14 +101,14 @@ const FlashcardList = ({ onEdit, onCreate }) => {
                 </table>
 
                 {groups.length === 0 && (
-                    <p className="empty-message">No hay flashcards creados aÃºn</p>
+                    <p className="empty-message">No hay flashcards creados aún</p>
                 )}
             </div>
 
             <ConfirmModal
                 isOpen={showDeleteModal}
-                title="Confirmar eliminaciÃ³n"
-                message={`Â¿EstÃ¡s seguro de que quieres eliminar el flashcard "${itemToDelete?.subject} - ${itemToDelete?.topic}"? Esta acciÃ³n no se puede deshacer.`}
+                title="Confirmar eliminación"
+                message={`¿Estás seguro de que quieres eliminar el flashcard "${itemToDelete?.subject} - ${itemToDelete?.topic}"? Esta acción no se puede deshacer.`}
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />

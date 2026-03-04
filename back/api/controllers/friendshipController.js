@@ -59,7 +59,7 @@ async function searchUsers(req, res) {
     try {
         const { q } = req.query;
         if (!q || q.trim().length < 2) {
-            return res.status(400).json({ error: { message: "Búsqueda debe tener al menos 2 caracteres" } });
+            return res.status(400).json({ error: { message: "La búsqueda debe tener al menos 2 caracteres" } });
         }
         const users = await friendshipService.searchUsers(q.trim(), req.account._id);
         res.json(users);

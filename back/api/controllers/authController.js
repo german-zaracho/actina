@@ -7,7 +7,7 @@ async function createAccount(req, res) {
         // Crear la cuenta
         const newAccount = await services.createAccount(req.body);
         
-        // Crear perfil bÃ¡sico automÃ¡ticamente
+        // Crear perfil basico automaticamente
         await profileService.createBasicProfile({
             _id: newAccount._id,
             userName: newAccount.userName,
@@ -15,11 +15,11 @@ async function createAccount(req, res) {
         });
         
         res.status(201).json({ 
-            message: "Account and profile created successfully" 
+            message: "Cuenta y perfil creado exitosamente" 
         });
         
     } catch (err) {
-        console.error('Error creating account:', err);
+        console.error('Error creando cuenta:', err);
         res.status(400).json({ 
             error: { message: err.message } 
         });
@@ -29,7 +29,7 @@ async function createAccount(req, res) {
 async function getAccount(req, res) {
     try {
         // req.account viene del validateToken middleware
-        // Ya tiene toda la info de la cuenta, solo quitar la contraseÃ±a
+        // Ya tiene toda la info de la cuenta
         const { password, ...accountData } = req.account;
         res.json(accountData);
     } catch (err) {
@@ -61,7 +61,7 @@ async function logout(req, res) {
     return tokenService
         .removeToken(token)
         .then(() => {
-            res.status(200).json({ message: "Session closed correctly" });
+            res.status(200).json({ message: "Sesión cerrada correctamente" });
         })
         .catch((err) => {
             res.status(400).json({ error: { message: err.message } });
@@ -70,7 +70,7 @@ async function logout(req, res) {
 
 async function createProfile(req, res) {
     return profileService.createProfile(req.account, req.body)
-        .then(() => res.status(201).json({ message: "Profile created successfully" }))
+        .then(() => res.status(201).json({ message: "Perfil creado exitosamente" }))
         .catch(err => res.status(400).json({ error: { message: err.message } }))
 }
 
@@ -79,11 +79,11 @@ async function updateProfile(req, res) {
         const updatedProfile = await profileService.updateProfile(req.account._id, req.body);
         
         res.status(200).json({
-            message: "Profile updated successfully", 
-            profile: updatedProfile  // Retornar el perfil actualizado
+            message: "Perfil actualizado exitosamente", 
+            profile: updatedProfile  // Retorna el perfil actualizado
         });
     } catch (err) {
-        console.error('Error updating profile:', err);
+        console.error('Error actualizando el perfil:', err);
         res.status(400).json({ 
             error: { message: err.message } 
         });

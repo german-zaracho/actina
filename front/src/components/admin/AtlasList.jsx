@@ -65,7 +65,7 @@ const AtlasList = ({ onEdit, onCreate }) => {
                         <tr>
                             <th>Tipo</th>
                             <th>Materia</th>
-                            <th>PÃ¡ginas</th>
+                            <th>Páginas</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -95,14 +95,14 @@ const AtlasList = ({ onEdit, onCreate }) => {
                 </table>
 
                 {groups.length === 0 && (
-                    <p className="empty-message">No hay atlas creados aÃºn</p>
+                    <p className="empty-message">No hay atlas creados aún</p>
                 )}
             </div>
 
             <ConfirmModal
                 isOpen={showDeleteModal}
-                title="Confirmar eliminaciÃ³n"
-                message={`Â¿EstÃ¡s seguro de que quieres eliminar el atlas "${itemToDelete?.type} - ${itemToDelete?.subject}"? Esta acciÃ³n no se puede deshacer.`}
+                title="Confirmar eliminación"
+                message={`¿Estás seguro de que quieres eliminar el atlas "${itemToDelete?.type} - ${itemToDelete?.subject}"? Esta acción no se puede deshacer.`}
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />

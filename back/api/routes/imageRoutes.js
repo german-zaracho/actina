@@ -41,13 +41,13 @@ router.get('/images/profile/:imageName', (req, res) => {
         
         // Verificar que el archivo existe
         if (!fs.existsSync(imagePath)) {
-            return res.status(404).json({ error: 'Image not found' });
+            return res.status(404).json({ error: 'Imagen no encontrada' });
         }
         
         res.sendFile(imagePath);
     } catch (error) {
         console.error('Error serving image:', error);
-        res.status(500).json({ error: 'Error serving image' });
+        res.status(500).json({ error: 'Error al traer la imagen' });
     }
 });
 

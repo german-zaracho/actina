@@ -16,7 +16,7 @@ import '../../css/admin.css';
 
 const AdminPanel = () => {
     const navigate = useNavigate();
-    // const { isAdmin, loading } = useAuth();
+    const { isAdmin, loading } = useAuth();
     // const { isAuthenticated, isAdmin, loading } = useAuth();
 
     const [activeSection, setActiveSection] = useState('dashboard');

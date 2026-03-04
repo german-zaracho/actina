@@ -12,7 +12,7 @@ route.get('/my-activities', [validateToken], userActivitiesController.getMyActiv
 // Obtener actividades por tipo
 route.get('/my-activities/type/:type', [validateToken], userActivitiesController.getActivitiesByType);
 
-// Obtener una actividad especÃ­fica
+// Obtener una actividad especifica
 route.get('/my-activities/:id', [validateToken], userActivitiesController.getActivityById);
 
 // Crear nueva actividad

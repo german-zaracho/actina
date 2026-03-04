@@ -1,6 +1,6 @@
 import * as userActivitiesService from '../../services/userActivitiesService.js';
 
-// Obtener todas las actividades del usuario
+// Obtiene las actividades del usuario
 async function getMyActivities(req, res) {
     try {
         const activities = await userActivitiesService.getUserActivities(req.account._id);
@@ -10,7 +10,7 @@ async function getMyActivities(req, res) {
     }
 }
 
-// Obtener una actividad especÃ­fica
+// Obtiene una actividad especi­fica
 async function getActivityById(req, res) {
     try {
         const activity = await userActivitiesService.getActivityById(
@@ -31,7 +31,7 @@ async function createActivity(req, res) {
             req.body
         );
         res.status(201).json({ 
-            message: 'Activity created successfully', 
+            message: 'Actividad creada exitosamente', 
             data: newActivity 
         });
     } catch (err) {
@@ -42,7 +42,7 @@ async function createActivity(req, res) {
 // Actualizar actividad
 async function updateActivity(req, res) {
     try {
-        console.log('=== UPDATE ACTIVITY DEBUG ===');
+        console.log('updateActivity debug');
         console.log('Activity ID:', req.params.id);
         console.log('User ID:', req.account._id);
         console.log('Body received:', req.body);
@@ -52,7 +52,7 @@ async function updateActivity(req, res) {
             req.account._id,
             req.body
         );
-        res.json({ message: 'Activity updated successfully' });
+        res.json({ message: 'Actividad actualizada exitosamente' });
     } catch (err) {
         console.error('Update error:', err);
         res.status(400).json({ error: { message: err.message } });
@@ -66,13 +66,13 @@ async function deleteActivity(req, res) {
             req.params.id,
             req.account._id
         );
-        res.json({ message: 'Activity deleted successfully' });
+        res.json({ message: 'Actividad eliminada exitosamente' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
 }
 
-// Obtener actividades por tipo
+// Obtiene actividades por tipo
 async function getActivitiesByType(req, res) {
     try {
         const activities = await userActivitiesService.getActivitiesByType(
@@ -85,12 +85,12 @@ async function getActivitiesByType(req, res) {
     }
 }
 
-// Obtener actividades públicas de un amigo
+// Obtiene actividades públicas de un amigo
 async function getFriendActivities(req, res) {
     try {
         const activities = await userActivitiesService.getFriendActivities(
             req.params.friendId,
-            req.account?._id // pasar el ID del usuario actual
+            req.account?._id
         );
         res.json(activities);
     } catch (err) {
@@ -98,7 +98,7 @@ async function getFriendActivities(req, res) {
     }
 }
 
-// Obtener actividades públicas (para todos)
+// Obtiene actividades públicas (para todos)
 async function getPublicActivities(req, res) {
     try {
         const activities = await userActivitiesService.getPublicActivities();
@@ -108,12 +108,12 @@ async function getPublicActivities(req, res) {
     }
 }
 
-// Obtener una actividad específica por ID (pública o de amigo)
+// Obtiene una actividad específica por ID (pública o de amigo)
 async function getActivityByIdPublic(req, res) {
     try {
         const activity = await userActivitiesService.getActivityByIdPublic(
             req.params.activityId,
-            req.account?._id // puede ser undefined si no hay token
+            req.account?._id
         );
         res.json(activity);
     } catch (err) {
@@ -121,7 +121,7 @@ async function getActivityByIdPublic(req, res) {
     }
 }
 
-// Copiar actividad a mis actividades
+// Copiar una actividad a mis actividades
 async function copyActivity(req, res) {
     try {
         const { activityId } = req.body;
@@ -130,7 +130,7 @@ async function copyActivity(req, res) {
             req.account._id
         );
         res.status(201).json({ 
-            message: 'Activity copied successfully',
+            message: 'Actividad copiada exitosamente',
             activity: copiedActivity
         });
     } catch (err) {

@@ -5,7 +5,7 @@ async function getAll(req, res) {
         const atlas = await service.getAll();
         res.json(atlas);
     } catch (err) {
-        console.error('Error in getAll atlas:', err);
+        console.error('Error en getAll atlas:', err);
         res.status(500).json({ error: { message: err.message } });
     }
 }
@@ -14,11 +14,11 @@ async function getById(req, res) {
     try {
         const item = await service.getById(req.params.id);
         if (!item) {
-            return res.status(404).json({ error: { message: 'Atlas not found' } });
+            return res.status(404).json({ error: { message: 'Atlas no encontrado' } });
         }
         res.json(item);
     } catch (err) {
-        console.error('Error in getById atlas:', err);
+        console.error('Error en getById atlas:', err);
         res.status(404).json({ error: { message: err.message } });
     }
 }

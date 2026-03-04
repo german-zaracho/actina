@@ -104,14 +104,14 @@ const MultiplechoiceList = ({ onEdit, onCreate }) => {
                 </table>
 
                 {groups.length === 0 && (
-                    <p className="empty-message">No hay grupos creados aÃºn</p>
+                    <p className="empty-message">No hay grupos creados aún</p>
                 )}
             </div>
 
             <ConfirmModal
                 isOpen={showDeleteModal}
-                title="Confirmar eliminaciÃ³n"
-                message={`Â¿EstÃ¡s seguro de que quieres eliminar el grupo "${itemToDelete?.subject} - ${itemToDelete?.classification}"? Esta acciÃ³n no se puede deshacer.`}
+                title="Confirmar eliminación"
+                message={`¿Estás seguro de que quieres eliminar el grupo "${itemToDelete?.subject} - ${itemToDelete?.classification}"? Esta acción no se puede deshacer.`}
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />

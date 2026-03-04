@@ -11,7 +11,7 @@ async function createToken(account){
     const token = jwt.sign(account,"Secret password")
     
     await client.connect()
-    console.log("Creating token for account:", account)
+    console.log("Creando token para cuenta:", account)
     await tokenCollection.insertOne({token, account_id: account._id})
     
     return token
@@ -19,7 +19,7 @@ async function createToken(account){
 
 async function verifyToken(token){
     try {
-        console.log("=== VERIFY TOKEN DEBUG ===");
+        console.log("Verify token debug");
         console.log("Token to verify:", token);
         
         const payload = jwt.verify(token, "Secret password")

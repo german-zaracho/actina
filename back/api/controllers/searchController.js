@@ -17,7 +17,7 @@ async function getAutocomplete(req, res) {
         
         res.json(suggestions);
     } catch (err) {
-        console.error('Error en autocomplete:', err);
+        console.error('Error en autocompletar:', err);
         res.status(500).json({ error: { message: err.message } });
     }
 }

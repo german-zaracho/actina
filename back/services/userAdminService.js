@@ -8,17 +8,17 @@ const db = client.db(process.env.DB_NAME);
 const accountCollection = db.collection("account");
 const profileCollection = db.collection("profile");
 
-// Obtener todos los usuarios con sus perfiles
+// Obtiene todos los usuarios con sus perfiles
 async function getAllUsers() {
     await client.connect();
     
-    // Obtener todas las cuentas
+    // Obtiene todas las cuentas
     const accounts = await accountCollection.find().toArray();
     
-    // Obtener todos los perfiles
+    // Obtiene todos los perfiles
     const profiles = await profileCollection.find().toArray();
     
-    // Combinar accounts con profiles
+    // Combina accounts con profiles
     const users = accounts.map(account => {
         const profile = profiles.find(p => p._id.toString() === account._id.toString());
         return {
@@ -40,7 +40,7 @@ async function getAllUsers() {
     return users;
 }
 
-// Obtener un usuario específico con su perfil
+// Obtiene un usuario específico con su perfil
 async function getUserById(id) {
     await client.connect();
     
@@ -66,17 +66,17 @@ async function getUserById(id) {
     };
 }
 
-// Crear nuevo usuario (account + profile)
+// Crea nuevo usuario (account + profile)
 async function createUser(userData) {
     await client.connect();
     
-    // Verificar que no exista el userName
+    // Verifica que no exista el userName
     const existingUser = await accountCollection.findOne({ userName: userData.userName });
     if (existingUser) {
         throw new Error("El nombre de usuario ya existe");
     }
     
-    // Verificar email si se proporciona
+    // Verifica el email si se proporciona
     if (userData.email) {
         const existingEmail = await profileCollection.findOne({ email: userData.email });
         if (existingEmail) {
@@ -119,20 +119,20 @@ async function createUser(userData) {
     };
 }
 
-// Actualizar usuario (account + profile)
+// Actualiza el usuario (account + profile)
 async function updateUser(id, userData) {
     await client.connect();
     
-    // Verificar que el usuario existe
+    // Verifica que el usuario exista
     const account = await accountCollection.findOne({ _id: new ObjectId(id) });
     if (!account) {
         throw new Error("Usuario no encontrado");
     }
     
-    // Preparar actualizaciones para account
+    // Prepara las actualizaciones para la account
     const accountUpdates = {};
     
-    // Si se cambia el userName, verificar que no exista
+    // Si se cambia el userName, verifica que no exista
     if (userData.userName && userData.userName !== account.userName) {
         const existingUser = await accountCollection.findOne({ 
             userName: userData.userName,
@@ -154,7 +154,7 @@ async function updateUser(id, userData) {
         accountUpdates.password = await bcrypt.hash(userData.password, 10);
     }
     
-    // Actualizar account si hay cambios
+    // Actualiza la account si hay cambios
     if (Object.keys(accountUpdates).length > 0) {
         await accountCollection.updateOne(
             { _id: new ObjectId(id) },
@@ -162,7 +162,7 @@ async function updateUser(id, userData) {
         );
     }
     
-    // Preparar actualizaciones para profile
+    // Prepara las actualizaciones para profile
     const profileUpdates = {
         updatedAt: new Date()
     };
@@ -177,7 +177,7 @@ async function updateUser(id, userData) {
     }
     if (userData.location !== undefined) profileUpdates.location = userData.location;
     
-    // Actualizar o crear profile
+    // Actualiza o crea el profile
     await profileCollection.updateOne(
         { _id: new ObjectId(id) },
         { $set: profileUpdates },
@@ -187,11 +187,11 @@ async function updateUser(id, userData) {
     return await getUserById(id);
 }
 
-// Eliminar usuario (primero sus actividades de user_activities, luego profile y account)
+// Elimina el usuario (primero sus actividades de user_activities, luego profile y account)
 async function deleteUser(id) {
     await client.connect();
     
-    // Verificar que el usuario existe
+    // Verifica que el usuario exista
     const account = await accountCollection.findOne({ _id: new ObjectId(id) });
     if (!account) {
         throw new Error("Usuario no encontrado");
@@ -202,14 +202,14 @@ async function deleteUser(id) {
     
     console.log(`Iniciando eliminación del usuario ${userName} (ID: ${id})`);
     
-    // PRIMERO: Buscar y verificar las actividades del usuario
+    // Primero: Busca y verificaa las actividades del usuario
     const userActivitiesCollection = db.collection("user_activities");
     
-    // Buscar todas las actividades del usuario
+    // Busca todas las actividades del usuario
     const userActivities = await userActivitiesCollection.find({ userId: userId }).toArray();
     console.log(`Encontradas ${userActivities.length} actividades del usuario ${userName}`);
     
-    // Eliminar todas las actividades del usuario
+    // Elimina todas las actividades del usuario
     if (userActivities.length > 0) {
         const deleteResult = await userActivitiesCollection.deleteMany({ userId: userId });
         
@@ -222,7 +222,7 @@ async function deleteUser(id) {
         console.log(`El usuario ${userName} no tiene actividades para eliminar`);
     }
     
-    // SEGUNDO: Eliminar profile
+    // Segundo: Elimina el profile
     const profileResult = await profileCollection.deleteOne({ _id: userId });
     if (profileResult.deletedCount === 1) {
         console.log(`Eliminado profile del usuario ${userName}`);
@@ -230,7 +230,7 @@ async function deleteUser(id) {
         console.log(`No se encontró profile para el usuario ${userName}`);
     }
     
-    // TERCERO: Eliminar account
+    // Tercero: Elimina la account
     const accountResult = await accountCollection.deleteOne({ _id: userId });
     if (accountResult.deletedCount !== 1) {
         throw new Error("Error al eliminar la cuenta del usuario");

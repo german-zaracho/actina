@@ -3,7 +3,7 @@ import * as flashcardService from '../../services/flashcardService.js';
 import * as atlasService from '../../services/atlasService.js';
 import * as userAdminService from '../../services/userAdminService.js';
 
-// ===== MULTIPLECHOICES =====
+// Multiplechoice
 async function getAllMultiplechoices(req, res) {
     try {
         const multiplechoices = await multiplechoiceService.getAll();
@@ -15,8 +15,13 @@ async function getAllMultiplechoices(req, res) {
 
 async function createMultiplechoice(req, res) {
     try {
-        const newItem = await multiplechoiceService.create(req.body);
-        res.status(201).json({ message: 'Multiple choice created', data: newItem });
+        const data = {
+            ...req.body,
+            userName: req.account.userName,
+            createdAt: new Date()
+        };
+        const newItem = await multiplechoiceService.create(data);
+        res.status(201).json({ message: 'Multiplechoice creado', data: newItem });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -25,7 +30,7 @@ async function createMultiplechoice(req, res) {
 async function updateMultiplechoice(req, res) {
     try {
         await multiplechoiceService.update(req.params.id, req.body);
-        res.json({ message: 'Multiple choice updated' });
+        res.json({ message: 'Multiplechoice actualizado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -34,13 +39,13 @@ async function updateMultiplechoice(req, res) {
 async function deleteMultiplechoice(req, res) {
     try {
         await multiplechoiceService.delete(req.params.id);
-        res.json({ message: 'Multiple choice deleted' });
+        res.json({ message: 'Multiplechoice eliminado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
 }
 
-// ===== FLASHCARDS =====
+//Flashcard
 async function getAllFlashcards(req, res) {
     try {
         const flashcards = await flashcardService.getAll();
@@ -52,8 +57,13 @@ async function getAllFlashcards(req, res) {
 
 async function createFlashcard(req, res) {
     try {
-        const newItem = await flashcardService.create(req.body);
-        res.status(201).json({ message: 'Flashcard created', data: newItem });
+        const data = {
+            ...req.body,
+            userName: req.account.userName,
+            createdAt: new Date()
+        };
+        const newItem = await flashcardService.create(data);
+        res.status(201).json({ message: 'Flashcard creada', data: newItem });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -62,7 +72,7 @@ async function createFlashcard(req, res) {
 async function updateFlashcard(req, res) {
     try {
         await flashcardService.update(req.params.id, req.body);
-        res.json({ message: 'Flashcard updated' });
+        res.json({ message: 'Flashcard actualizada' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -71,13 +81,13 @@ async function updateFlashcard(req, res) {
 async function deleteFlashcard(req, res) {
     try {
         await flashcardService.deleteFlashcard(req.params.id);
-        res.json({ message: 'Flashcard deleted' });
+        res.json({ message: 'Flashcard eliminada' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
 }
 
-// ===== ATLAS =====
+//Atlas
 async function getAllAtlas(req, res) {
     try {
         const atlas = await atlasService.getAll();
@@ -89,8 +99,13 @@ async function getAllAtlas(req, res) {
 
 async function createAtlas(req, res) {
     try {
-        const newItem = await atlasService.create(req.body);
-        res.status(201).json({ message: 'Atlas created', data: newItem });
+        const data = {
+            ...req.body,
+            userName: req.account.userName,
+            createdAt: new Date()
+        };
+        const newItem = await atlasService.create(data);
+        res.status(201).json({ message: 'Atlas creado', data: newItem });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -99,7 +114,7 @@ async function createAtlas(req, res) {
 async function updateAtlas(req, res) {
     try {
         await atlasService.update(req.params.id, req.body);
-        res.json({ message: 'Atlas updated' });
+        res.json({ message: 'Atlas actualizado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -108,13 +123,13 @@ async function updateAtlas(req, res) {
 async function deleteAtlas(req, res) {
     try {
         await atlasService.deleteAtlas(req.params.id);
-        res.json({ message: 'Atlas deleted' });
+        res.json({ message: 'Atlas eliminado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
 }
 
-// ===== USERS =====
+// User
 async function getAllUsers(req, res) {
     try {
         const users = await userAdminService.getAllUsers();
@@ -136,7 +151,7 @@ async function getUserById(req, res) {
 async function createUser(req, res) {
     try {
         const newUser = await userAdminService.createUser(req.body);
-        res.status(201).json({ message: 'User created', data: newUser });
+        res.status(201).json({ message: 'User creado', data: newUser });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -145,7 +160,7 @@ async function createUser(req, res) {
 async function updateUser(req, res) {
     try {
         await userAdminService.updateUser(req.params.id, req.body);
-        res.json({ message: 'User updated' });
+        res.json({ message: 'User actualizado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -154,13 +169,13 @@ async function updateUser(req, res) {
 async function deleteUser(req, res) {
     try {
         await userAdminService.deleteUser(req.params.id);
-        res.json({ message: 'User deleted' });
+        res.json({ message: 'User eliminado' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
 }
 
-// ===== DASHBOARD STATS =====
+// Dashboard stat
 async function getDashboardStats(req, res) {
     try {
         const [multiplechoices, flashcards, atlas, users] = await Promise.all([
@@ -170,33 +185,29 @@ async function getDashboardStats(req, res) {
             userAdminService.getAllUsers()
         ]);
 
-        // Calcular contenido creado esta semana
         const oneWeekAgo = new Date();
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-        const multiplechoicesThisWeek = multiplechoices.filter(item => 
+        const multiplechoicesThisWeek = multiplechoices.filter(item =>
             new Date(item.createdAt) > oneWeekAgo
         ).length;
 
-        const flashcardsThisWeek = flashcards.filter(item => 
+        const flashcardsThisWeek = flashcards.filter(item =>
             new Date(item.createdAt) > oneWeekAgo
         ).length;
 
-        const atlasThisWeek = atlas.filter(item => 
+        const atlasThisWeek = atlas.filter(item =>
             new Date(item.createdAt) > oneWeekAgo
         ).length;
 
         const contentThisWeek = multiplechoicesThisWeek + flashcardsThisWeek + atlasThisWeek;
 
-        // Estadísticas detalladas de multiplechoice
         let totalMultiplechoiceQuestions = 0;
         let totalMultiplechoiceJustified = 0;
 
         multiplechoices.forEach(mc => {
             if (mc.questions && Array.isArray(mc.questions)) {
                 totalMultiplechoiceQuestions += mc.questions.length;
-                
-                // Contar preguntas con justificación
                 mc.questions.forEach(question => {
                     if (question.justification && question.justification.trim() !== '') {
                         totalMultiplechoiceJustified++;
@@ -205,21 +216,20 @@ async function getDashboardStats(req, res) {
             }
         });
 
-        // Usuarios activos esta semana (que crearon contenido)
         const activeUsersSet = new Set();
-        
+
         multiplechoices.forEach(item => {
             if (new Date(item.createdAt) > oneWeekAgo && item.userName) {
                 activeUsersSet.add(item.userName);
             }
         });
-        
+
         flashcards.forEach(item => {
             if (new Date(item.createdAt) > oneWeekAgo && item.userName) {
                 activeUsersSet.add(item.userName);
             }
         });
-        
+
         atlas.forEach(item => {
             if (new Date(item.createdAt) > oneWeekAgo && item.userName) {
                 activeUsersSet.add(item.userName);

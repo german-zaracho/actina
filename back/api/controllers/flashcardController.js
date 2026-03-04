@@ -13,17 +13,6 @@ async function getFlashcards (req, res) {
 
 };
 
-// const getFlashcardById = (req, res) => {
-//     const id = req.params.id;
-//     service.getFlashcardById(id).then((flashcard) => {
-//         if (flashcard) {
-//             res.status(200).json(flashcard);
-//         } else {
-//             res.status(404).json();
-//         }
-//     });
-// };
-
 async function getFlashcardById (req, res) {
 
     try {

@@ -7,14 +7,14 @@ const db = client.db(process.env.DB_NAME);
 const profileCollection = db.collection("profile");
 const accountCollection = db.collection("account");
 
-// Obtener perfil del usuario actual
+// Obtiene el perfil del usuario actual
 async function getProfile(userId) {
     await client.connect();
     const profile = await profileCollection.findOne({ _id: new ObjectId(userId) });
     return profile;
 }
 
-// Crear perfil básico
+// Crea un perfil básico
 async function createBasicProfile(profileData) {
     await client.connect();
     const newProfile = {
@@ -33,7 +33,7 @@ async function createBasicProfile(profileData) {
     return newProfile;
 }
 
-// Actualizar perfil
+// Actualiza el perfil
 async function updateProfile(userId, profileData) {
     await client.connect();
     
@@ -51,7 +51,7 @@ async function updateProfile(userId, profileData) {
     return await getProfile(userId);
 }
 
-// Obtener perfil público por ID
+// Obtiene el perfil público por ID
 async function getPublicProfile(userId) {
     await client.connect();
     
@@ -61,7 +61,7 @@ async function getPublicProfile(userId) {
         throw new Error("Usuario no encontrado");
     }
     
-    // También obtener el rol del usuario de la colección account
+    // También obtiene el rol del usuario de la colección account
     const account = await accountCollection.findOne({ _id: new ObjectId(userId) });
     
     return {
@@ -70,7 +70,7 @@ async function getPublicProfile(userId) {
     };
 }
 
-// Obtener perfil público por userName
+// Obtiene el perfil público por userName
 async function getPublicProfileByUsername(userName) {
     await client.connect();
     
@@ -80,7 +80,7 @@ async function getPublicProfileByUsername(userName) {
         throw new Error("Usuario no encontrado");
     }
     
-    // También obtener el rol del usuario de la colección account
+    // También obtiene el rol del usuario de la colección account
     const account = await accountCollection.findOne({ userName: userName });
     
     return {

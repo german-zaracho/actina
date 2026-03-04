@@ -14,14 +14,14 @@ async function createAccount(account){
     // Verificar si ya existe el userName
     const existsByUserName = await accountCollection.findOne({ userName: account.userName })
     if (existsByUserName) {
-        throw new Error("That account already exists")
+        throw new Error("Esa cuenta ya existe")
     }
 
     // Si tienes email, también verificar que no exista
     if (account.email) {
         const existsByEmail = await accountCollection.findOne({ email: account.email })
         if (existsByEmail) {
-            throw new Error("Email already exists")
+            throw new Error("Ese correo ya está registrado")
         }
     }
     

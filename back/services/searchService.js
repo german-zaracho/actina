@@ -6,15 +6,14 @@ dotenv.config();
 const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db(process.env.DB_NAME);
 
-/**
- * Obtiene sugerencias únicas para el autocompletado usando Atlas Search Autocomplete
- */
+// Obtiene sugerencias unicas para el autocompletado usando Atlas Search Autocomplete
+
 async function getAutocompleteSuggestions(query, types) {
     await client.connect();
     
     const suggestions = new Set();
 
-    // Buscar en Multiplechoices usando Atlas Search Autocomplete
+    // Busca en Multiplechoices
     if (types.includes('multiplechoice')) {
         try {
             const multiplechoices = await db.collection('multiplechoices')
@@ -41,7 +40,7 @@ async function getAutocompleteSuggestions(query, types) {
                 if (mc.subject) suggestions.add(mc.subject);
             });
 
-            // También buscar en classification
+            // También busca en classification
             const byClassification = await db.collection('multiplechoices')
                 .aggregate([
                     {
@@ -71,7 +70,7 @@ async function getAutocompleteSuggestions(query, types) {
         }
     }
 
-    // Buscar en Flashcards usando Atlas Search Autocomplete
+    // Busca en Flashcards
     if (types.includes('flashcard')) {
         try {
             const flashcards = await db.collection('flashcards')
@@ -98,7 +97,7 @@ async function getAutocompleteSuggestions(query, types) {
                 if (fc.subject) suggestions.add(fc.subject);
             });
 
-            // También buscar en topic
+            // También busca en topic
             const byTopic = await db.collection('flashcards')
                 .aggregate([
                     {
@@ -128,7 +127,7 @@ async function getAutocompleteSuggestions(query, types) {
         }
     }
 
-    // Buscar en Atlas usando Atlas Search Autocomplete
+    // Busca en Atlas
     if (types.includes('atlas')) {
         try {
             const atlas = await db.collection('atlas')
@@ -155,7 +154,7 @@ async function getAutocompleteSuggestions(query, types) {
                 if (a.type) suggestions.add(a.type);
             });
 
-            // También buscar en subject
+            // También busca en subject
             const bySubject = await db.collection('atlas')
                 .aggregate([
                     {
@@ -185,23 +184,18 @@ async function getAutocompleteSuggestions(query, types) {
         }
     }
 
-    // Convertir Set a Array, limitar y ordenar
+    // Convertir Set a Array, limita y ordena
     return Array.from(suggestions)
         .slice(0, 10)
         .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 }
 
-/**
- * Normaliza texto removiendo acentos
- */
+// Normaliza texto removiendo acentos
 function normalizeText(text) {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-/**
- * Encuentra palabras que coinciden con el query en un texto
- * Solo considera coincidencias significativas (mínimo 3 caracteres)
- */
+// Encuentra palabras que coinciden con el query en un texto, solo considera coincidencias significativas (mínimo 3 caracteres)
 function findMatchingWords(text, query) {
     if (!text || !query) return [];
     
@@ -215,7 +209,7 @@ function findMatchingWords(text, query) {
     const matches = [];
     
     words.forEach(word => {
-        // Limpiar la palabra de puntuación
+        // Limpia la palabra de puntuación
         const wordClean = word.replace(/[.,!?;:()¿¡""]/g, '');
         const wordLower = wordClean.toLowerCase();
         const wordNormalized = normalizeText(wordLower);
@@ -229,23 +223,22 @@ function findMatchingWords(text, query) {
                 matches.push(wordClean);
             }
         } else {
-            // Query >= 3 caracteres: buscar como subcadena
-            // Verificar que la coincidencia sea significativa (no solo una letra)
+            // Query >= 3 caracteres: busca como subcadena
+            // Verifica que la coincidencia sea significativa (no solo una letra)
             const matchIndex = wordNormalized.indexOf(queryNormalized);
             if (matchIndex !== -1) {
-                // Asegurar que la coincidencia es del query completo, no solo una letra
+                // Asegura que la coincidencia es del query completo, no solo una letra
                 matches.push(wordClean);
             }
         }
     });
     
-    // Eliminar duplicados
+    // Elimina duplicados
     return [...new Set(matches)];
 }
 
-/**
- * Extrae términos coincidentes de un documento
- */
+//Extrae términos coincidentes de un documento
+
 function extractMatchedTerms(doc, query, type) {
     const matches = new Set();
     const queryNormalized = normalizeText(query.toLowerCase().trim());
@@ -323,9 +316,9 @@ function extractMatchedTerms(doc, query, type) {
     if (filtered.length === 0) {
         console.warn(`Búsqueda exhaustiva para "${query}" en documento ${doc._id}`);
         
-        // Función recursiva para extraer TODOS los strings del documento
+        // Función para extraer todos los strings del documento
         const extractAllStrings = (obj, strings = [], depth = 0) => {
-            if (depth > 10 || !obj) return strings; // Evitar recursión infinita
+            if (depth > 10 || !obj) return strings;
             
             if (typeof obj === 'string' && obj.trim().length > 0) {
                 strings.push(obj.trim());
@@ -343,7 +336,7 @@ function extractMatchedTerms(doc, query, type) {
             return strings;
         };
         
-        // Extraer TODOS los strings del documento
+        // Extraer los strings del documento
         const allStrings = extractAllStrings(doc);
         console.log(`📝 Strings extraídos: ${allStrings.length}`);
         
@@ -396,9 +389,8 @@ function extractMatchedTerms(doc, query, type) {
     return filtered;
 }
 
-/**
- * Busca actividades completas usando Atlas Search
- */
+// Busca actividades completas
+
 async function searchActivities(query, types) {
     await client.connect();
     

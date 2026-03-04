@@ -17,9 +17,9 @@ route.get("/account/role", [validateToken], controllers.getCurrentUserRole);
 route.post("/profile",[ validateToken, validateProfile], controllers.createProfile);
 route.put("/profile", [validateToken, validateProfile], controllers.updateProfile);
 route.get("/profile",[ validateToken ], controllers.getProfile);
-// Obtener perfil pÃºblico por ID (mantener para compatibilidad)
+// Obtener perfil publico por ID
 route.get("/profile/:userId", controllers.getPublicProfile);
-// Obtener perfil público por userName
+// Obtener perfil publico por userName
 route.get("/profile/by-username/:userName", controllers.getPublicProfileByUsername);
 
 export default route

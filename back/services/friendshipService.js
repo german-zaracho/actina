@@ -7,11 +7,11 @@ const db = client.db(process.env.DB_NAME);
 const friendshipCollection = db.collection("friendships");
 const profileCollection = db.collection("profile");
 
-// Enviar solicitud de amistad
+// Envia solicitud de amistad
 async function sendFriendRequest(userId, friendId) {
     await client.connect();
     
-    // Verificar que no exista ya una relación
+    // Verifica que no exista ya una amistad
     const existing = await friendshipCollection.findOne({
         $or: [
             { userId: new ObjectId(userId), friendId: new ObjectId(friendId) },
@@ -20,7 +20,7 @@ async function sendFriendRequest(userId, friendId) {
     });
     
     if (existing) {
-        throw new Error("Ya existe una relación con este usuario");
+        throw new Error("Ya existe una amistad con este usuario");
     }
     
     const friendship = {
@@ -84,7 +84,7 @@ async function removeFriend(friendshipId, currentUserId) {
     return { message: "Amistad eliminada" };
 }
 
-// Obtener amigos de un usuario
+// Obtiene amigos de un usuario
 async function getFriends(userId) {
     await client.connect();
     
@@ -95,12 +95,12 @@ async function getFriends(userId) {
         ]
     }).toArray();
     
-    // Obtener IDs de amigos
+    // Obtiene IDs de amigos
     const friendIds = friendships.map(f => 
         f.userId.toString() === userId ? f.friendId : f.userId
     );
     
-    // Obtener perfiles de amigos
+    // Obtiene perfiles de amigos
     const friends = await profileCollection.find({
         _id: { $in: friendIds }
     }).toArray();
@@ -108,7 +108,7 @@ async function getFriends(userId) {
     return friends;
 }
 
-// Obtener solicitudes pendientes
+// Obtiene solicitudes pendientes
 async function getPendingRequests(userId) {
     await client.connect();
     
@@ -117,7 +117,7 @@ async function getPendingRequests(userId) {
         status: "pending"
     }).toArray();
     
-    // Obtener perfiles de quienes enviaron solicitud
+    // Obtiene perfiles de quienes enviaron solicitud
     const senderIds = requests.map(r => r.userId);
     const senders = await profileCollection.find({
         _id: { $in: senderIds }
@@ -130,7 +130,7 @@ async function getPendingRequests(userId) {
     }));
 }
 
-// Buscar usuarios por nombre
+// Busca usuarios por nombre
 async function searchUsers(searchTerm, currentUserId) {
     await client.connect();
     
@@ -142,7 +142,7 @@ async function searchUsers(searchTerm, currentUserId) {
         _id: { $ne: new ObjectId(currentUserId) } // Excluir usuario actual
     }).limit(20).toArray();
     
-    // Verificar estado de amistad con cada usuario
+    // Verifica estado de amistad con cada usuario
     const userIds = users.map(u => u._id);
     const friendships = await friendshipCollection.find({
         $or: [
@@ -151,7 +151,7 @@ async function searchUsers(searchTerm, currentUserId) {
         ]
     }).toArray();
     
-    // Agregar estado de amistad a cada usuario
+    // Agrega estado de amistad a cada usuario
     return users.map(user => {
         const friendship = friendships.find(f => 
             f.userId.toString() === user._id.toString() || 

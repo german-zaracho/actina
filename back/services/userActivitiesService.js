@@ -7,7 +7,7 @@ const db = client.db(process.env.DB_NAME);
 const userActivitiesCollection = db.collection("user_activities");
 const friendshipsCollection = db.collection("friendships");
 
-// Obtener actividades de un usuario
+// Obtiene actividades de un usuario
 async function getUserActivities(userId) {
     await client.connect();
     const activities = await userActivitiesCollection.find({ 
@@ -16,7 +16,7 @@ async function getUserActivities(userId) {
     return activities;
 }
 
-// Obtener actividades de un usuario específico (públicas + amigos si corresponde)
+// Obtiene actividades de un usuario específico (públicas + amigos si corresponde)
 async function getFriendActivities(friendId, currentUserId) {
     await client.connect();
     
@@ -32,7 +32,7 @@ async function getFriendActivities(friendId, currentUserId) {
         areFriends = !!friendship;
     }
     
-    // Construir query según si son amigos o no
+    // Construye query según si son amigos o no
     const query = {
         userId: new ObjectId(friendId),
         visibility: areFriends ? { $in: ['public', 'friends'] } : 'public'
@@ -42,7 +42,7 @@ async function getFriendActivities(friendId, currentUserId) {
     return activities;
 }
 
-// Obtener todas las actividades públicas
+// Obtiene todas las actividades públicas
 async function getPublicActivities() {
     await client.connect();
     const activities = await userActivitiesCollection.find({ 
@@ -51,7 +51,7 @@ async function getPublicActivities() {
     return activities;
 }
 
-// Obtener actividad por ID (verificando visibilidad)
+// Obtiene actividad por ID (verificando visibilidad)
 async function getActivityById(activityId, userId) {
     await client.connect();
     
@@ -63,20 +63,20 @@ async function getActivityById(activityId, userId) {
         throw new Error("Activity not found");
     }
     
-    // Verificar que el usuario tenga permiso
+    // Verifica que el usuario tenga permiso
     const isOwner = activity.userId.toString() === userId?.toString();
     
     if (isOwner) {
         return activity;
     }
     
-    // Si no es el dueño, verificar visibilidad
+    // Si no es el dueño, verifica visibilidad
     if (activity.visibility === 'public') {
         return activity;
     }
     
     if (activity.visibility === 'friends' && userId) {
-        // Verificar si son amigos
+        // Verifica si son amigos
         const friendship = await friendshipsCollection.findOne({
             $or: [
                 { userId: new ObjectId(userId), friendId: activity.userId, status: 'accepted' },
@@ -92,7 +92,7 @@ async function getActivityById(activityId, userId) {
     throw new Error("You don't have permission to view this activity");
 }
 
-// Obtener actividades por tipo
+// Obtiene actividades por tipo
 async function getActivitiesByType(userId, activityType) {
     await client.connect();
     const activities = await userActivitiesCollection.find({ 
@@ -117,11 +117,11 @@ async function createActivity(userId, activityData) {
     return { _id: result.insertedId, ...newActivity };
 }
 
-// Actualizar actividad
+// Actualiza actividad
 async function updateActivity(activityId, userId, activityData) {
     await client.connect();
     
-    // Verificar que la actividad pertenezca al usuario
+    // Verifica que la actividad pertenezca al usuario
     const activity = await userActivitiesCollection.findOne({ 
         _id: new ObjectId(activityId),
         userId: new ObjectId(userId)
@@ -131,7 +131,7 @@ async function updateActivity(activityId, userId, activityData) {
         throw new Error("Activity not found or you don't have permission");
     }
     
-    // Filtrar campos que no se deben actualizar
+    // Filtra campos que no se deben actualizar
     const { _id, userId: uid, createdAt, ...updateData } = activityData;
     
     console.log('Updating activity with data:', updateData);
@@ -155,7 +155,7 @@ async function updateActivity(activityId, userId, activityData) {
 async function deleteActivity(activityId, userId) {
     await client.connect();
     
-    // Verificar que la actividad pertenezca al usuario
+    // Verifica que la actividad pertenezca al usuario
     const activity = await userActivitiesCollection.findOne({ 
         _id: new ObjectId(activityId),
         userId: new ObjectId(userId)
@@ -172,11 +172,11 @@ async function deleteActivity(activityId, userId) {
     return result;
 }
 
-// Copiar actividad a mis actividades
+// Copia la actividad a mis actividades
 async function copyActivity(activityId, userId) {
     await client.connect();
     
-    // Buscar la actividad original
+    // Busca la actividad original
     const originalActivity = await userActivitiesCollection.findOne({ 
         _id: new ObjectId(activityId)
     });
@@ -185,13 +185,13 @@ async function copyActivity(activityId, userId) {
         throw new Error("Activity not found");
     }
     
-    // Verificar que no sea privada de otro usuario
+    // Verifica que no sea privada de otro usuario
     if (originalActivity.visibility === 'private' && 
         originalActivity.userId.toString() !== userId.toString()) {
         throw new Error("Cannot copy private activity");
     }
     
-    // Crear copia de la actividad
+    // Crea una copia de la actividad
     const { _id, userId: originalUserId, createdAt, updatedAt, ...activityData } = originalActivity;
     
     const copiedActivity = {
@@ -212,7 +212,7 @@ async function copyActivity(activityId, userId) {
     };
 }
 
-// Obtener actividad específica por ID (pública o de amigo)
+// Obtiene la actividad específica por ID (pública o de amigo)
 async function getActivityByIdPublic(activityId, currentUserId) {
     return getActivityById(activityId, currentUserId);
 }

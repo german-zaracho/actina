@@ -15,7 +15,7 @@ async function addToFavorites(req, res) {
     try {
         const { activityId } = req.body;
         await service.addToFavorites(req.account._id, activityId);
-        res.status(201).json({ message: 'Added to favorites' });
+        res.status(201).json({ message: 'Agregado a favoritos' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
@@ -26,7 +26,7 @@ async function removeFromFavorites(req, res) {
     try {
         const { activityId } = req.params;
         await service.removeFromFavorites(req.account._id, activityId);
-        res.json({ message: 'Removed from favorites' });
+        res.json({ message: 'Eliminado de favoritos' });
     } catch (err) {
         res.status(400).json({ error: { message: err.message } });
     }
