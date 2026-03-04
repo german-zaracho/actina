@@ -8,7 +8,7 @@ export default function MultiplechoiceClassification({ multiplechoices }) {
     const navigate = useNavigate();
     const location = useLocation();
     const myActivities = location.state?.myActivities || [];
-    
+
     const [data, setData] = useState(multiplechoices);
     const [selectedClassification, setSelectedClassification] = useState(null);
 
@@ -28,14 +28,14 @@ export default function MultiplechoiceClassification({ multiplechoices }) {
         .filter((multiplechoice) => isMyActivities || multiplechoice.subject === subject)
         .map((multiplechoice, index) => (
             <li className='bgBlue' key={index} onClick={() => handleItemClick(multiplechoice.classification)}>
-                <Link 
+                <Link
                     to={`/multiplechoiceQuestions/${multiplechoice.classification}`}
-                    state={{ 
+                    state={{
                         isMyActivity: isMyActivities,
-                        myActivities: isMyActivities ? myActivities : undefined 
+                        myActivities: isMyActivities ? myActivities : undefined
                     }}
                 >
-                    {multiplechoice.classification}
+                    {multiplechoice.classification} ({multiplechoice.questions?.length || 0})
                 </Link>
             </li>
         ));
