@@ -245,7 +245,6 @@ function findMatchingWords(text, query) {
 
 /**
  * Extrae términos coincidentes de un documento
- * GARANTIZA que siempre retorna al menos una coincidencia
  */
 function extractMatchedTerms(doc, query, type) {
     const matches = new Set();
@@ -321,9 +320,8 @@ function extractMatchedTerms(doc, query, type) {
         return term.length >= 3 && termNormalized.includes(queryNormalized);
     });
     
-    // 🔥 SI NO ENCONTRAMOS NADA, hacer búsqueda exhaustiva en TODO el documento
     if (filtered.length === 0) {
-        console.warn(`⚠️ Búsqueda exhaustiva para "${query}" en documento ${doc._id}`);
+        console.warn(`Búsqueda exhaustiva para "${query}" en documento ${doc._id}`);
         
         // Función recursiva para extraer TODOS los strings del documento
         const extractAllStrings = (obj, strings = [], depth = 0) => {
@@ -383,9 +381,9 @@ function extractMatchedTerms(doc, query, type) {
             .slice(0, 5); // Máximo 5 términos
         
         if (filtered.length > 0) {
-            console.log(`✅ Encontradas ${filtered.length} coincidencias exhaustivas:`, filtered);
+            console.log(`Encontradas ${filtered.length} coincidencias exhaustivas:`, filtered);
         } else {
-            console.error(`❌ NO SE ENCONTRÓ NINGUNA COINCIDENCIA para "${query}"`, {
+            console.error(`No se encontro ninguna coincidencia para "${query}"`, {
                 type,
                 id: doc._id,
                 subject: doc.subject,

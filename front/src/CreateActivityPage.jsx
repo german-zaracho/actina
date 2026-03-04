@@ -8,9 +8,8 @@ import './css/create-activity.css';
 
 const CreateActivityPage = () => {
     const navigate = useNavigate();
-    const [selectedType, setSelectedType] = useState(null); // null, 'multiplechoice', 'flashcard', 'atlas'
+    const [selectedType, setSelectedType] = useState(null);
     
-    // Estado para el toast
     const [toast, setToast] = useState({
         isVisible: false,
         message: '',
@@ -26,24 +25,18 @@ const CreateActivityPage = () => {
     };
 
     const handleSave = () => {
-        // Mostrar toast y redirigir después
         setToast({
             isVisible: true,
             message: '¡Actividad creada exitosamente!',
             type: 'success'
         });
-        
-        // Esperar a que el toast se muestre antes de redirigir
         setTimeout(() => {
             navigate('/my-activities');
         }, 1500);
     };
 
     const closeToast = () => {
-        setToast({
-            ...toast,
-            isVisible: false
-        });
+        setToast({ ...toast, isVisible: false });
     };
 
     const activityTypes = [
@@ -52,21 +45,21 @@ const CreateActivityPage = () => {
             title: 'Multiple Choice',
             description: 'Crea preguntas de opción múltiple con respuestas y justificaciones',
             icon: 'quiz',
-            color: '#667eea'
+            color: '#037e6a'
         },
         {
             type: 'flashcard',
             title: 'Flashcard',
             description: 'Crea tarjetas de estudio con conceptos y características',
             icon: 'style',
-            color: '#f093fb'
+            color: '#534799'
         },
         {
             type: 'atlas',
             title: 'Atlas',
             description: 'Crea un atlas visual con imágenes y elementos educativos',
-            icon: 'map',
-            color: '#4facfe'
+            icon: 'art_track',
+            color: '#0185c6'
         }
     ];
 
@@ -81,7 +74,6 @@ const CreateActivityPage = () => {
                             <>
                                 <div className="page-header">
                                     <h1>Crear Nueva Actividad</h1>
-                                    <p className="subtitle">Elige el tipo de actividad que deseas crear</p>
                                 </div>
 
                                 <div className="activity-types-grid">
@@ -92,7 +84,10 @@ const CreateActivityPage = () => {
                                             onClick={() => handleSelectType(activity.type)}
                                             style={{ '--card-color': activity.color }}
                                         >
-                                            <div className="card-icon">
+                                            <div 
+                                                className="card-icon" 
+                                                style={{ backgroundColor: activity.color }}
+                                            >
                                                 <span className="material-icons">{activity.icon}</span>
                                             </div>
                                             <h3>{activity.title}</h3>
@@ -125,7 +120,6 @@ const CreateActivityPage = () => {
                 </div>
             </div>
 
-            {/* Toast Notification */}
             <ToastNotification
                 message={toast.message}
                 type={toast.type}

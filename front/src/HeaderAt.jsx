@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../src/css/styles.css';
 import { useAuth } from './AuthContext';
-import backgroundImage from '../src/assets/trama5.png';
 
 export default function HeaderAt() {
     const navigate = useNavigate();
     const { profile, isAdmin, logout: logoutContext } = useAuth();
     const [showDropdown, setShowDropdown] = useState(false);
-    
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 600);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const userInitial = profile?.name 
         ? profile.name.charAt(0).toUpperCase() 
         : profile?.userName?.charAt(0).toUpperCase() || 'A';
@@ -22,7 +30,10 @@ export default function HeaderAt() {
         <header className='whiteHeader'>
             <div className='logoContainer'>
                 <Link to="/home" className="border-top homeA">
-                    <img src="../../public/logo.png" alt="Logo de Actina" />
+                    <img
+                        src={isMobile ? "../../public/logo2.png" : "../../public/logo.png"}
+                        alt="Logo de Actina"
+                    />
                 </Link>
 
                 <div className="user-menu">

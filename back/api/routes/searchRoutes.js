@@ -1,27 +1,3 @@
-// import { Router } from "express";
-// import { validateToken } from "../../middleware/validateTokenMiddleware.js";
-// import * as searchController from "../controllers/searchController.js";
-
-// const route = Router();
-
-// route.get('/search/activities', [validateToken], searchController.searchActivities);
-
-// export default route;
-
-// import { Router } from "express";
-// import { validateToken } from "../../middleware/validateTokenMiddleware.js";
-// import * as searchController from "../controllers/searchController.js";
-
-// const route = Router();
-
-// // Endpoint de autocompletado - retorna sugerencias
-// route.get('/search/autocomplete', [validateToken], searchController.getAutocomplete);
-
-// // Endpoint de búsqueda completa - retorna resultados
-// route.get('/search/activities', [validateToken], searchController.searchActivities);
-
-// export default route;
-
 import { Router } from "express";
 import { validateToken } from "../../middleware/validateTokenMiddleware.js";
 import * as searchController from "../controllers/searchController.js";

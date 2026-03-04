@@ -24,7 +24,7 @@ route.put('/my-activities/:id', [validateToken], userActivitiesController.update
 // Eliminar actividad
 route.delete('/my-activities/:id', [validateToken], userActivitiesController.deleteActivity);
 
-// Obtener actividades pÃºblicas de un amigo (solo visibles para amigos)
+// Obtener actividades publicas de un amigo (solo visibles para amigos)
 route.get('/friend-activities/:friendId', [validateToken], userActivitiesController.getFriendActivities);
 
 // Obtener actividades públicas (para todos, no requiere token)

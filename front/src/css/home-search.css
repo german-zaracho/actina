@@ -37,6 +37,7 @@
     font-size: 15px;
     outline: none;
     background: transparent;
+    min-width: 0; /* evita que el input desborde el flex container */
 }
 
 .searchField input::placeholder {
@@ -56,6 +57,7 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
+    flex-shrink: 0;
 }
 
 .clearButton {
@@ -276,7 +278,6 @@
 }
 
 /* ====== ESTILOS DE HIGHLIGHT ====== */
-/* Resaltado de palabras coincidentes */
 .highlight-match {
     background-color: #ffd700;
     color: #000;
@@ -286,7 +287,6 @@
     box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
 }
 
-/* Información de términos coincidentes */
 .matchInfo {
     color: #666;
     font-size: 0.85em;
@@ -299,7 +299,6 @@
     font-weight: 600;
 }
 
-/* Ajustar el resultCard para mejor visualización */
 .resultCard h5 .highlight-match,
 .resultCard p .highlight-match {
     background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
@@ -307,19 +306,39 @@
 }
 
 @keyframes highlightPulse {
-    0%, 100% {
-        box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+    0%, 100% { box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2); }
+    50% { box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.4); }
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablet grande / desktop chico (sidebar expandida) */
+@media (max-width: 1024px) {
+    .searchContainer {
+        max-width: 100%;
+        padding: 0 8px;
     }
-    50% {
-        box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.4);
+
+    .searchField input {
+        font-size: 14px;
     }
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 768px) {
+    .searchContainer {
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
     .searchField input {
-        padding: 10px 100px 10px 40px;
+        padding: 10px 80px 10px 40px;
         font-size: 14px;
+    }
+
+    .searchField input::placeholder {
+        /* Placeholder más corto en mobile */
+        font-size: 13px;
     }
 
     .resultsList {
@@ -329,5 +348,48 @@
     .filtersMenu {
         left: 0;
         right: 0;
+        min-width: unset;
+    }
+
+    .searchResults > h3 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .searchField input {
+        padding: 10px 72px 10px 38px;
+        font-size: 13px;
+    }
+
+    .searchIcon {
+        left: 10px;
+        font-size: 18px;
+    }
+
+    .clearButton {
+        right: 40px;
+    }
+
+    .filterButton {
+        right: 4px;
+    }
+
+    .clearButton .material-icons,
+    .filterButton .material-icons {
+        font-size: 18px;
+    }
+
+    .resultCard {
+        padding: 14px;
+    }
+
+    .resultCard h5 {
+        font-size: 15px;
+    }
+
+    .noResults {
+        padding: 30px 16px;
     }
 }

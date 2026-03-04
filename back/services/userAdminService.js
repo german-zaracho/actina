@@ -217,7 +217,7 @@ async function deleteUser(id) {
             throw new Error(`Error al eliminar actividades: se esperaban ${userActivities.length} pero se eliminaron ${deleteResult.deletedCount}`);
         }
         
-        console.log(`✓ Eliminadas ${deleteResult.deletedCount} actividades del usuario ${userName}`);
+        console.log(`Eliminadas ${deleteResult.deletedCount} actividades del usuario ${userName}`);
     } else {
         console.log(`El usuario ${userName} no tiene actividades para eliminar`);
     }
@@ -225,9 +225,9 @@ async function deleteUser(id) {
     // SEGUNDO: Eliminar profile
     const profileResult = await profileCollection.deleteOne({ _id: userId });
     if (profileResult.deletedCount === 1) {
-        console.log(`✓ Eliminado profile del usuario ${userName}`);
+        console.log(`Eliminado profile del usuario ${userName}`);
     } else {
-        console.log(`⚠ No se encontró profile para el usuario ${userName}`);
+        console.log(`No se encontró profile para el usuario ${userName}`);
     }
     
     // TERCERO: Eliminar account
@@ -235,7 +235,7 @@ async function deleteUser(id) {
     if (accountResult.deletedCount !== 1) {
         throw new Error("Error al eliminar la cuenta del usuario");
     }
-    console.log(`✓ Eliminado account del usuario ${userName}`);
+    console.log(`Eliminado account del usuario ${userName}`);
     
     return { 
         message: "Usuario y todas sus actividades eliminados correctamente",

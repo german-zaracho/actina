@@ -1,3 +1,9 @@
+/* ============================================
+   MULTIPLECHOICE FORM - Contrastes corregidos
+   Paleta: #037e6a, #534799, #fa4436, #0185c6
+   ============================================ */
+
+/* ── Sección de preguntas ── */
 .questions-section {
     margin-top: 2rem;
 }
@@ -11,28 +17,40 @@
 
 .questions-header h3 {
     margin: 0;
-    color: #333;
+    color: #1a1a2e;
+    font-weight: 700;
 }
 
+/* ── Botón agregar pregunta ── */
+/* Era #28a745 (verde genérico) → ahora blanco con borde verde del proyecto */
 .btn-add {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    background: white;
+    color: #037e6a;
+    border: 2px solid #037e6a;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
 }
 
 .btn-add:hover {
-    background: #218838;
+    background: #037e6a;
+    color: white;
+    box-shadow: 0 4px 12px rgba(3, 126, 106, 0.3);
 }
 
+/* ── Card de cada pregunta ── */
+/* Antes era #f8f9fa con borde gris — ahora fondo blanco con borde sutil */
 .question-card {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
+    background: #ffffff;
+    border: 1.5px solid #d6e8e5;
+    border-left: 4px solid #037e6a;
+    border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .question-header {
@@ -44,23 +62,30 @@
 
 .question-header h4 {
     margin: 0;
-    color: #495057;
+    color: #1a1a2e;
+    font-weight: 600;
 }
 
+/* ── Botón eliminar pregunta ── */
+/* Era #dc3545 sólido — ahora outline para no saturar */
 .btn-remove {
-    background: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
+    background: transparent;
+    color: #fa4436;
+    border: 1.5px solid #fa4436;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .btn-remove:hover {
-    background: #c82333;
+    background: #fa4436;
+    color: white;
 }
 
+/* ── Opciones de respuesta ── */
 .option-row {
     display: flex;
     gap: 0.5rem;
@@ -70,90 +95,74 @@
 
 .option-row input[type="radio"] {
     flex-shrink: 0;
+    accent-color: #037e6a;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
 
 .option-row input[type="text"] {
     flex: 1;
 }
 
+/* ── Validación ── */
 
-/* ultimos cambios / validacion en el form */
-
-/* Estilos para validación de formularios */
-
-/* Mensaje de error inline (encima de las opciones) */
+/* Error inline */
 .error-message-inline {
-    background: #fee;
-    color: #c33;
+    background: #fff0ef;
+    color: #c0392b;
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     margin-bottom: 0.75rem;
-    border-left: 4px solid #c33;
+    border-left: 4px solid #fa4436;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-/* Input con error (borde rojo) */
-.input-error {
-    border: 2px solid #dc3545 !important;
-    background-color: #fff5f5 !important;
-}
-
-.input-error:focus {
-    border-color: #dc3545 !important;
-    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15) !important;
-}
-
-/* Botón deshabilitado con cursor apropiado */
-.btn-save:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.btn-save:disabled:hover {
-    background: #ccc;
-    transform: none;
-}
-
-/* Animación sutil para el mensaje de error */
-.error-message-inline {
     animation: slideDown 0.3s ease;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Input con error */
+.input-error {
+    border: 2px solid #fa4436 !important;
+    background-color: #fff7f6 !important;
 }
 
-/* Mejorar visibilidad del mensaje de error general */
+.input-error:focus {
+    border-color: #fa4436 !important;
+    box-shadow: 0 0 0 3px rgba(250, 68, 54, 0.12) !important;
+}
+
+/* Error general */
 .error-message {
-    background: #fee;
-    color: #c33;
+    background: #fff0ef;
+    color: #c0392b;
     padding: 1rem 1.25rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
-    border-left: 4px solid #c33;
+    border-left: 4px solid #fa4436;
     font-size: 0.95rem;
     animation: slideDown 0.3s ease;
 }
 
-/* Tooltip para el botón deshabilitado */
+/* ── Botón guardar deshabilitado ── */
+.btn-save:disabled {
+    background: #b0bec5 !important;
+    color: #fff !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Tooltip del botón deshabilitado */
 .btn-save[disabled][title]:hover::after {
     content: attr(title);
     position: absolute;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #333;
+    background: #1a1a2e;
     color: white;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
@@ -161,4 +170,10 @@
     white-space: nowrap;
     margin-bottom: 0.5rem;
     z-index: 1000;
+}
+
+/* ── Animaciones ── */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

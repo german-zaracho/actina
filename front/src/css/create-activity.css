@@ -1,123 +1,244 @@
-.create-activity-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
+:root {
+    --actina-green:   #037e6a;
+    --actina-green-light: #e6f4f1;
+    --actina-purple:  #534799;
+    --actina-purple-light: #eeeaf8;
+    --actina-blue:    #0185c6;
+    --actina-blue-light: #e0f2fb;
+    --actina-red:     #fa4436;
+    --actina-bg:      #e9e3e3;
+    --actina-text:    #1a1a2e;
+    --actina-muted:   #6b7280;
+    --radius-card:    20px;
+    --shadow-card:    0 4px 20px rgba(0,0,0,0.08);
+    --shadow-hover:   0 16px 40px rgba(0,0,0,0.14);
+    --transition:     all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ── Contenedor principal ── */
+.create-activity-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* ── Header ── */
 .page-header {
     text-align: center;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--actina-green);
+    border-radius: 2px;
+    margin: 1rem auto 0;
 }
 
 .page-header h1 {
-    margin: 0 0 1rem 0;
-    color: #333;
-    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
     margin: 0;
-    color: #666;
-    font-size: 1.2rem;
+    color: var(--actina-muted);
+    font-size: 1.05rem;
 }
 
+/* ── Grid de cards ── */
 .activity-types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
 }
 
+/* ── Card base ── */
 .activity-type-card {
     background: white;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    border-radius: var(--radius-card);
+    padding: 2rem 1.75rem 1.75rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Franja superior coloreada */
 .activity-type-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
+    top: 0; left: 0; right: 0;
+    height: 5px;
     background: var(--card-color);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+/* Fondo suave en hover */
+.activity-type-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--card-bg, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--radius-card);
+    pointer-events: none;
 }
 
 .activity-type-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--card-color);
 }
 
-.activity-type-card:hover::before {
-    transform: scaleX(1);
+.activity-type-card:hover::after {
+    opacity: 1;
 }
 
+/* ── Ícono ── */
 .card-icon {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--card-color), var(--card-color));
+    background: var(--card-bg-icon, var(--card-color));
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    opacity: 0.9;
+    margin: 0 auto 1.4rem;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+    box-shadow: 0 6px 18px var(--card-shadow);
+}
+
+.activity-type-card:hover .card-icon {
+    transform: scale(1.1) rotate(-4deg);
 }
 
 .card-icon .material-icons {
-    font-size: 40px;
+    font-size: 38px;
     color: white;
 }
 
+/* ── Texto ── */
 .activity-type-card h3 {
-    margin: 0 0 1rem 0;
-    color: #333;
-    font-size: 1.5rem;
+    margin: 0 0 0.75rem 0;
+    color: var(--actina-text);
+    font-size: 1.3rem;
+    font-weight: 700;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .activity-type-card p {
     margin: 0 0 1.5rem 0;
-    color: #666;
+    color: var(--actina-muted);
     text-align: center;
-    line-height: 1.6;
-    min-height: 48px;
+    line-height: 1.65;
+    font-size: 0.92rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
+/* ── Botón select ── */
 .btn-select {
     width: 100%;
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     background: var(--card-color);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.3px;
 }
 
 .btn-select:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 16px var(--card-shadow);
+    transform: translateY(-1px);
 }
 
+.btn-select:active {
+    transform: translateY(0);
+}
+
+/* ── Colores por tipo ── */
+
+/* Multiple Choice → verde */
+.activity-type-card:nth-child(1) {
+    --card-color:    #037e6a;
+    --card-bg:       rgba(3, 126, 106, 0.04);
+    --card-shadow:   rgba(3, 126, 106, 0.3);
+    --card-bg-icon:  #037e6a;
+}
+
+/* Flashcard → violeta */
+.activity-type-card:nth-child(2) {
+    --card-color:    #534799;
+    --card-bg:       rgba(83, 71, 153, 0.04);
+    --card-shadow:   rgba(83, 71, 153, 0.3);
+    --card-bg-icon:  #534799;
+}
+
+/* Atlas → azul */
+.activity-type-card:nth-child(3) {
+    --card-color:    #0185c6;
+    --card-bg:       rgba(1, 133, 198, 0.04);
+    --card-shadow:   rgba(1, 133, 198, 0.3);
+    --card-bg-icon:  #0185c6;
+}
+
+/* ── Badge de tipo (decorativo, opcional) ── */
+.card-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: var(--card-bg, rgba(0,0,0,0.06));
+    color: var(--card-color);
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Botón volver ── */
+.create-activity-container > .btnBackWhite {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ── Form wrapper ── */
 .form-wrapper {
     background: white;
-    border-radius: 12px;
+    border-radius: var(--radius-card);
     padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-card);
 }
 
-/* Ajustes para los formularios dentro de este contexto */
 .form-wrapper .form-container {
     background: transparent;
     box-shadow: none;
@@ -128,35 +249,87 @@
     margin-top: 0;
 }
 
-/* Responsive */
+/* ── Animación de entrada de las cards ── */
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.activity-type-card {
+    animation: cardFadeUp 0.4s ease both;
+}
+
+.activity-type-card:nth-child(1) { animation-delay: 0.05s; }
+.activity-type-card:nth-child(2) { animation-delay: 0.15s; }
+.activity-type-card:nth-child(3) { animation-delay: 0.25s; }
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
     .create-activity-container {
-        padding: 1rem;
+        padding: 1rem 1rem 2rem;
+        margin: 1.5rem auto;
     }
 
     .page-header h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .activity-types-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
 
     .activity-type-card {
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        flex-wrap: wrap;
     }
 
     .card-icon {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
+        margin: 0 1rem 0 0;
+        flex-shrink: 0;
     }
 
     .card-icon .material-icons {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .activity-type-card h3 {
+        text-align: left;
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .activity-type-card p {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .card-text-block {
+        flex: 1;
+    }
+
+    .btn-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
     }
 }
