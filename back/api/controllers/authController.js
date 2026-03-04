@@ -80,7 +80,7 @@ async function updateProfile(req, res) {
         
         res.status(200).json({
             message: "Profile updated successfully", 
-            profile: updatedProfile  // â† IMPORTANTE: Retornar el perfil actualizado
+            profile: updatedProfile  // Retornar el perfil actualizado
         });
     } catch (err) {
         console.error('Error updating profile:', err);
