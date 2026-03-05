@@ -20,7 +20,7 @@ const RegisterPage = () => {
             ...formData,
             [e.target.name]: e.target.value
         });
-        // Limpiar error cuando el usuario comience a escribir
+        // Limpia el error cuando el usuario comience a escribir
         if (error) setError("");
     };
 
@@ -71,12 +71,6 @@ const RegisterPage = () => {
 
             console.log("Usuario registrado:", response);
 
-            // Opcional: Auto-login después del registro
-            // Si tu backend devuelve un token al registrarse, puedes hacer esto:
-            // localStorage.setItem("token", response.token);
-            // navigate("/home", { replace: true });
-
-            // O redirigir al login con un mensaje de éxito
             navigate("/login", {
                 state: { message: "¡Registro exitoso! Ahora puedes iniciar sesión." }
             });

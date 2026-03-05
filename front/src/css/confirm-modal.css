@@ -99,7 +99,6 @@
     background: #c82333;
 }
 
-/* Responsive */
 @media (max-width: 500px) {
     .modal-content {
         min-width: 90%;

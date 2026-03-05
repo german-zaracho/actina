@@ -1,6 +1,6 @@
 import { call } from "./httpService";
 
-// Obtener favoritos del usuario
+// Obtiene favoritos del usuario
 export function getFavorites() {
     return call({ 
         url: "favorites", 
@@ -8,7 +8,7 @@ export function getFavorites() {
     });
 }
 
-// Agregar actividad a favoritos
+// Agrega una actividad a favoritos
 export function addToFavorites(activityId) {
     return call({ 
         url: "favorites", 
@@ -17,7 +17,7 @@ export function addToFavorites(activityId) {
     });
 }
 
-// Eliminar actividad de favoritos
+// Elimina una actividad de favoritos
 export function removeFromFavorites(activityId) {
     return call({ 
         url: `favorites/${activityId}`, 
@@ -25,7 +25,7 @@ export function removeFromFavorites(activityId) {
     });
 }
 
-// Verificar si una actividad está en favoritos
+// Verifica si una actividad está en favoritos
 export function isFavorite(activityId) {
     return call({ 
         url: `favorites/check/${activityId}`, 

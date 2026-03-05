@@ -18,12 +18,12 @@ const LoginPage = () => {
 
     const onChangeUserName = (e) => {
         setUserName(e.target.value);
-        if (error) setError(""); // Limpiar error al escribir
+        if (error) setError(""); // Limpia el error al escribir
     };
 
     const onChangePass = (e) => {
         setPass(e.target.value);
-        if (error) setError(""); // Limpiar error al escribir
+        if (error) setError("");
     };
 
     const onSubmit = async (e) => {
@@ -40,7 +40,6 @@ const LoginPage = () => {
         try {
             const { account, token } = await login({ userName: userName.trim(), password: pass });
 
-            // Usar el método del contexto en lugar de localStorage directamente
             await loginContext(token, account);
 
             navigate("/home", { replace: true });

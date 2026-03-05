@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [loading, setLoading] = useState(true);
 
-    // Cargar datos del usuario al montar
+    // Carga datos del usuario al montar
     useEffect(() => {
         checkAuth();
     }, []);
@@ -99,7 +99,6 @@ export const AuthProvider = ({ children }) => {
     );
 };
 
-// Hook personalizado para usar el contexto
 export const useAuth = () => {
     const context = useContext(AuthContext);
     if (!context) {

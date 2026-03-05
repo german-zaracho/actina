@@ -83,7 +83,7 @@ const ProfilePage = () => {
     const handleImageSelect = (imageName) => {
         setFormData(prev => ({
             ...prev,
-            userImage: imageName // Si es '', mostrarÃ¡ la letra inicial
+            userImage: imageName
         }));
     };
 
@@ -102,7 +102,6 @@ const ProfilePage = () => {
         setError('');
 
         try {
-            // Agregar un delay mínimo de 1 segundo para mostrar el loader
             const [response] = await Promise.all([
                 updateProfile(formData),
                 new Promise(resolve => setTimeout(resolve, 1000))
@@ -122,10 +121,8 @@ const ProfilePage = () => {
             setIsEditing(false);
             updateContextProfile(updatedProfile);
             
-            // Notificar al HeaderAt que el perfil se actualizó
             window.dispatchEvent(new CustomEvent('profileUpdated'));
             
-            // Mostrar toast de éxito
             setToast({
                 isVisible: true,
                 message: 'Perfil actualizado correctamente',
@@ -135,7 +132,6 @@ const ProfilePage = () => {
             console.error('Error updating profile:', err);
             setError(err.error?.message || 'Error al actualizar el perfil');
             
-            // Mostrar toast de error
             setToast({
                 isVisible: true,
                 message: 'Error al actualizar el perfil',
@@ -212,7 +208,6 @@ const ProfilePage = () => {
                                     <div className="image-selector">
                                         <label>Seleccionar imagen:</label>
                                         
-                                        {/* OpciÃ³n para usar letra inicial */}
                                         <div className="default-option">
                                             <button
                                                 type="button"
@@ -226,7 +221,6 @@ const ProfilePage = () => {
                                             <span className="option-label">Letra inicial</span>
                                         </div>
 
-                                        {/* Opciones de imÃ¡genes */}
                                         <div className="images-section">
                                             <p className="section-title">O elige una imagen:</p>
                                             <div className="image-grid">
@@ -288,13 +282,13 @@ const ProfilePage = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label>BiografÃ­a</label>
+                                    <label>Biografí­a</label>
                                     {isEditing ? (
                                         <textarea
                                             name="bio"
                                             value={formData.bio}
                                             onChange={handleInputChange}
-                                            placeholder="CuÃ©ntanos algo sobre ti..."
+                                            placeholder="Cuéntanos algo sobre ti..."
                                             rows="3"
                                             maxLength="200"
                                         />
@@ -323,7 +317,7 @@ const ProfilePage = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label>UbicaciÃ³n</label>
+                                    <label>Ubicación</label>
                                     {isEditing ? (
                                         <input
                                             type="text"

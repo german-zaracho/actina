@@ -14,14 +14,14 @@ export default function Home() {
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [isSearching, setIsSearching] = useState(false);
     const [showFilters, setShowFilters] = useState(false);
-    
+
     // Filtros de tipo
     const [filters, setFilters] = useState({
         multiplechoice: true,
         flashcard: true,
         atlas: true
     });
-    
+
     const searchRef = useRef(null);
     const debounceTimer = useRef(null);
 
@@ -37,7 +37,7 @@ export default function Home() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    // Obtener sugerencias con debounce
+    // Obtiene sugerencias
     useEffect(() => {
         if (debounceTimer.current) {
             clearTimeout(debounceTimer.current);
@@ -67,13 +67,13 @@ export default function Home() {
         };
     }, [searchQuery, filters]);
 
-    // Manejar búsqueda
+    // Maneja la búsqueda
     const handleSearch = async (query = searchQuery) => {
         if (!query || query.trim().length < 2) return;
 
         setIsSearching(true);
         setShowSuggestions(false);
-        
+
         try {
             const activeFilters = Object.keys(filters).filter(key => filters[key]);
             const results = await searchActivities(query.trim(), activeFilters);
@@ -85,13 +85,13 @@ export default function Home() {
         }
     };
 
-    // Manejar Enter
+    // Maneja el enter
     const handleKeyDown = (e) => {
         if (!showSuggestions) return;
 
         if (e.key === 'ArrowDown') {
             e.preventDefault();
-            setSelectedIndex(prev => 
+            setSelectedIndex(prev =>
                 prev < suggestions.length - 1 ? prev + 1 : prev
             );
         } else if (e.key === 'ArrowUp') {
@@ -112,7 +112,7 @@ export default function Home() {
         }
     };
 
-    // Seleccionar sugerencia
+    // Selecciona la sugerencia
     const handleSuggestionClick = (suggestion) => {
         setSearchQuery(suggestion);
         handleSearch(suggestion);
@@ -126,7 +126,7 @@ export default function Home() {
         }));
     };
 
-    // Navegar a resultado
+    // Navega a resultado
     const handleResultClick = (result) => {
         switch (result.type) {
             case 'multiplechoice':
@@ -153,11 +153,10 @@ export default function Home() {
     const getTotalResults = () => {
         if (!searchResults) return 0;
         return (searchResults.multiplechoices?.length || 0) +
-               (searchResults.flashcards?.length || 0) +
-               (searchResults.atlas?.length || 0);
+            (searchResults.flashcards?.length || 0) +
+            (searchResults.atlas?.length || 0);
     };
 
-    // ====== FUNCIÓN DE HIGHLIGHT MEJORADA ======
     // Normaliza texto removiendo acentos
     const normalizeText = (text) => {
         return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -166,26 +165,25 @@ export default function Home() {
     function renderHighlightedText(text, matchedTerms = [], query = searchQuery) {
         if (!text) return text;
 
-        // 🔥 COMBINAR: términos extraídos + query original
         const allTermsToHighlight = new Set();
-        
-        // 1. Agregar términos extraídos del backend
+
+        // Agrega términos extraídos del backend
         matchedTerms.forEach(term => {
             if (term && term.length >= 2) {
                 allTermsToHighlight.add(term);
             }
         });
-        
-        // 2. Agregar el query original (lo que el usuario escribió)
+
+        // Agrega el query original
         if (query && query.trim().length >= 2) {
             allTermsToHighlight.add(query.trim());
         }
-        
-        // 3. Si no hay términos, buscar el query dentro del texto
+
+        // Si no hay términos, buscar el query dentro del texto
         if (allTermsToHighlight.size === 0 && query && query.trim().length >= 2) {
             const queryNorm = normalizeText(query.trim().toLowerCase());
             const textNorm = normalizeText(text.toLowerCase());
-            
+
             // Si el texto contiene el query, agregarlo
             if (textNorm.includes(queryNorm)) {
                 allTermsToHighlight.add(query.trim());
@@ -194,19 +192,18 @@ export default function Home() {
 
         const terms = Array.from(allTermsToHighlight)
             .filter(t => t && t.length >= 2)
-            .sort((a, b) => b.length - a.length); // Más largos primero
+            .sort((a, b) => b.length - a.length);
 
         if (terms.length === 0) return text;
 
-        // 4️⃣ Escapar caracteres especiales de regex
         const escapedTerms = terms.map(t =>
             t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
         );
 
-        // 5️⃣ Crear regex única con todos los términos
+        // Crear regex única con todos los términos
         const regex = new RegExp(`(${escapedTerms.join('|')})`, 'gi');
 
-        // 6️⃣ Split + map
+        // Split + map
         const parts = text.split(regex);
 
         return parts.map((part, i) => {
@@ -214,11 +211,11 @@ export default function Home() {
             const partNormalized = normalizeText(part.toLowerCase());
             const isMatch = terms.some(term => {
                 const termNormalized = normalizeText(term.toLowerCase());
-                return partNormalized === termNormalized || 
-                       partNormalized.includes(termNormalized) ||
-                       termNormalized.includes(partNormalized);
+                return partNormalized === termNormalized ||
+                    partNormalized.includes(termNormalized) ||
+                    termNormalized.includes(partNormalized);
             });
-            
+
             return isMatch ? (
                 <mark key={i} className="highlight-match">{part}</mark>
             ) : (
@@ -235,12 +232,12 @@ export default function Home() {
                 <div className='container'>
                     <div className='homeSection'>
                         <h2 className='searchTitle'>Hola, Bienvenid@!</h2>
-                        
+
                         {/* Buscador con Autocomplete */}
                         <div className='searchContainer' ref={searchRef}>
                             <div className='searchField'>
                                 <span className="material-icons searchIcon">search</span>
-                                <input 
+                                <input
                                     type="text"
                                     placeholder='Buscar en multiplechoice, flashcards, atlas...'
                                     value={searchQuery}
@@ -252,9 +249,9 @@ export default function Home() {
                                         }
                                     }}
                                 />
-                                
+
                                 {searchQuery && (
-                                    <button 
+                                    <button
                                         className="clearButton"
                                         onClick={handleClear}
                                         title="Limpiar búsqueda"
@@ -262,8 +259,8 @@ export default function Home() {
                                         <span className="material-icons">close</span>
                                     </button>
                                 )}
-                                
-                                <button 
+
+                                <button
                                     className="filterButton"
                                     onClick={() => setShowFilters(!showFilters)}
                                     title="Filtros de búsqueda"
@@ -333,7 +330,7 @@ export default function Home() {
                             <div className="searchResults">
                                 <h3>Resultados ({getTotalResults()})</h3>
 
-                                {/* Multiple Choice Results */}
+                                {/* Multiplechoice */}
                                 {searchResults.multiplechoices && searchResults.multiplechoices.length > 0 && (
                                     <div className="resultsSection">
                                         <h4>
@@ -356,8 +353,8 @@ export default function Home() {
                                                     <span className="resultMeta">
                                                         {item.questions?.length || 0} preguntas
                                                         {(() => {
-                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0) 
-                                                                ? item.matchedTerms 
+                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0)
+                                                                ? item.matchedTerms
                                                                 : [searchQuery.trim()];
                                                             return (
                                                                 <span className="matchInfo">
@@ -377,7 +374,7 @@ export default function Home() {
                                     </div>
                                 )}
 
-                                {/* Flashcards Results */}
+                                {/* Flashcards */}
                                 {searchResults.flashcards && searchResults.flashcards.length > 0 && (
                                     <div className="resultsSection">
                                         <h4>
@@ -400,8 +397,8 @@ export default function Home() {
                                                     <span className="resultMeta">
                                                         {item.tabs?.length || 0} tabs
                                                         {(() => {
-                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0) 
-                                                                ? item.matchedTerms 
+                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0)
+                                                                ? item.matchedTerms
                                                                 : [searchQuery.trim()];
                                                             return (
                                                                 <span className="matchInfo">
@@ -421,7 +418,7 @@ export default function Home() {
                                     </div>
                                 )}
 
-                                {/* Atlas Results */}
+                                {/* Atlas */}
                                 {searchResults.atlas && searchResults.atlas.length > 0 && (
                                     <div className="resultsSection">
                                         <h4>
@@ -444,8 +441,8 @@ export default function Home() {
                                                     <span className="resultMeta">
                                                         {item.pages?.length || 0} páginas
                                                         {(() => {
-                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0) 
-                                                                ? item.matchedTerms 
+                                                            const termsToShow = (item.matchedTerms && item.matchedTerms.length > 0)
+                                                                ? item.matchedTerms
                                                                 : [searchQuery.trim()];
                                                             return (
                                                                 <span className="matchInfo">

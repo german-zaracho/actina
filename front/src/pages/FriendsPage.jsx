@@ -9,7 +9,7 @@ import '../css/friends.css';
 
 const FriendsPage = () => {
     const navigate = useNavigate();
-    const [activeTab, setActiveTab] = useState('search'); // 'search', 'friends', 'requests'
+    const [activeTab, setActiveTab] = useState('search');
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [friends, setFriends] = useState([]);
@@ -23,13 +23,13 @@ const FriendsPage = () => {
         type: 'success'
     });
 
-    // Cargar solicitudes y amigos al montar el componente (para los contadores)
+    // Cargar solicitudes y amigos al montar el componente
     useEffect(() => {
         loadRequests();
         loadFriends();
     }, []);
 
-    // Cargar datos segÃºn la pestaÃ±a activa
+    // Carga datos segun la pestaña activa
     useEffect(() => {
         if (activeTab === 'friends') {
             loadFriends();
@@ -87,10 +87,10 @@ const FriendsPage = () => {
     const handleSendRequest = async (friendId) => {
         try {
             await sendFriendRequest(friendId);
-            // Actualizar resultados de bÃºsqueda
+            // Actualiza resultados de busqueda
             const updatedResults = await searchUsers(searchQuery);
             setSearchResults(updatedResults);
-            // Mostrar toast en lugar de alert
+            // Muestra toast en lugar de alert
             setToast({
                 isVisible: true,
                 message: 'Solicitud enviada correctamente',
@@ -109,9 +109,9 @@ const FriendsPage = () => {
         try {
             await acceptFriendRequest(requestId);
             loadRequests(); // Actualiza solicitudes
-            loadFriends();  // Actualiza amigos para que el contador suba
+            loadFriends();  // Actualiza amigos
             
-            // Notificar al Sidebar para actualizar el contador
+            // Notifica al Sidebar para actualizar el contador
             window.dispatchEvent(new Event('friendRequestsUpdated'));
             
             setToast({
@@ -133,7 +133,7 @@ const FriendsPage = () => {
             await rejectFriendRequest(requestId);
             loadRequests();
             
-            // Notificar al Sidebar para actualizar el contador
+            // Notifica al Sidebar para actualizar el contador
             window.dispatchEvent(new Event('friendRequestsUpdated'));
             
             setToast({
@@ -151,7 +151,7 @@ const FriendsPage = () => {
     };
 
     const handleRemoveFriend = async (friendshipId) => {
-        if (!confirm('Â¿Seguro que quieres eliminar esta amistad?')) return;
+        if (!confirm('¿Seguro que quieres eliminar esta amistad?')) return;
 
         try {
             await removeFriend(friendshipId);
@@ -240,7 +240,6 @@ const FriendsPage = () => {
                             </button>
                         </div>
 
-                        {/* TAB: BUSCAR */}
                         {activeTab === 'search' && (
                             <div className="tab-content">
                                 <form onSubmit={handleSearch} className="search-form">
@@ -286,13 +285,12 @@ const FriendsPage = () => {
                             </div>
                         )}
 
-                        {/* TAB: MIS AMIGOS */}
                         {activeTab === 'friends' && (
                             <div className="tab-content">
                                 {loading ? (
                                     <p>Cargando...</p>
                                 ) : friends.length === 0 ? (
-                                    <p className="no-results">AÃºn no tienes amigos agregados</p>
+                                    <p className="no-results">Aun no tienes amigos agregados</p>
                                 ) : (
                                     <div className="results-list">
                                         {friends.map(friend => (
@@ -334,7 +332,6 @@ const FriendsPage = () => {
                             </div>
                         )}
 
-                        {/* TAB: SOLICITUDES */}
                         {activeTab === 'requests' && (
                             <div className="tab-content">
                                 {loading ? (

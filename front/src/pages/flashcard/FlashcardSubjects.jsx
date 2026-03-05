@@ -7,9 +7,9 @@ import HeaderAt from '../../components/layout/HeaderAt';
 
 export default function FlashcardSubjects({ flashcards }) {
     const navigate = useNavigate();
-    const [data, setData] = useState(flashcards);
+    const [data] = useState(flashcards);
     const [myActivities, setMyActivities] = useState([]);
-    const [selectedSubject, setSelectedSubject] = useState(null);
+    const [showMyActivities, setShowMyActivities] = useState(false);
 
     useEffect(() => {
         loadMyActivities();
@@ -24,22 +24,27 @@ export default function FlashcardSubjects({ flashcards }) {
         }
     };
 
-    const handleGoBack = () => {
-        navigate(-1);
-    };
+    const handleGoBack = () => navigate(-1);
 
     const handleItemClick = (subject) => {
-        setSelectedSubject(subject);
         navigate(`/flashcardTabs/${subject}`);
     };
 
-    const handleMyActivitiesClick = () => {
-        if (myActivities.length === 0) {
-            alert('Aún no has creado ningún flashcard');
-        }
+    const handleMyActivityClick = (activity) => {
+        navigate(`/flashcardTabs/${activity.subject}`, {
+            state: { friendActivity: activity }
+        });
     };
 
-    const uniqueSubjects = Array.from(new Set(data.map(flashcard => flashcard.subject)));
+    const handleMyActivitiesToggle = () => {
+        if (myActivities.length === 0) {
+            alert('Aún no has creado ningún flashcard');
+            return;
+        }
+        setShowMyActivities(prev => !prev);
+    };
+
+    const uniqueSubjects = Array.from(new Set(data.map(fc => fc.subject)));
 
     return (
         <>
@@ -53,34 +58,44 @@ export default function FlashcardSubjects({ flashcards }) {
                     <ul className='subjects classifications'>
                         {uniqueSubjects.map((subject, index) => (
                             <li className='bgBlue' key={index} onClick={() => handleItemClick(subject)}>
-                                <Link to={`/flashcardTabs/${subject}`} subject={subject}>
-                                    {subject}
-                                </Link>
+                                <Link to={`/flashcardTabs/${subject}`}>{subject}</Link>
                             </li>
                         ))}
-                        
-                        {/* Separador visual */}
-                        {myActivities.length > 0 && (
-                            <li className='category-divider'>
-                                <span>Mis Actividades</span>
-                            </li>
-                        )}
 
-                        {/* Categoría "Mis Flashcards" */}
-                        {myActivities.length > 0 ? (
-                            <li className='bgBlue my-activities-category'>
-                                <Link 
-                                    to={`/flashcardTabs/Mis Flashcards`}
-                                    state={{ myActivities: myActivities }}
-                                >
-                                    Mis Flashcards ({myActivities.length})
-                                </Link>
+                        {/* Separador */}
+                        <li className='category-divider'>
+                            <span>Mis Actividades</span>
+                        </li>
+
+                        {/* Botón Mis Flashcards */}
+                        <li
+                            className='my-activities-category'
+                            onClick={handleMyActivitiesToggle}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <a>
+                                Mis Flashcards ({myActivities.length})
+                                {myActivities.length > 0 && (
+                                    <span className="material-icons" style={{ fontSize: '1rem', marginLeft: '0.5rem', verticalAlign: 'middle' }}>
+                                        {showMyActivities ? 'expand_less' : 'expand_more'}
+                                    </span>
+                                )}
+                            </a>
+                        </li>
+
+                        {/* Lista expandible de mis flashcards */}
+                        {showMyActivities && myActivities.map((activity, index) => (
+                            <li
+                                key={index}
+                                className='my-activity-item'
+                                onClick={() => handleMyActivityClick(activity)}
+                            >
+                                <a>
+                                    <span className="material-icons my-activity-icon">style</span>
+                                    <span>{activity.subject} — {activity.topic}</span>
+                                </a>
                             </li>
-                        ) : (
-                            <li className='bgBlue my-activities-category' onClick={handleMyActivitiesClick}>
-                                <a>Mis Flashcards (0)</a>
-                            </li>
-                        )}
+                        ))}
                     </ul>
                     <button onClick={handleGoBack} className='btnBackWhite'>Volver</button>
                 </div>

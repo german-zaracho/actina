@@ -3,7 +3,6 @@
     margin: 0 auto 1.5rem;
 }
 
-/* Barra de progreso */
 .mc-progress-bar {
     height: 6px;
     background: #e9e3e3;
@@ -26,7 +25,6 @@
     margin-bottom: 1rem;
 }
 
-/* Card de pregunta */
 .mc-question-card {
     background: white;
     border-radius: 14px;
@@ -43,7 +41,6 @@
     line-height: 1.5;
 }
 
-/* Opciones */
 .mc-options-list {
     list-style: none;
     padding: 0;
@@ -135,7 +132,6 @@
 .mc-option.correct .mc-option-icon { color: #037e6a; }
 .mc-option.incorrect .mc-option-icon { color: #fa4436; }
 
-/* Justificación */
 .mc-justification {
     margin-top: 1.25rem;
     background: #f5faf9;
@@ -158,7 +154,6 @@
 
 .mc-justification-answer .material-icons { font-size: 1.1rem !important; }
 
-/* Score inline */
 .mc-score-inline {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
@@ -169,7 +164,6 @@
     text-align: center;
 }
 
-/* Botones de acción */
 .mc-actions { margin-top: 0.5rem; }
 
 .mc-actions-row {
@@ -229,7 +223,6 @@
     cursor: not-allowed;
 }
 
-/* Modal */
 .mc-modal-result {
     display: flex;
     flex-direction: column;
@@ -269,7 +262,6 @@
     margin: 0.5rem 0 1.5rem;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .mc-question-card { padding: 1.25rem; }
     .mc-actions-row { justify-content: stretch; }

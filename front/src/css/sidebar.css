@@ -41,7 +41,7 @@ body.dark {
 .sidebar {
     margin: 30px 0px auto 0px;
     position: sticky;
-    top: 100px; /* modificar aca */
+    top: 100px;
     left: 0;
     /* height: 100%; */
     width: 250px;
@@ -49,7 +49,7 @@ body.dark {
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;
-    border-top-right-radius: 30px; /* Ajusta el valor */
+    border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
 
@@ -343,7 +343,6 @@ body.dark .home .text {
     color: #1b6ff3;
 }
 
-/* Badge de notificaciones */
 .notification-badge {
     position: absolute;
     right: 5px;
@@ -386,25 +385,22 @@ body.dark .home .text {
     }
 }
 
-/* Asegurar que el sidebar esté por encima del overlay */
+/* sidebar por encima del overlay */
 .sidebar {
     z-index: 999;
 }
 
-/* En desktop, no mostrar el overlay ya que el sidebar siempre está visible */
 @media (min-width: 769px) {
     .sidebar-overlay {
         display: none;
     }
 }
 
-/* En mobile/tablet, el overlay es útil */
 @media (max-width: 768px) {
     .sidebar-overlay {
         display: block;
     }
     
-    /* Sidebar en mobile debe estar posicionado fixed para superponerse */
     .sidebar:not(.close) {
         position: fixed;
         left: 0;

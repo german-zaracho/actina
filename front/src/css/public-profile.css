@@ -109,7 +109,6 @@
     font-size: 1.1rem;
 }
 
-/* Sección de actividades */
 .activities-section {
     padding-top: 1rem;
     border-top: 2px solid #f0f0f0;
@@ -343,7 +342,6 @@
     color: #666;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .profile-card {
         padding: 1rem;

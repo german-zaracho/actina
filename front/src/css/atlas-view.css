@@ -173,7 +173,6 @@
 .atlas-blur-btn:hover { color: #0185c6; }
 .atlas-blur-btn .material-icons { font-size: 1.1rem; }
 
-/* Responsive */
 @media (max-width: 600px) {
     .atlas-card { padding: 1rem; }
     .atlas-image-wrapper { padding: 0.5rem; }

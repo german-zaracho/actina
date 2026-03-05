@@ -1,10 +1,3 @@
-/* ============================================
-   USER ACTIVITY FORM - Contrastes corregidos
-   Paleta: #037e6a, #534799, #fa4436, #0185c6
-   ============================================ */
-
-/* ── Contenedor del formulario ── */
-/* Fondo blanco explícito para que nunca herede el fondo oscuro del layout */
 .form-container {
     background: #ffffff;
     border-radius: 16px;
@@ -22,14 +15,12 @@
     border-bottom: 2px solid #e9e3e3;
 }
 
-/* ── Estructura ── */
 .form-sections {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
 }
 
-/* Sección con borde lateral → usa verde del proyecto */
 .form-section {
     background: #f7faf9;
     padding: 1.5rem;
@@ -52,7 +43,6 @@
     color: #037e6a;
 }
 
-/* ── Grid ── */
 .form-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -64,14 +54,12 @@
     grid-template-columns: 1fr;
 }
 
-/* ── Grupos de campos ── */
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
 
-/* Labels: antes #555 sobre fondo oscuro → ahora #1a1a2e bien visible */
 .form-group label {
     font-weight: 600;
     color: #1a1a2e;
@@ -87,7 +75,6 @@
     color: #fa4436;
 }
 
-/* Inputs y textareas sobre fondo blanco */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -120,7 +107,6 @@
     min-height: 80px;
 }
 
-/* Select deshabilitado */
 .form-group select:disabled {
     background-color: #f0f4f3;
     cursor: not-allowed;
@@ -128,7 +114,6 @@
     color: #5a7a75;
 }
 
-/* ── Textos de ayuda (antes #666 sobre fondo oscuro) ── */
 .helper-text,
 .char-count,
 .char-counter {
@@ -140,7 +125,6 @@
 .char-counter.warning { color: #e67e22; }
 .char-counter.danger  { color: #fa4436; }
 
-/* ── Password input ── */
 .password-input-wrapper {
     position: relative;
 }
@@ -170,7 +154,6 @@
     font-size: 20px;
 }
 
-/* ── Acciones del formulario ── */
 .form-actions {
     display: flex;
     gap: 1rem;
@@ -180,7 +163,6 @@
     margin-top: 1.75rem;
 }
 
-/* Cancelar: antes gris #6c757d → ahora outline neutro bien legible */
 .btn-cancel {
     padding: 0.75rem 2rem;
     border: 2px solid #9badb0;
@@ -199,7 +181,6 @@
     color: #1a1a2e;
 }
 
-/* Guardar: antes #667eea (violeta externo) → ahora verde del proyecto */
 .btn-save {
     padding: 0.75rem 2rem;
     border: none;
@@ -228,7 +209,6 @@
     opacity: 0.7;
 }
 
-/* ── Mensajes de error ── */
 .error-message {
     background: #fff0ef;
     color: #c0392b;
@@ -239,7 +219,6 @@
     font-size: 0.95rem;
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
     .form-container {
         padding: 1.25rem;

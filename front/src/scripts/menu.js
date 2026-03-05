@@ -128,9 +128,6 @@
 
 		};
 
-		/**
-		 * Why do this? See https://justmarkup.com/articles/2019-01-21-the-link-to-button-enhancement/
-		 */
 		function convertLinkToButton( menuItem ) {
 
 			const 	link = menuItem.getElementsByTagName( 'a' )[0],

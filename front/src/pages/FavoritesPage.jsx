@@ -15,7 +15,7 @@ const FavoritesPage = () => {
     const [error, setError] = useState('');
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [activityToRemove, setActivityToRemove] = useState(null);
-    
+
     const [toast, setToast] = useState({
         isVisible: false,
         message: '',
@@ -89,7 +89,7 @@ const FavoritesPage = () => {
     };
 
     const getActivityIcon = (activityType) => {
-        switch(activityType) {
+        switch (activityType) {
             case 'multiplechoice':
                 return 'quiz';
             case 'flashcard':
@@ -102,7 +102,7 @@ const FavoritesPage = () => {
     };
 
     const getActivityColor = (activityType) => {
-        switch(activityType) {
+        switch (activityType) {
             case 'multiplechoice':
                 return '#037e6a';
             case 'flashcard':
@@ -139,23 +139,23 @@ const FavoritesPage = () => {
     const handleActivityClick = (activity) => {
         if (activity.activityType === 'multiplechoice') {
             navigate(`/multiplechoiceQuestions/${activity.classification}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    subject: activity.subject 
+                    subject: activity.subject
                 }
             });
         } else if (activity.activityType === 'flashcard') {
             navigate(`/flashcardTabs/${activity.subject}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    topic: activity.topic 
+                    topic: activity.topic
                 }
             });
         } else if (activity.activityType === 'atlas') {
             navigate(`/atlasPages/${activity.subject}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    type: activity.type 
+                    type: activity.type
                 }
             });
         }
@@ -201,16 +201,15 @@ const FavoritesPage = () => {
                         ) : (
                             <div className="activities-grid">
                                 {favorites.map(activity => {
-                                    // Si la actividad está eliminada, mostrar tarjeta especial
                                     if (activity.isDeleted) {
                                         return (
-                                            <div 
-                                                key={activity._id} 
+                                            <div
+                                                key={activity._id}
                                                 className="activity-card deleted-activity"
                                                 style={{ '--category-color': '#e74c3c' }}
                                             >
                                                 <div className="card-header">
-                                                    <div 
+                                                    <div
                                                         className="card-icon"
                                                         style={{ background: '#e74c3c' }}
                                                     >
@@ -243,16 +242,15 @@ const FavoritesPage = () => {
                                             </div>
                                         );
                                     }
-                                    
-                                    // Renderizado normal para actividades existentes
+
                                     return (
-                                        <div 
-                                            key={activity._id} 
+                                        <div
+                                            key={activity._id}
                                             className="activity-card"
                                             style={{ '--category-color': getActivityColor(activity.activityType) }}
                                         >
                                             <div className="card-header">
-                                                <div 
+                                                <div
                                                     className="card-icon"
                                                     style={{ background: getActivityColor(activity.activityType) }}
                                                 >
@@ -268,8 +266,8 @@ const FavoritesPage = () => {
                                                     {getActivityStats(activity)}
                                                 </p>
                                                 <p className="activity-date">
-                                                    Tipo: {activity.activityType === 'multiplechoice' ? 'Multiple Choice' : 
-                                                          activity.activityType === 'flashcard' ? 'Flashcard' : 'Atlas'}
+                                                    Tipo: {activity.activityType === 'multiplechoice' ? 'Multiple Choice' :
+                                                        activity.activityType === 'flashcard' ? 'Flashcard' : 'Atlas'}
                                                 </p>
                                             </div>
 

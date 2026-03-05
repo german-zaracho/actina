@@ -45,13 +45,13 @@ const UserForm = ({ user, onSave, onCancel }) => {
     };
 
     const validateForm = () => {
-        // Validar userName
+        // Valida el userName
         if (!formData.userName.trim()) {
             setError('El nombre de usuario es requerido');
             return false;
         }
 
-        // Validar contraseña (solo al crear o si se ingresa una nueva)
+        // Valida la contraseña (solo al crear o si se ingresa una nueva)
         if (!user && !formData.password) {
             setError('La contraseña es requerida');
             return false;

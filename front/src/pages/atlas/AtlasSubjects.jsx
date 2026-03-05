@@ -7,9 +7,9 @@ import HeaderAt from '../../components/layout/HeaderAt';
 
 export default function AtlasSubjects({ atlas }) {
     const navigate = useNavigate();
-    const [data, setData] = useState(atlas);
+    const [data] = useState(atlas);
     const [myActivities, setMyActivities] = useState([]);
-    const [selectedSubject, setSelectedSubject] = useState(null);
+    const [showMyActivities, setShowMyActivities] = useState(false);
 
     useEffect(() => {
         loadMyActivities();
@@ -24,22 +24,27 @@ export default function AtlasSubjects({ atlas }) {
         }
     };
 
-    const handleGoBack = () => {
-        navigate(-1);
-    };
+    const handleGoBack = () => navigate(-1);
 
     const handleItemClick = (subject) => {
-        setSelectedSubject(subject);
         navigate(`/atlasPages/${subject}`);
     };
 
-    const handleMyActivitiesClick = () => {
-        if (myActivities.length === 0) {
-            alert('Aún no has creado ningún atlas');
-        }
+    const handleMyActivityClick = (activity) => {
+        navigate(`/atlasPages/${activity.subject}`, {
+            state: { friendActivity: activity }
+        });
     };
 
-    const uniqueSubjects = Array.from(new Set(data.map(atlas => atlas.subject)));
+    const handleMyActivitiesToggle = () => {
+        if (myActivities.length === 0) {
+            alert('Aún no has creado ningún atlas');
+            return;
+        }
+        setShowMyActivities(prev => !prev);
+    };
+
+    const uniqueSubjects = Array.from(new Set(data.map(a => a.subject)));
 
     return (
         <>
@@ -53,34 +58,43 @@ export default function AtlasSubjects({ atlas }) {
                     <ul className='subjects classifications'>
                         {uniqueSubjects.map((subject, index) => (
                             <li className='bgBlue' key={index} onClick={() => handleItemClick(subject)}>
-                                <Link to={`/atlasPages/${subject}`} subject={subject}>
-                                    {subject}
-                                </Link>
+                                <Link to={`/atlasPages/${subject}`}>{subject}</Link>
                             </li>
                         ))}
-                        
-                        {/* Separador visual */}
-                        {myActivities.length > 0 && (
-                            <li className='category-divider'>
-                                <span>Mis Actividades</span>
-                            </li>
-                        )}
 
-                        {/* Categoría "Mis Atlas" */}
-                        {myActivities.length > 0 ? (
-                            <li className='bgBlue my-activities-category'>
-                                <Link 
-                                    to={`/atlasPages/Mis Atlas`}
-                                    state={{ myActivities: myActivities }}
-                                >
-                                    Mis Atlas ({myActivities.length})
-                                </Link>
+                        {/* Separador */}
+                        <li className='category-divider'>
+                            <span>Mis Actividades</span>
+                        </li>
+
+                        {/* Botón Mis Atlas */}
+                        <li
+                            className='my-activities-category'
+                            onClick={handleMyActivitiesToggle}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <a>
+                                Mis Atlas ({myActivities.length})
+                                {myActivities.length > 0 && (
+                                    <span className="material-icons" style={{ fontSize: '1rem', marginLeft: '0.5rem', verticalAlign: 'middle' }}>
+                                        {showMyActivities ? 'expand_less' : 'expand_more'}
+                                    </span>
+                                )}
+                            </a>
+                        </li>
+
+                        {showMyActivities && myActivities.map((activity, index) => (
+                            <li
+                                key={index}
+                                className='my-activity-item'
+                                onClick={() => handleMyActivityClick(activity)}
+                            >
+                                <a>
+                                    <span className="material-icons my-activity-icon">art_track</span>
+                                    <span>{activity.type} — {activity.subject}</span>
+                                </a>
                             </li>
-                        ) : (
-                            <li className='bgBlue my-activities-category' onClick={handleMyActivitiesClick}>
-                                <a>Mis Atlas (0)</a>
-                            </li>
-                        )}
+                        ))}
                     </ul>
                     <button onClick={handleGoBack} className='btnBackWhite'>Volver</button>
                 </div>

@@ -14,7 +14,7 @@ const MyActivitiesPage = () => {
     const [filteredActivities, setFilteredActivities] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const [filterType, setFilterType] = useState('all'); // 'all', 'multiplechoice', 'flashcard', 'atlas'
+    const [filterType, setFilterType] = useState('all');
     const [editingActivity, setEditingActivity] = useState(null);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [activityToDelete, setActivityToDelete] = useState(null);
@@ -151,7 +151,7 @@ const MyActivitiesPage = () => {
         const icons = {
             'multiplechoice': 'quiz',
             'flashcard': 'style',
-            'atlas': 'map'
+            'atlas': 'art_track'
         };
         return icons[type] || 'description';
     };
@@ -202,7 +202,7 @@ const MyActivitiesPage = () => {
                     sum + (tab.concepts?.length || 0), 0) || 0;
                 return `${activity.tabs?.length || 0} tabs, ${totalConcepts} conceptos`;
             case 'atlas':
-                return `${activity.pages?.length || 0} pÃ¡ginas`;
+                return `${activity.pages?.length || 0} páginas`;
             default:
                 return '';
         }
@@ -210,15 +210,14 @@ const MyActivitiesPage = () => {
 
     const getCategoryColor = (type) => {
         const colors = {
-            'multiplechoice': '#667eea',
-            'flashcard': '#f093fb',
-            'atlas': '#4facfe'
+            'multiplechoice': '#037e6a',
+            'flashcard': '#534799',
+            'atlas': '#0185c6'
         };
         return colors[type] || '#999';
     };
 
     const handleActivityClick = (activity) => {
-        // Navegar a los componentes existentes pasando la actividad por state
         if (activity.activityType === 'multiplechoice') {
             navigate(`/multiplechoiceQuestions/${activity.classification}`, {
                 state: { 
@@ -405,8 +404,8 @@ const MyActivitiesPage = () => {
 
             <ConfirmModal
                 isOpen={showDeleteModal}
-                title="Confirmar eliminaciÃ³n"
-                message={`Â¿EstÃ¡s seguro de que quieres eliminar la actividad "${activityToDelete ? getActivityTitle(activityToDelete) : ''}"? Esta acciÃ³n no se puede deshacer.`}
+                title="Confirmar eliminación"
+                message={`¿Estás seguro de que quieres eliminar la actividad "${activityToDelete ? getActivityTitle(activityToDelete) : ''}"? Esta acción no se puede deshacer.`}
                 onConfirm={handleConfirmDelete}
                 onCancel={handleCancelDelete}
             />

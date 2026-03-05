@@ -42,7 +42,7 @@ const PublicProfilePage = () => {
             try {
                 const activitiesData = await getFriendActivities(profileData._id);
                 setActivities(activitiesData);
-                
+
                 // Cargar estado de favoritos para cada actividad
                 const favStates = {};
                 for (const activity of activitiesData) {
@@ -59,7 +59,6 @@ const PublicProfilePage = () => {
                 setActivities([]);
             }
 
-            // Opcionalmente, cargar amigos del usuario (si quieres mostrarlos)
             try {
                 const friendsData = await call({
                     url: `friends/${profileData._id}`,
@@ -87,7 +86,7 @@ const PublicProfilePage = () => {
     };
 
     const getActivityIcon = (activityType) => {
-        switch(activityType) {
+        switch (activityType) {
             case 'multiplechoice':
                 return 'quiz';
             case 'flashcard':
@@ -100,7 +99,7 @@ const PublicProfilePage = () => {
     };
 
     const getActivityColor = (activityType) => {
-        switch(activityType) {
+        switch (activityType) {
             case 'multiplechoice':
                 return '#037e6a';
             case 'flashcard':
@@ -135,37 +134,36 @@ const PublicProfilePage = () => {
     };
 
     const handleActivityClick = (activity) => {
-        // Navegar a los componentes existentes pasando la actividad completa por state
         if (activity.activityType === 'multiplechoice') {
             navigate(`/multiplechoiceQuestions/${activity.classification}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    subject: activity.subject 
+                    subject: activity.subject
                 }
             });
         } else if (activity.activityType === 'flashcard') {
             navigate(`/flashcardTabs/${activity.subject}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    topic: activity.topic 
+                    topic: activity.topic
                 }
             });
         } else if (activity.activityType === 'atlas') {
             navigate(`/atlasPages/${activity.subject}`, {
-                state: { 
+                state: {
                     friendActivity: activity,
-                    type: activity.type 
+                    type: activity.type
                 }
             });
         }
     };
 
     const handleToggleFavorite = async (activity, e) => {
-        e.stopPropagation(); // Evitar que se active handleActivityClick
-        
+        e.stopPropagation(); // Evita que se active handleActivityClick
+
         try {
             const currentlyFavorite = favoriteStates[activity._id];
-            
+
             if (currentlyFavorite) {
                 await removeFromFavorites(activity._id);
                 setFavoriteStates(prev => ({ ...prev, [activity._id]: false }));
@@ -180,8 +178,8 @@ const PublicProfilePage = () => {
     };
 
     const handleCopyActivity = async (activity, e) => {
-        e.stopPropagation(); // Evitar que se active handleActivityClick
-        
+        e.stopPropagation();
+
         try {
             await copyActivity(activity._id);
             setToast({
@@ -237,11 +235,11 @@ const PublicProfilePage = () => {
                 <Sidebar />
                 <div className="container">
                     <div className="public-profile-container">
-                        <button 
-                            onClick={() => navigate(-1)} 
+                        <button
+                            onClick={() => navigate(-1)}
                             className='btnBackWhite'
                         >
-                            â† Volver
+                            Volver
                         </button>
 
                         <div className="profile-card">
@@ -249,8 +247,8 @@ const PublicProfilePage = () => {
                             <div className="profile-header">
                                 <div className="profile-image">
                                     {profile.userImage ? (
-                                        <img 
-                                            src={`/src/assets/images/profile-imgs/${profile.userImage}`} 
+                                        <img
+                                            src={`/src/assets/images/profile-imgs/${profile.userImage}`}
                                             alt={profile.userName}
                                         />
                                     ) : (
@@ -265,11 +263,11 @@ const PublicProfilePage = () => {
                                 </div>
                             </div>
 
-                            {/* InformaciÃ³n del perfil */}
+                            {/* Información del perfil */}
                             <div className="profile-info">
                                 {profile.bio && (
                                     <div className="info-section">
-                                        <h3>BiografÃ­a</h3>
+                                        <h3>Biografía</h3>
                                         <p>{profile.bio}</p>
                                     </div>
                                 )}
@@ -284,7 +282,7 @@ const PublicProfilePage = () => {
 
                                     {profile.location && (
                                         <div className="info-item">
-                                            <label>UbicaciÃ³n</label>
+                                            <label>Ubicación</label>
                                             <p>{profile.location}</p>
                                         </div>
                                     )}
@@ -309,8 +307,8 @@ const PublicProfilePage = () => {
                                         <h3>Actividades ({activities.length})</h3>
                                         <div className="activities-grid">
                                             {activities.map(activity => (
-                                                <div 
-                                                    key={activity._id} 
+                                                <div
+                                                    key={activity._id}
                                                     className="activity-card"
                                                     onClick={() => handleActivityClick(activity)}
                                                     style={{ '--activity-color': getActivityColor(activity.activityType) }}
@@ -341,8 +339,8 @@ const PublicProfilePage = () => {
                                                     <div className="activity-content">
                                                         <h4>{getActivityTitle(activity)}</h4>
                                                         <p className="activity-type">
-                                                            {activity.activityType === 'multiplechoice' ? 'Multiple Choice' : 
-                                                             activity.activityType === 'flashcard' ? 'Flashcard' : 'Atlas'}
+                                                            {activity.activityType === 'multiplechoice' ? 'Multiple Choice' :
+                                                                activity.activityType === 'flashcard' ? 'Flashcard' : 'Atlas'}
                                                         </p>
                                                         <p className="activity-stats">
                                                             {getActivityStats(activity)}
@@ -360,26 +358,25 @@ const PublicProfilePage = () => {
                                     </div>
                                 )}
 
-                                {/* SecciÃ³n de amigos */}
                                 {friends.length > 0 && (
                                     <div className="friends-section">
                                         <h3>Amigos ({friends.length})</h3>
                                         <div className="friends-grid">
                                             {friends.slice(0, 6).map(friend => (
-                                                <div 
-                                                    key={friend._id} 
+                                                <div
+                                                    key={friend._id}
                                                     className="friend-item"
                                                     onClick={() => navigate(`/profile/${friend.userName}`)}
                                                 >
                                                     {friend.userImage ? (
-                                                        <img 
+                                                        <img
                                                             src={`/src/assets/images/profile-imgs/${friend.userImage}`}
                                                             alt={friend.userName}
                                                         />
                                                     ) : (
                                                         <div className="friend-avatar">
-                                                            {friend.name?.charAt(0).toUpperCase() || 
-                                                             friend.userName?.charAt(0).toUpperCase() || 'A'}
+                                                            {friend.name?.charAt(0).toUpperCase() ||
+                                                                friend.userName?.charAt(0).toUpperCase() || 'A'}
                                                         </div>
                                                     )}
                                                     <p>{friend.name || friend.userName}</p>
@@ -388,7 +385,7 @@ const PublicProfilePage = () => {
                                         </div>
                                         {friends.length > 6 && (
                                             <p className="more-friends">
-                                                +{friends.length - 6} amigos mÃ¡s
+                                                +{friends.length - 6} amigos más
                                             </p>
                                         )}
                                     </div>

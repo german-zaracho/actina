@@ -11,14 +11,14 @@ export default function Sidebar() {
     useEffect(() => {
         loadPendingRequests();
         
-        // Escuchar eventos de actualización de solicitudes
+        // Escucha eventos de actualización de solicitudes
         const handleUpdateRequests = () => {
             loadPendingRequests();
         };
         
         window.addEventListener('friendRequestsUpdated', handleUpdateRequests);
         
-        // Actualizar cada 30 segundos
+        // Actualiza cada 30 segundos
         const interval = setInterval(loadPendingRequests, 30000);
         
         return () => {
@@ -30,13 +30,13 @@ export default function Sidebar() {
     // Detectar clics fuera del sidebar para cerrarlo
     useEffect(() => {
         const handleClickOutside = (event) => {
-            // Solo actuar si el sidebar está abierto
+            // Solo actua si el sidebar está abierto
             if (!isClosed && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
                 setIsClosed(true);
             }
         };
 
-        // Agregar listener solo cuando el sidebar está abierto
+        // Agrega listener solo cuando el sidebar está abierto
         if (!isClosed) {
             document.addEventListener('mousedown', handleClickOutside);
         }
@@ -52,7 +52,7 @@ export default function Sidebar() {
             const requests = await getPendingRequests();
             setPendingRequestsCount(requests.length);
         } catch (err) {
-            // Si hay error (no autenticado, etc.), no mostrar contador
+            // Si hay un error (no autenticado, etc.), no mostra el contador
             setPendingRequestsCount(0);
         }
     };

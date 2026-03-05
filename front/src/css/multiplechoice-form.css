@@ -1,9 +1,3 @@
-/* ============================================
-   MULTIPLECHOICE FORM - Contrastes corregidos
-   Paleta: #037e6a, #534799, #fa4436, #0185c6
-   ============================================ */
-
-/* ── Sección de preguntas ── */
 .questions-section {
     margin-top: 2rem;
 }
@@ -21,8 +15,6 @@
     font-weight: 700;
 }
 
-/* ── Botón agregar pregunta ── */
-/* Era #28a745 (verde genérico) → ahora blanco con borde verde del proyecto */
 .btn-add {
     background: white;
     color: #037e6a;
@@ -41,8 +33,6 @@
     box-shadow: 0 4px 12px rgba(3, 126, 106, 0.3);
 }
 
-/* ── Card de cada pregunta ── */
-/* Antes era #f8f9fa con borde gris — ahora fondo blanco con borde sutil */
 .question-card {
     background: #ffffff;
     border: 1.5px solid #d6e8e5;
@@ -66,8 +56,6 @@
     font-weight: 600;
 }
 
-/* ── Botón eliminar pregunta ── */
-/* Era #dc3545 sólido — ahora outline para no saturar */
 .btn-remove {
     background: transparent;
     color: #fa4436;
@@ -85,7 +73,6 @@
     color: white;
 }
 
-/* ── Opciones de respuesta ── */
 .option-row {
     display: flex;
     gap: 0.5rem;
@@ -105,9 +92,6 @@
     flex: 1;
 }
 
-/* ── Validación ── */
-
-/* Error inline */
 .error-message-inline {
     background: #fff0ef;
     color: #c0392b;
@@ -122,7 +106,6 @@
     animation: slideDown 0.3s ease;
 }
 
-/* Input con error */
 .input-error {
     border: 2px solid #fa4436 !important;
     background-color: #fff7f6 !important;
@@ -133,7 +116,6 @@
     box-shadow: 0 0 0 3px rgba(250, 68, 54, 0.12) !important;
 }
 
-/* Error general */
 .error-message {
     background: #fff0ef;
     color: #c0392b;
@@ -145,7 +127,6 @@
     animation: slideDown 0.3s ease;
 }
 
-/* ── Botón guardar deshabilitado ── */
 .btn-save:disabled {
     background: #b0bec5 !important;
     color: #fff !important;
@@ -155,7 +136,6 @@
     box-shadow: none !important;
 }
 
-/* Tooltip del botón deshabilitado */
 .btn-save[disabled][title]:hover::after {
     content: attr(title);
     position: absolute;
@@ -172,7 +152,6 @@
     z-index: 1000;
 }
 
-/* ── Animaciones ── */
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-8px); }
     to   { opacity: 1; transform: translateY(0); }

@@ -65,52 +65,30 @@ nav {
     font-size: 54px;
 }
 
-/**
- * Initial state, hidden off screen
- */
 .clicky-menu ul {
 	position: absolute;
 	top: 100%;
 	left: 0;
 	visibility: hidden;
-	/*[1]*/
 }
 
-/**
- * No JS fallback
- *
- * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
- */
 .clicky-menu.no-js li:hover>ul {
 	visibility: visible;
 }
 
 .clicky-menu.no-js li:focus-within>ul {
-	/*[2]*/
 	visibility: visible;
 }
 
-/**
- * Open/Close Menu Behavior with JS
- */
 .clicky-menu ul[aria-hidden="false"] {
 	visibility: visible;
 }
 
-/* Prevent offscreen-submenus */
 .clicky-menu .sub-menu--right {
 	left: auto !important;
 	right: 0 !important;
 }
 
-/**
- * Footnotes
- *
- * [1] Using `visibility` instead of `display` allows for easier transitions and animation of submenus
- * [2] Must be a separate ruleset so that hover works in non-modern browsers
- */
-
-/* Hidden SVG used for down arrows */
 #arrowsvg {
 	display: none;
 	position: absolute;
@@ -129,7 +107,6 @@ nav {
 	}
 }
 
-/* General Link & Button Styles */
 .clicky-menu a,
 .clicky-menu button {
 	margin: .25em;
@@ -154,7 +131,6 @@ nav {
 	color: black;
 }
 
-/* Top Level Items */
 .clicky-menu>li {
 	position: relative;
 	flex: 1 1 auto;
@@ -190,7 +166,6 @@ nav {
 	}
 }
 
-/* Icon */
 .clicky-menu svg {
 	width: 1em;
 	height: 1em;
@@ -210,7 +185,6 @@ nav {
 	filter: invert(100%);
 }
 
-/* Submenu Styles */
 .clicky-menu ul {
 	min-width: 100%;
 	/* width: 12em; */
@@ -227,7 +201,6 @@ nav {
 	}
 }
 
-/* Responsive Submenu Behavior */
 .clicky-menu ul[aria-hidden="false"] {
 	position: static;
 	width: 100%;
@@ -241,7 +214,6 @@ nav {
 	}
 }
 
-/* Submenu Links */
 .clicky-menu ul a {
 	display: block;
 	padding-top: .375em;

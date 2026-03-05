@@ -152,7 +152,6 @@ export default function MultiplechoiceQuestions({ multiplechoices }) {
                                     </div>
                                 )}
 
-                                {/* Resultado acumulado si terminó */}
                                 {endAttempt && (
                                     <div className="mc-score-inline">
                                         Respuestas correctas: <strong>{correctAnswersCount} / {currentTotalQuestions}</strong>

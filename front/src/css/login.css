@@ -1,4 +1,3 @@
-/* Container principal del login/register */
 .loginForm {
     margin: 3rem auto;
     background: white;
@@ -24,7 +23,6 @@
     gap: 1.5rem;
 }
 
-/* Form groups */
 .loginForm form > div {
     display: flex;
     flex-direction: column;
@@ -59,7 +57,6 @@
     color: #adb5bd;
 }
 
-/* Botones */
 .btnLogin {
     width: 100%;
     height: 48px;
@@ -93,7 +90,6 @@
     box-shadow: none;
 }
 
-/* Mensajes de error y éxito */
 .error-message {
     background: #fee;
     color: #c33;
@@ -127,7 +123,6 @@
     }
 }
 
-/* Links de autenticación */
 .auth-links {
     text-align: center;
     margin-top: 1.5rem;
@@ -153,7 +148,6 @@
     text-decoration: underline;
 }
 
-/* Divisor visual */
 .divider {
     display: flex;
     align-items: center;
@@ -174,7 +168,6 @@
     font-size: 0.9rem;
 }
 
-/* Indicador de fortaleza de contraseña (opcional para register) */
 .password-strength {
     height: 4px;
     border-radius: 2px;
@@ -203,7 +196,6 @@
     background: #28a745;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .loginForm {
         margin: 2rem auto;
@@ -268,7 +260,6 @@
     }
 }
 
-/* Estados de loading */
 .btnLogin.loading {
     position: relative;
     color: transparent;

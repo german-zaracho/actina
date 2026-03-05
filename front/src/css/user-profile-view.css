@@ -1,4 +1,3 @@
-/* User Profile View Modal Styles */
 .profile-modal-overlay {
     position: fixed;
     top: 0;
@@ -242,7 +241,6 @@
     background: #5a6fd8;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .profile-modal {
         width: 100%;
