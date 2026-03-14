@@ -40,7 +40,7 @@ app.use('/api', SearchRoutes);
 
 // Servir el frontend buildeado (front/dist/)
 // Esto solo aplica en producción (Render), localmente el front corre con Vite
-const frontendDist = path.join(__dirname, '../../front/dist');
+const frontendDist = path.join(__dirname, '../../../front/dist');
 app.use(express.static(frontendDist));
 
 // Cualquier ruta que no sea /api la maneja React Router
