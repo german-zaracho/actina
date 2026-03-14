@@ -40,6 +40,8 @@ app.use('/api', SearchRoutes);
 
 // Servir el frontend buildeado (front/dist/)
 // Esto solo aplica en producción (Render), localmente el front corre con Vite
+console.log('__dirname:', __dirname);
+console.log('frontendDist:', path.join(__dirname, '../../../front/dist'));
 const frontendDist = path.join(__dirname, '../../../front/dist');
 app.use(express.static(frontendDist));
 
