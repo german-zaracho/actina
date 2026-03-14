@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from "express";
+import path from 'path';
+import { fileURLToPath } from 'url';
 import MultiplechoiceRoute from '../routes/routes.js';
 import ApiMultiplechoiceRoute from '../api/routes/multiplechoiceRoutes.js';
 import ApiFlashcardRoute from '../api/routes/flashcardsRoutes.js';
@@ -14,29 +16,40 @@ import UserActivitiesRoutes from '../api/routes/userActivitiesRoutes.js';
 import SearchRoutes from '../api/routes/searchRoutes.js';
 import cors from 'cors';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 
 app.use(express.urlencoded({ extended: true })); //middleware para analizar datos pasados por la url
-app.use("/", express.static("public")); //middleware para establecer archivos estaticos (ej que se apliquen los styles en todas las vistas sin importar la ruta)
 app.use(express.json());    //middleware para poder analizar solicitudes en formato JSON 
 app.use(cors());
+app.use("/", express.static("public")); //middleware para establecer archivos estaticos (ej que se apliquen los styles en todas las vistas sin importar la ruta)
 
+// Rutas de la API
 app.use(MultiplechoiceRoute);
-app.use('/api',ApiMultiplechoiceRoute);
-app.use('/api',ApiFlashcardRoute);
-app.use('/api',ApiAtlasRoute);
-
+app.use('/api', ApiMultiplechoiceRoute);
+app.use('/api', ApiFlashcardRoute);
+app.use('/api', ApiAtlasRoute);
 app.use('/api', ApiAuth);
-
 app.use('/api', ImageRoutes);
-
 app.use('/api', AdminRoutes);
-
 app.use('/api', FriendshipRoutes);
-
 app.use('/api', UserActivitiesRoutes);
-
 app.use('/api', SearchRoutes);
 
-// Pasa el puerto del servidor
-app.listen(2023);
+// Servir el frontend buildeado (front/dist/)
+// Esto solo aplica en producción (Render), localmente el front corre con Vite
+const frontendDist = path.join(__dirname, '../../front/dist');
+app.use(express.static(frontendDist));
+
+// Cualquier ruta que no sea /api la maneja React Router
+app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendDist, 'index.html'));
+});
+
+const PORT = process.env.PORT || 2023;
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
+});
+
