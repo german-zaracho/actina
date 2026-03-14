@@ -4,7 +4,6 @@ dotenv.config();
 import express from "express";
 import path from 'path';
 import { fileURLToPath } from 'url';
-import MultiplechoiceRoute from '../routes/routes.js';
 import ApiMultiplechoiceRoute from '../api/routes/multiplechoiceRoutes.js';
 import ApiFlashcardRoute from '../api/routes/flashcardsRoutes.js';
 import ApiAtlasRoute from '../api/routes/atlasRoutes.js';
@@ -21,13 +20,14 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true })); //middleware para analizar datos pasados por la url
-app.use(express.json());    //middleware para poder analizar solicitudes en formato JSON 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors());
-app.use("/", express.static("public")); //middleware para establecer archivos estaticos (ej que se apliquen los styles en todas las vistas sin importar la ruta)
+
+// Archivos estáticos del backend (public/)
+app.use("/", express.static("public"));
 
 // Rutas de la API
-app.use(MultiplechoiceRoute);
 app.use('/api', ApiMultiplechoiceRoute);
 app.use('/api', ApiFlashcardRoute);
 app.use('/api', ApiAtlasRoute);
@@ -52,4 +52,3 @@ const PORT = process.env.PORT || 2023;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
