@@ -58,14 +58,12 @@ export default function MultiplechoiceSubject({ multiplechoices }) {
                             </li>
                         ))}
                         
-                        {/* Separador visual */}
                         {myActivities.length > 0 && (
                             <li className='category-divider'>
                                 <span>Mis Actividades</span>
                             </li>
                         )}
 
-                        {/* Categoría "Mis Multiplechoice" */}
                         {myActivities.length > 0 ? (
                             <li className='bgBlue my-activities-category'>
                                 <Link 

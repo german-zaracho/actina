@@ -231,3 +231,34 @@
     .fc-tab-btn { max-width: 120px; font-size: 0.8rem; padding: 0.35rem 0.75rem; }
     .fc-card { padding: 1rem; }
 }
+
+/* boton de ocultar items de conceptos a la vez*/
+
+.fc-concept-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.fc-concept-toggle {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    padding: 0.2rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.fc-concept-toggle:hover {
+    color: #534799;
+}
+
+.fc-concept-toggle .material-icons {
+    font-size: 1rem !important;
+}

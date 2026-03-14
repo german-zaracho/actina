@@ -92,7 +92,7 @@ const PublicProfilePage = () => {
             case 'flashcard':
                 return 'style';
             case 'atlas':
-                return 'map';
+                return 'art_track';
             default:
                 return 'description';
         }
@@ -103,9 +103,9 @@ const PublicProfilePage = () => {
             case 'multiplechoice':
                 return '#037e6a';
             case 'flashcard':
-                return '#e67e22';
+                return '#534799';
             case 'atlas':
-                return '#3498db';
+                return '#0185c6';
             default:
                 return '#95a5a6';
         }
@@ -324,7 +324,7 @@ const PublicProfilePage = () => {
                                                         title={favoriteStates[activity._id] ? 'Quitar de favoritos' : 'Agregar a favoritos'}
                                                     >
                                                         <span className="material-icons">
-                                                            {favoriteStates[activity._id] ? 'star' : 'star_border'}
+                                                            {favoriteStates[activity._id] ? 'bookmark' : 'bookmark_border'}
                                                         </span>
                                                     </button>
                                                     <button

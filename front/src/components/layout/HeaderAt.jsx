@@ -31,7 +31,7 @@ export default function HeaderAt() {
             <div className='logoContainer'>
                 <Link to="/home" className="border-top homeA">
                     <img
-                        src={isMobile ? "../../public/logo2.png" : "../../public/logo.png"}
+                        src={isMobile ? "/logo2.png" : "/logo.png"}
                         alt="Logo de Actina"
                     />
                 </Link>

@@ -117,9 +117,7 @@ const FlashcardFormContent = ({ formData, setFormData }) => {
                         <div className="concepts-section">
                             <div className="concepts-header">
                                 <h5>Conceptos ({tab.concepts.length})</h5>
-                                <button type="button" className="btn-add-small" onClick={() => addConcept(tabIndex)}>
-                                    + Concepto
-                                </button>
+                                
                             </div>
 
                             {tab.concepts.map((concept, conceptIndex) => (
@@ -156,8 +154,12 @@ const FlashcardFormContent = ({ formData, setFormData }) => {
                                             + Agregar Característica
                                         </button>
                                     </div>
+                                    
                                 </div>
                             ))}
+                            <button type="button" className="btn-add-small" onClick={() => addConcept(tabIndex)}>
+                                    + Concepto
+                                </button>
                         </div>
                     </div>
                 ))}

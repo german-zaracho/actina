@@ -192,7 +192,7 @@ const FavoritesPage = () => {
 
                         {favorites.length === 0 ? (
                             <div className="empty-state">
-                                <span className="material-icons">star_border</span>
+                                <i className='bx bxs-bookmark icon'></i>
                                 <p>No tienes actividades favoritas aún</p>
                                 <p style={{ fontSize: '0.9rem', color: '#999' }}>
                                     Explora actividades de otros usuarios y agrégalas a favoritos
@@ -291,7 +291,7 @@ const FavoritesPage = () => {
                                                     onClick={() => handleRemoveClick(activity)}
                                                     className="btn-action btn-delete"
                                                 >
-                                                    <span className="material-icons">star</span>
+                                                    <i className='bx bxs-bookmark icon'></i>
                                                     Quitar
                                                 </button>
                                             </div>

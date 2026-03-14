@@ -27,6 +27,8 @@ import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 
 export default function App() {
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:2023";
+
   const [multiplechoices, setMultiplechoices] = useState([]);
   const [flashcards, setFlashcards] = useState([]);
   const [atlas, setAtlas] = useState([]);
@@ -34,7 +36,7 @@ export default function App() {
   useEffect(() => {
 
     console.log("Iniciando componente");
-    fetch("http://localhost:2023/api/multiplechoices", {
+    fetch(`${API_URL}/api/multiplechoices`, {
       headers: {
         "auth-token": localStorage.getItem("token")
       }
@@ -43,7 +45,7 @@ export default function App() {
       .then((data) => setMultiplechoices(data))
       .catch((error) => console.error("Error fetching multiplechoices:", error));
 
-    fetch("http://localhost:2023/api/flashcards", {
+    fetch(`${API_URL}/api/flashcards`, {
       headers: {
         "auth-token": localStorage.getItem("token")
       }
@@ -53,7 +55,7 @@ export default function App() {
       .then((data) => setFlashcards(data))
       .catch((error) => console.error("Error fetching flashcards:", error));
 
-    fetch("http://localhost:2023/api/atlas", {
+    fetch(`${API_URL}/api/atlas`, {
       headers: {
         "auth-token": localStorage.getItem("token")
       }
@@ -63,8 +65,6 @@ export default function App() {
       .catch((error) => console.error("Error fetching atlas:", error));
 
   }, []);
-
-  useEffect(() => { }, [multiplechoices, flashcards, atlas])
 
   return (
     <AuthProvider>

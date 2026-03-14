@@ -129,7 +129,8 @@ export default function Sidebar() {
                             </li>
                             <li className="nav-link">
                                 <Link to="/favorites">
-                                    <span className="material-icons icon">star</span>
+                                    {/* <span className="material-icons icon">star</span> */}
+                                    <i className='bx bxs-bookmark icon'></i>
                                     <span className="text nav-text">Favoritos</span>
                                 </Link>
                             </li>

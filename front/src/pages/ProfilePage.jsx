@@ -324,7 +324,7 @@ const ProfilePage = () => {
                                             name="location"
                                             value={formData.location}
                                             onChange={handleInputChange}
-                                            placeholder="Tu ciudad, paÃ­s"
+                                            placeholder="Tu ciudad, paí­s"
                                         />
                                     ) : (
                                         <p>{profile?.location || 'No especificado'}</p>
