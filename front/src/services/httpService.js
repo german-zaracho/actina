@@ -43,7 +43,7 @@
 //     call
 // }
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:2023";
+const BASE_URL = import.meta.env.VITE_API_URL || "";
 
 export async function call({ url, method = "GET", body = undefined, basePath = "api" }) {
 

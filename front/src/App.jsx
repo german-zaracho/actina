@@ -27,7 +27,7 @@ import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 
 export default function App() {
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:2023";
+  const API_URL = import.meta.env.VITE_API_URL || "";
 
   const [multiplechoices, setMultiplechoices] = useState([]);
   const [flashcards, setFlashcards] = useState([]);
