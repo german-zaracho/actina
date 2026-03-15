@@ -43,7 +43,7 @@ export default function HeaderAt() {
                     >
                         {profile?.userImage ? (
                             <img 
-                                src={`/src/assets/images/profile-imgs/${profile.userImage}`} 
+                                src={`/images/profile-imgs/${profile.userImage}`} 
                                 alt="Profile" 
                                 className="user-image"
                             />

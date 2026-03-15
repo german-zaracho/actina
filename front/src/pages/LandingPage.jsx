@@ -15,7 +15,7 @@ export default function LandingPage() {
                 </div>
 
                 <div>
-                    <div className='imgWrapper'><img src="../../src/assets/images/views/homeNormal.jpg" alt="Home del sitio web Actina" className='' /></div>
+                    <div className='imgWrapper'><img src="/images/views/homeNormal.jpg" alt="Home del sitio web Actina" className='' /></div>
                 </div>
 
             </section>
@@ -23,7 +23,7 @@ export default function LandingPage() {
             <section className='landingSection'>
 
                 <div>
-                    <div className='imgWrapper'><img src="../../src/assets/images/views/multiplechoiceInicio.jpg" alt="Pagina de multiplechoice del sitio Actina" className='' /></div>
+                    <div className='imgWrapper'><img src="/images/views/multiplechoiceInicio.jpg" alt="Pagina de multiplechoice del sitio Actina" className='' /></div>
                 </div>
 
                 <div className='landingText'>
@@ -41,7 +41,7 @@ export default function LandingPage() {
                 </div>
                 
                 <div>
-                    <div className='imgWrapper'><img src="../../src/assets/images/views/flashcardInicio.jpg" alt="Pagina de flashcard del sitio Actina" className='' /></div>
+                    <div className='imgWrapper'><img src="/images/views/flashcardInicio.jpg" alt="Pagina de flashcard del sitio Actina" className='' /></div>
                 </div>
 
             </section>
@@ -49,7 +49,7 @@ export default function LandingPage() {
             <section className='landingSection'>
 
                 <div>
-                    <div className='imgWrapper'><img src="../../src/assets/images/views/atlasHome.jpg" alt="Pagina de Atlas del sitio web Actina" className='' /></div>
+                    <div className='imgWrapper'><img src="/images/views/atlasHome.jpg" alt="Pagina de Atlas del sitio web Actina" className='' /></div>
                 </div>
 
                 <div className='landingText'>
@@ -67,7 +67,7 @@ export default function LandingPage() {
                 </div>
                 
                 <div>
-                    <div className='imgWrapper'><img src="../../src/assets/images/views/homeNormal.jpg" alt="Home del sitio web Actina" className='' /></div>
+                    <div className='imgWrapper'><img src="/images/views/homeNormal.jpg" alt="Home del sitio web Actina" className='' /></div>
                 </div>
 
             </section>

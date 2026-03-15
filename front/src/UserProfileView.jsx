@@ -3,8 +3,8 @@ import './css/user-profile-view.css';
 
 const UserProfileView = ({ user, onClose, onEdit }) => {
     const getUserInitial = () => {
-        return user.name?.charAt(0).toUpperCase() || 
-               user.userName?.charAt(0).toUpperCase() || 'U';
+        return user.name?.charAt(0).toUpperCase() ||
+            user.userName?.charAt(0).toUpperCase() || 'U';
     };
 
     const getRoleName = (rol) => {
@@ -29,8 +29,8 @@ const UserProfileView = ({ user, onClose, onEdit }) => {
                 <div className="profile-header-section">
                     <div className="profile-avatar-large">
                         {user.userImage ? (
-                            <img 
-                                src={`/src/assets/images/profile-imgs/${user.userImage}`}
+                            <img
+                                src={`/images/profile-imgs/${user.userImage}`}
                                 alt={user.userName}
                             />
                         ) : (
@@ -76,7 +76,7 @@ const UserProfileView = ({ user, onClose, onEdit }) => {
                             Fecha de Nacimiento
                         </span>
                         <span className="detail-value">
-                            {user.birthDate 
+                            {user.birthDate
                                 ? new Date(user.birthDate).toLocaleDateString('es-AR', {
                                     year: 'numeric',
                                     month: 'long',
@@ -93,7 +93,7 @@ const UserProfileView = ({ user, onClose, onEdit }) => {
                             Fecha de Creación
                         </span>
                         <span className="detail-value">
-                            {user.createdAt 
+                            {user.createdAt
                                 ? new Date(user.createdAt).toLocaleDateString('es-AR', {
                                     year: 'numeric',
                                     month: 'long',

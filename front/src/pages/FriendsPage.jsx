@@ -264,7 +264,7 @@ const FriendsPage = () => {
                                             <div className="user-info">
                                                 {user.userImage ? (
                                                     <img
-                                                        src={`/src/assets/images/profile-imgs/${user.userImage}`}
+                                                        src={`/images/profile-imgs/${user.userImage}`}
                                                         alt={user.userName}
                                                         className="user-avatar"
                                                     />
@@ -302,7 +302,7 @@ const FriendsPage = () => {
                                                 >
                                                     {friend.userImage ? (
                                                         <img
-                                                            src={`/src/assets/images/profile-imgs/${friend.userImage}`}
+                                                            src={`/images/profile-imgs/${friend.userImage}`}
                                                             alt={friend.userName}
                                                             className="user-avatar"
                                                         />
@@ -349,7 +349,7 @@ const FriendsPage = () => {
                                                 >
                                                     {request.sender?.userImage ? (
                                                         <img
-                                                            src={`/src/assets/images/profile-imgs/${request.sender.userImage}`}
+                                                            src={`/images/profile-imgs/${request.sender.userImage}`}
                                                             alt={request.sender.userName}
                                                             className="user-avatar"
                                                         />

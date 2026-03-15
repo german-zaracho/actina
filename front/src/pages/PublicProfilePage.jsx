@@ -248,7 +248,7 @@ const PublicProfilePage = () => {
                                 <div className="profile-image">
                                     {profile.userImage ? (
                                         <img
-                                            src={`/src/assets/images/profile-imgs/${profile.userImage}`}
+                                            src={`/images/profile-imgs/${profile.userImage}`}
                                             alt={profile.userName}
                                         />
                                     ) : (
@@ -370,7 +370,7 @@ const PublicProfilePage = () => {
                                                 >
                                                     {friend.userImage ? (
                                                         <img
-                                                            src={`/src/assets/images/profile-imgs/${friend.userImage}`}
+                                                            src={`/images/profile-imgs/${friend.userImage}`}
                                                             alt={friend.userName}
                                                         />
                                                     ) : (

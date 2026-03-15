@@ -138,7 +138,7 @@ const AtlasPages = ({ atlas }) => {
                                 {/* Imagen */}
                                 <div className="atlas-image-wrapper">
                                     <img
-                                        src={`../../src/assets/images/atlas/${currentPage.image}`}
+                                        src={`/images/atlas/${currentPage.image}`}
                                         alt={currentPage.topic}
                                         className="atlas-image"
                                     />

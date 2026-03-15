@@ -194,7 +194,7 @@ const ProfilePage = () => {
                                 <div className="profile-image">
                                     {formData.userImage ? (
                                         <img 
-                                            src={`/src/assets/images/profile-imgs/${formData.userImage}`} 
+                                            src={`/images/profile-imgs/${formData.userImage}`} 
                                             alt="Profile" 
                                         />
                                     ) : (
@@ -232,7 +232,7 @@ const ProfilePage = () => {
                                                         onClick={() => handleImageSelect(imageName)}
                                                     >
                                                         <img 
-                                                            src={`/src/assets/images/profile-imgs/${imageName}`} 
+                                                            src={`/images/profile-imgs/${imageName}`} 
                                                             alt={`Avatar ${imageName}`}
                                                         />
                                                     </button>

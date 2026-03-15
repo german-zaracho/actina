@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 router.get('/images/profile', (req, res) => {
     try {
         // Desde api/routes/ ir a src/assets/images/profile-imgs/
-        const imagesPath = path.join(__dirname, '../../public/assets/images/profile-imgs');
+        const imagesPath = path.join(__dirname, '../../../front/public/images/profile-imgs');
         
         // Leer el directorio
         const files = fs.readdirSync(imagesPath);
@@ -37,7 +37,7 @@ router.get('/images/profile/:imageName', (req, res) => {
     try {
         const imageName = req.params.imageName;
         // Desde api/routes/ ir a /images/profile-imgs/
-        const imagePath = path.join(__dirname, '../../public/assets/images/profile-imgs', imageName);
+        const imagePath = path.join(__dirname, '../../../front/public/images/profile-imgs', imageName);
         
         // Verificar que el archivo existe
         if (!fs.existsSync(imagePath)) {
