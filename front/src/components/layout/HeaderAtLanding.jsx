@@ -48,11 +48,11 @@ export default function HeaderAtLanding() {
 
                 <div className='access'>
                     <button
-                        className="btnWhite"
+                        className="btnGreen guestButton"
                         onClick={handleGuestLogin}
                         disabled={loadingGuest}
                     >
-                        {loadingGuest ? "Cargando..." : "Ingresar como invitado"}
+                        {loadingGuest ? "Cargando..." : "Invitado"}
                     </button>
                     <Link to="/login" className="btnGreen">Iniciar sesión</Link>
                 </div>
