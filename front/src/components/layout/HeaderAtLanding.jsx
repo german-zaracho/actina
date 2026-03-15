@@ -22,7 +22,7 @@ export default function HeaderAtLanding() {
                 
                 <Link to="/home" className="border-top">
                     <img
-                        src={isMobile ? "../../public/logo2.png" : "../../public/logo.png"}
+                        src={isMobile ? "/logo2.png" : "/logo.png"}
                         alt="Logo de Actina"
                     />
                 </Link>
