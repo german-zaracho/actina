@@ -1,0 +1,143 @@
+/* ===== FOOTER ===== */
+
+footer {
+    background: #1a1a2e;
+    color: #ccc;
+    margin-top: auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Columna logo */
+.footer-brand img {
+    height: 42px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #999;
+    max-width: 280px;
+    margin: 0;
+}
+
+/* Columnas de links */
+.footer-col h4 {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0 0 1.25rem 0;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: #037e6a;
+    border-radius: 2px;
+}
+
+.footer-col p {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.88rem;
+    color: #999;
+    cursor: default;
+    transition: color 0.2s;
+}
+
+.footer-col p:hover { color: #037e6a; }
+
+/* Parte inferior */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-copy {
+    font-size: 0.82rem;
+    color: #666;
+    margin: 0;
+}
+
+.footer-copy span {
+    color: #037e6a;
+    font-weight: 600;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #037e6a;
+    border-color: #037e6a;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    /* filter: brightness(0) invert(1); */
+    opacity: 0.7;
+}
+
+.footer-social a:hover img { opacity: 1; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.25rem;
+    }
+}

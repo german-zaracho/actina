@@ -422,7 +422,7 @@ export default function Home() {
                                 {searchResults.atlas && searchResults.atlas.length > 0 && (
                                     <div className="resultsSection">
                                         <h4>
-                                            <span className="material-icons">map</span>
+                                            <span className="material-icons">art_track</span>
                                             Atlas ({searchResults.atlas.length})
                                         </h4>
                                         <div className="resultsList">

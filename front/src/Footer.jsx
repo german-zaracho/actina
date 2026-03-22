@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../src/css/styles.css';
+import React from 'react';
+import './css/footer.css';
 
 export default function Footer() {
-
     return (
         <footer>
+            <div className="footer-top">
 
-            <div className="columnContainer">
-
-                <div className="footerColumn">
-                    <img src="../../src/assets/logoBlanco.png" alt="Logo de Actina" />
+                {/* Marca */}
+                <div className="footer-brand">
+                    <img src="/logo.png" alt="Logo de Actina" />
+                    <p>Plataforma de estudio para estudiantes de medicina. Repasá contenido con multiplechoice, flashcards y atlas interactivos.</p>
                 </div>
 
-                <div className="footerColumn">
-                    <h3>Recursos</h3>
+                {/* Recursos */}
+                <div className="footer-col">
+                    <h4>Recursos</h4>
                     <p>Sobre nosotros</p>
                     <p>Contacto</p>
                     <p>Condiciones de servicio</p>
                 </div>
 
-                <div className="footerColumn">
-                    <h3>Más</h3>
+                {/* Más */}
+                <div className="footer-col">
+                    <h4>Más</h4>
                     <p>Android app</p>
                     <p>iOS app</p>
                     <p>FAQ</p>
@@ -29,39 +30,23 @@ export default function Footer() {
 
             </div>
 
-            <hr />
-            <div className="rowContainer">
+            <div className="footer-bottom">
+                <p className="footer-copy">
+                    © {new Date().getFullYear()} <span>Actina</span>. Todos los derechos reservados.
+                </p>
 
-                <div className="socialMediaContainer">
-
-                    <a href="#" target="_blank" className="socialIcon"><img src="../../src/assets/icons/facebook.png"
-                        alt="Facebook" /></a>
-                    <a href="#" target="_blank" className="socialIcon"><img src="../../src/assets/icons/gorjeo.png"
-                        alt="Twitter" /></a>
-                    <a href="#" target="_blank" className="socialIcon"><img src="../../src/assets/icons/instagram.png"
-                        alt="Instagram" /></a>
-
+                <div className="footer-social">
+                    <a href="#" target="_blank" rel="noreferrer" aria-label="Facebook">
+                        <img src="/images/icons/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" aria-label="Twitter">
+                        <img src="/images/icons/gorjeo.png" alt="Twitter" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <img src="/images/icons/instagram.png" alt="Instagram" />
+                    </a>
                 </div>
-
-                <div>
-                    <form action="#" method="post">
-                        <input type="email" name="email" placeholder="Enter your email" required />
-                        <button type="submit">Subscribe</button>
-                        <div className='inputFooterContainer'>
-                            <input type="checkbox" name="suscribe" id="" />
-                            <p>Sí, quiero recibir correos electrónicos sobre productos, noticias y más de Actina.</p>
-                        </div>
-                    </form>
-                </div>
-
-
-
-
-
             </div>
-
-
-
         </footer>
     );
 }

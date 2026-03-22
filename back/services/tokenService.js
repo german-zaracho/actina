@@ -7,33 +7,38 @@ const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db(process.env.DB_NAME);
 const tokenCollection = db.collection("tokens");
 
-async function createToken(account){
-    const token = jwt.sign(account,"Secret password")
-    
+async function createToken(account) {
+    const token = jwt.sign(account, "Secret password", { expiresIn: '7d' })
+
     await client.connect()
     console.log("Creando token para cuenta:", account)
-    await tokenCollection.insertOne({token, account_id: account._id})
     
+    await tokenCollection.insertOne({
+        token,
+        account_id: account._id,
+        createdAt: new Date()
+    })
+
     return token
 }
 
-async function verifyToken(token){
+async function verifyToken(token) {
     try {
         console.log("Verify token debug");
         console.log("Token to verify:", token);
-        
+
         const payload = jwt.verify(token, "Secret password")
         console.log("JWT payload:", payload)
-        
+
         await client.connect()
-        const activeSession = await tokenCollection.findOne({token, account_id: new ObjectId(payload._id)})
+        const activeSession = await tokenCollection.findOne({ token, account_id: new ObjectId(payload._id) })
         console.log("Active session found:", activeSession)
-        
-        if(!activeSession) {
+
+        if (!activeSession) {
             console.log("No active session found for token");
             return null;
         }
-        
+
         console.log("Token verification successful");
         return payload
     } catch (error) {
@@ -42,9 +47,9 @@ async function verifyToken(token){
     }
 }
 
-async function removeToken(token){
+async function removeToken(token) {
     await client.connect()
-    await tokenCollection.deleteOne({token})
+    await tokenCollection.deleteOne({ token })
 }
 
 export {
